@@ -42,7 +42,7 @@ namespace IrisContabilidad.modulo_facturacion
 
                     itbisIdText.Text = itebis.codigo.ToString();
                     nombreText.Text = itebis.nombre;
-                    porcientoText.Text = itebis.porciento.ToString("N");
+                    porcientoText.Text = itebis.porciento.ToString();
                     activoCheck.Checked = Convert.ToBoolean(itebis.activo);
                 }
                 else
