@@ -31,6 +31,7 @@ namespace IrisContabilidad.modulo_facturacion
             this.Text = tituloLabel.Text;
             loadVentana();
         }
+
         public void loadVentana()
         {
             try
@@ -42,7 +43,7 @@ namespace IrisContabilidad.modulo_facturacion
 
                     itbisIdText.Text = itebis.codigo.ToString();
                     nombreText.Text = itebis.nombre;
-                    porcientoText.Text = itebis.porciento.ToString("N");
+                    porcientoText.Text = itebis.porciento.ToString();
                     activoCheck.Checked = Convert.ToBoolean(itebis.activo);
                 }
                 else
@@ -61,6 +62,7 @@ namespace IrisContabilidad.modulo_facturacion
                 MessageBox.Show("Error loadVentana.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         public void salir()
         {
             if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -68,6 +70,7 @@ namespace IrisContabilidad.modulo_facturacion
                 this.Close();
             }
         }
+
         public bool validarGetAction()
         {
             try
@@ -95,7 +98,7 @@ namespace IrisContabilidad.modulo_facturacion
                 {
                     porciento = Convert.ToDecimal(porcientoText.Text);
                     porciento = porciento/100;
-                    porcientoText.Text = porciento.ToString("##.##");
+                    porcientoText.Text = porciento.ToString("##.####");
                 }
                 return true;
             }
@@ -172,6 +175,7 @@ namespace IrisContabilidad.modulo_facturacion
             }
 
         }
+
         private void ventana_itebis_Load(object sender, EventArgs e)
         {
 
@@ -179,7 +183,18 @@ namespace IrisContabilidad.modulo_facturacion
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            
+
+            try
+            {
+                if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
+                {
+                    activoCheck.Focus();
+                }
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         private void porcientoText_KeyPress(object sender, KeyPressEventArgs e)
@@ -239,5 +254,38 @@ namespace IrisContabilidad.modulo_facturacion
                 
             }
         }
+
+        private void nombreText_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
+                {
+                    porcientoText.Focus();
+                    porcientoText.SelectAll();
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void activoCheck_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            try
+            {
+                if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
+                {
+                    button1.Focus();
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
     }
 }

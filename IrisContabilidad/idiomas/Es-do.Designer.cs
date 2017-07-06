@@ -70,6 +70,15 @@ namespace IrisContabilidad.idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Banco.
+        /// </summary>
+        internal static string banco {
+            get {
+                return ResourceManager.GetString("banco", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Clave.
         /// </summary>
         internal static string clave {
@@ -115,6 +124,24 @@ namespace IrisContabilidad.idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Dirección.
+        /// </summary>
+        internal static string direccion {
+            get {
+                return ResourceManager.GetString("direccion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fax.
+        /// </summary>
+        internal static string fax {
+            get {
+                return ResourceManager.GetString("fax", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a ID.
         /// </summary>
         internal static string id {
@@ -151,6 +178,15 @@ namespace IrisContabilidad.idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Nombre banco.
+        /// </summary>
+        internal static string nombreBanco {
+            get {
+                return ResourceManager.GetString("nombreBanco", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Numero Cuenta.
         /// </summary>
         internal static string numeroCuenta {
@@ -174,6 +210,15 @@ namespace IrisContabilidad.idiomas {
         internal static string origenDebito {
             get {
                 return ResourceManager.GetString("origenDebito", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Telefono.
+        /// </summary>
+        internal static string telefono {
+            get {
+                return ResourceManager.GetString("telefono", resourceCulture);
             }
         }
         
