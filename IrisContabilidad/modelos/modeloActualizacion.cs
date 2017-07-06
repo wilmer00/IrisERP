@@ -510,7 +510,7 @@ namespace IrisContabilidad.modelos
                 sql = "ALTER TABLE `iris`.`banco` MODIFY COLUMN `codigo` INTEGER NOT NULL DEFAULT 0;";
                 utilidades.ejecutarcomando_mysql(sql);
                 //nuevo query
-                sql = "";
+                sql = "ALTER TABLE `iris`.`compra` MODIFY COLUMN `codigo_tipo_compra` INTEGER NOT NULL DEFAULT 0 COMMENT 'para saber si es contado,credito,cotizacion,pedido';";
                 utilidades.ejecutarcomando_mysql(sql);
                 //nuevo query
                 sql = "";

@@ -85,6 +85,7 @@ namespace IrisContabilidad.modulo_facturacion
             this.activoCheck.TabIndex = 70;
             this.activoCheck.Text = "Activo";
             this.activoCheck.UseVisualStyleBackColor = true;
+            this.activoCheck.KeyDown += new System.Windows.Forms.KeyEventHandler(this.activoCheck_KeyDown);
             // 
             // nombreText
             // 
@@ -94,6 +95,7 @@ namespace IrisContabilidad.modulo_facturacion
             this.nombreText.Name = "nombreText";
             this.nombreText.Size = new System.Drawing.Size(253, 26);
             this.nombreText.TabIndex = 69;
+            this.nombreText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nombreText_KeyDown);
             // 
             // label3
             // 
@@ -152,7 +154,7 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             this.porcientoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.porcientoText.Location = new System.Drawing.Point(150, 182);
-            this.porcientoText.MaxLength = 5;
+            this.porcientoText.MaxLength = 7;
             this.porcientoText.Name = "porcientoText";
             this.porcientoText.Size = new System.Drawing.Size(253, 26);
             this.porcientoText.TabIndex = 72;

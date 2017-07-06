@@ -95,7 +95,7 @@ namespace IrisContabilidad.modulo_facturacion
                 {
                     porciento = Convert.ToDecimal(porcientoText.Text);
                     porciento = porciento/100;
-                    porcientoText.Text = porciento.ToString("##.##");
+                    porcientoText.Text = porciento.ToString("##.####");
                 }
                 return true;
             }
@@ -179,7 +179,18 @@ namespace IrisContabilidad.modulo_facturacion
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            
+
+            try
+            {
+                if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
+                {
+                    activoCheck.Focus();
+                }
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         private void porcientoText_KeyPress(object sender, KeyPressEventArgs e)
@@ -237,6 +248,38 @@ namespace IrisContabilidad.modulo_facturacion
             catch (Exception)
             {
                 
+            }
+        }
+
+        private void nombreText_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
+                {
+                    porcientoText.Focus();
+                    porcientoText.SelectAll();
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void activoCheck_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            try
+            {
+                if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
+                {
+                    button1.Focus();
+                }
+            }
+            catch (Exception)
+            {
+
             }
         }
     }

@@ -34,7 +34,7 @@ namespace IrisContabilidad.modulo_contabilidad
         {
             InitializeComponent();
             empleado = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "ventana gastos");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "ventana banco");
             this.Text = tituloLabel.Text;
             loadVentana();
         }
@@ -177,6 +177,7 @@ namespace IrisContabilidad.modulo_contabilidad
                     //se agrega
                     if ((modeloBanco.agregarBanco(banco) == true))
                     {
+                        banco = null;
                         loadVentana();
                         MessageBox.Show("Se agregó ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -208,6 +209,16 @@ namespace IrisContabilidad.modulo_contabilidad
         {
             banco = null;
             loadVentana();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            salir();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            getAction();
         }
     }
 }
