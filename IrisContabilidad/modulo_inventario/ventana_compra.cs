@@ -261,6 +261,7 @@ namespace IrisContabilidad.modulo_inventario
                 compra.fecha_limite = Convert.ToDateTime(fechaFinalText.Text);
                 compra.ncf = numerocComprobanteFiscalText.Text;
                 compra.tipo_compra = tipoCompraComboBox.Text;
+                compra.codigo_tipo_compra = Convert.ToInt16(tipoCompraComboBox.SelectedValue);
                 compra.activo = true;
                 compra.pagada = false;
                 compra.codigo_sucursal = empleado.codigo_sucursal;
@@ -295,7 +296,7 @@ namespace IrisContabilidad.modulo_inventario
                 {
                     //agregar
                     //validar si la compra es al contado para proceder hacer el cobro
-                    if (compra.tipo_compra == "CON")
+                    if (compra.codigo_tipo_compra == 1)
                     {
                         ventanaDesglose = new ventana_desglose_dinero(compra, listaCompraDetalle);
                         compra = null;

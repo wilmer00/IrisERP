@@ -12,6 +12,8 @@ namespace IrisContabilidad.modelos
         utilidades utilidades = new utilidades();
 
 
+        private string sqlGeneral = "select codigo,nombre,cod_sucursal,activo from almacen where codigo>'0' ";
+
         //agregar 
         public bool agregarAlmacen(almacen almacen)
         {
@@ -19,7 +21,7 @@ namespace IrisContabilidad.modelos
             {
                 int activo = 0;
                 //validar nombre
-                string sql = "select *from almacen where nombre='" + almacen.nombre + "' and codigo!='" + almacen.codigo + "'";
+                string sql = sqlGeneral+" and nombre='" + almacen.nombre + "' and codigo!='" + almacen.codigo + "'";
                 DataSet ds = utilidades.ejecutarcomando_mysql(sql);
                 if (ds.Tables[0].Rows.Count > 0)
                 {
@@ -38,7 +40,7 @@ namespace IrisContabilidad.modelos
 
                 sql = "insert into almacen(codigo,nombre,cod_sucursal,activo) values('" + almacen.codigo + "','" + almacen.nombre +"','"+almacen.codigo_sucursal+ "','" + activo.ToString() + "')";
                 //MessageBox.Show(sql);
-                ds = utilidades.ejecutarcomando_mysql(sql);
+                utilidades.ejecutarcomando_mysql(sql);
                 return true;
             }
             catch (Exception ex)
@@ -55,7 +57,7 @@ namespace IrisContabilidad.modelos
             {
                 int activo = 0;
                 //validar nombre
-                string sql = "select *from almacen where nombre='" + almacen.nombre + "' and codigo!='" + almacen.codigo + "'";
+                string sql = sqlGeneral + " and nombre='" + almacen.nombre + "' and codigo!='" + almacen.codigo + "'";
                 DataSet ds = utilidades.ejecutarcomando_mysql(sql);
                 if (ds.Tables[0].Rows.Count > 0)
                 {
@@ -71,7 +73,7 @@ namespace IrisContabilidad.modelos
                     activo = 1;
                 }
                 sql = "update almacen set nombre='" + almacen.nombre + "',cod_sucursal='"+almacen.codigo_sucursal+"',activo='" + activo.ToString() + "' where codigo='" + almacen.codigo + "'";
-                ds = utilidades.ejecutarcomando_mysql(sql);
+                utilidades.ejecutarcomando_mysql(sql);
                 //MessageBox.Show(sql);
                 return true;
             }
@@ -115,7 +117,7 @@ namespace IrisContabilidad.modelos
             try
             {
                 almacen almacen = new almacen();
-                string sql = "select codigo,nombre,cod_sucursal,activo from almacen where codigo='" + id + "'";
+                string sql = sqlGeneral + " and codigo='" + id + "'";
                 DataSet ds = utilidades.ejecutarcomando_mysql(sql);
                 if (ds.Tables[0].Rows.Count > 0)
                 {
@@ -141,10 +143,10 @@ namespace IrisContabilidad.modelos
 
                 List<almacen> lista = new List<almacen>();
                 string sql = "";
-                sql = "select codigo,nombre,cod_sucursal,activo from almacen";
+                sql = sqlGeneral;
                 if (mantenimiento == false)
                 {
-                    sql += " where activo=1";
+                    sql += " and activo=1";
                 }
                 DataSet ds = utilidades.ejecutarcomando_mysql(sql);
                 if (ds.Tables[0].Rows.Count > 0)
@@ -177,7 +179,7 @@ namespace IrisContabilidad.modelos
 
                 List<almacen> lista = new List<almacen>();
                 string sql = "";
-                sql = "select codigo,nombre,cod_sucursal,activo from almacen where activo='1'";
+                sql = sqlGeneral + " and activo='1'";
 
                 DataSet ds = utilidades.ejecutarcomando_mysql(sql);
                 if (ds.Tables[0].Rows.Count > 0)

@@ -87,6 +87,7 @@ namespace IrisContabilidad.modulo_contabilidad
                 MessageBox.Show("Error loadVentana.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         public void loadSuplidor()
         {
             try
@@ -105,6 +106,7 @@ namespace IrisContabilidad.modulo_contabilidad
                 MessageBox.Show("Error loadSuplidor.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         public void loadTipoGastoDefectoBySuplidor()
         {
             try
@@ -124,6 +126,7 @@ namespace IrisContabilidad.modulo_contabilidad
                 MessageBox.Show("Error loadTipoGastoDefectoBySuplidor.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         public void loadTipoGasto()
         {
             try
@@ -141,6 +144,7 @@ namespace IrisContabilidad.modulo_contabilidad
                 MessageBox.Show("Error loadTipoGasto.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         public void loadTipoRetencion()
         {
             try
@@ -152,6 +156,7 @@ namespace IrisContabilidad.modulo_contabilidad
                 MessageBox.Show("Error loadTipoRetencion.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         public void salir()
         {
             if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -159,6 +164,7 @@ namespace IrisContabilidad.modulo_contabilidad
                 this.Close();
             }
         }
+
         public bool validarGetAction()
         {
             try
@@ -316,6 +322,7 @@ namespace IrisContabilidad.modulo_contabilidad
                 MessageBox.Show("Error  getAction.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void ventana_gastos_Load(object sender, EventArgs e)
         {
 
@@ -333,6 +340,7 @@ namespace IrisContabilidad.modulo_contabilidad
 
         private void button3_Click(object sender, EventArgs e)
         {
+            gasto = null;
             loadVentana();
         }
 
@@ -545,5 +553,7 @@ namespace IrisContabilidad.modulo_contabilidad
             {
             }
         }
+
+
     }
 }
