@@ -31,6 +31,7 @@ namespace IrisContabilidad.modulo_facturacion
             this.Text = tituloLabel.Text;
             loadVentana();
         }
+
         public void loadVentana()
         {
             try
@@ -61,6 +62,7 @@ namespace IrisContabilidad.modulo_facturacion
                 MessageBox.Show("Error loadVentana.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         public void salir()
         {
             if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -68,6 +70,7 @@ namespace IrisContabilidad.modulo_facturacion
                 this.Close();
             }
         }
+
         public bool validarGetAction()
         {
             try
@@ -172,6 +175,7 @@ namespace IrisContabilidad.modulo_facturacion
             }
 
         }
+
         private void ventana_itebis_Load(object sender, EventArgs e)
         {
 
@@ -282,5 +286,6 @@ namespace IrisContabilidad.modulo_facturacion
 
             }
         }
+
     }
 }
