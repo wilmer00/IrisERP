@@ -507,7 +507,7 @@ namespace IrisContabilidad.modelos
                 sql = "drop table producto_vs_permiso;";
                 utilidades.ejecutarcomando_mysql(sql);
                 //nuevo query
-                sql = "";
+                sql = "ALTER TABLE `iris`.`banco` MODIFY COLUMN `codigo` INTEGER NOT NULL DEFAULT 0;";
                 utilidades.ejecutarcomando_mysql(sql);
                 //nuevo query
                 sql = "";

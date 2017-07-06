@@ -121,6 +121,10 @@
     <value>Activo</value>
     <comment>activo para las checkbox</comment>
   </data>
+  <data name="banco" xml:space="preserve">
+    <value>Banco</value>
+    <comment>banco</comment>
+  </data>
   <data name="clave" xml:space="preserve">
     <value>Clave</value>
     <comment>clave/contrasena</comment>
@@ -141,6 +145,14 @@
     <value>Superior account</value>
     <comment>cuenta padre contabilidad</comment>
   </data>
+  <data name="direccion" xml:space="preserve">
+    <value>Dirección</value>
+    <comment>direccion</comment>
+  </data>
+  <data name="fax" xml:space="preserve">
+    <value>Fax</value>
+    <comment>fax</comment>
+  </data>
   <data name="id" xml:space="preserve">
     <value>ID</value>
     <comment>id para datagrid</comment>
@@ -157,6 +169,10 @@
     <value>Nombre</value>
     <comment>nombre para datagrid</comment>
   </data>
+  <data name="nombreBanco" xml:space="preserve">
+    <value>Nombre banco</value>
+    <comment>nombre banco</comment>
+  </data>
   <data name="numeroCuenta" xml:space="preserve">
     <value>Numero Cuenta</value>
     <comment>numero de cuenta</comment>
@@ -168,6 +184,10 @@
   <data name="origenDebito" xml:space="preserve">
     <value>Origen debito</value>
     <comment>origen debito</comment>
+  </data>
+  <data name="telefono" xml:space="preserve">
+    <value>Telefono</value>
+    <comment>telefono</comment>
   </data>
   <data name="usuario" xml:space="preserve">
     <value>Usuario</value>
