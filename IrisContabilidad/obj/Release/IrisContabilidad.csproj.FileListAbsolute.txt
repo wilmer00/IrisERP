@@ -384,3 +384,4 @@ C:\Users\wilmer\Documents\GitHub\Iris\IrisContabilidad\obj\Release\RdlCompile.co
 C:\Users\wilmer\Documents\GitHub\Iris\IrisContabilidad\obj\Release\IrisContabilidad.TrustInfo.xml
 C:\Users\wilmer\Documents\GitHub\Iris\IrisContabilidad\obj\Release\IrisContabilidad.exe.manifest
 C:\Users\wilmer\Documents\GitHub\Iris\IrisContabilidad\obj\Release\IrisContabilidad.application
+C:\Users\wilmer\Documents\GitHub\Iris\IrisContabilidad\obj\Release\IrisContabilidad.modulo_contabilidad.ventana_busqueda_banco.resources

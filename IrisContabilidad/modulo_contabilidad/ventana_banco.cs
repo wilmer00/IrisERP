@@ -120,7 +120,6 @@ namespace IrisContabilidad.modulo_contabilidad
         {
             try
             {
-                
                 //validar numero factura
                 if (nombreBancoText.Text == "")
                 {
@@ -170,7 +169,7 @@ namespace IrisContabilidad.modulo_contabilidad
                 banco.telefono2 = telefono2Text.Text;
                 banco.fax = faxText.Text;
                 banco.direccion = direccionText.Text;
-               
+
 
                 if (crear == true)
                 {
@@ -185,6 +184,20 @@ namespace IrisContabilidad.modulo_contabilidad
                     {
                         banco = null;
                         MessageBox.Show("No se agregó ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    //se modifica
+                    if ((modeloBanco.modificarBanco(banco) == true))
+                    {
+                        banco = null;
+                        loadVentana();
+                        MessageBox.Show("Se modificó ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se modificó ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -219,6 +232,18 @@ namespace IrisContabilidad.modulo_contabilidad
         private void button1_Click(object sender, EventArgs e)
         {
             getAction();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            ventana_busqueda_banco ventana = new ventana_busqueda_banco();
+            ventana.Owner = this;
+            ventana.ShowDialog();
+            if (ventana.DialogResult == DialogResult.OK)
+            {
+                banco = ventana.getObjeto();
+                loadVentana();
+            }
         }
     }
 }
