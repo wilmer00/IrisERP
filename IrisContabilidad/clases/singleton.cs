@@ -13,7 +13,38 @@ namespace IrisContabilidad.clases
         public static empleado empleado;
         public static sistemaConfiguracion sistema;
         public static Object idioma;
+        
         #endregion
+
+        //parametrizacion contable
+        #region parametrizacion contable
+
+        //cxc
+        public static cuenta_contable cuentaVentaItebis { get; set; }
+        public static cuenta_contable cuentaVenta { get; set; }
+        public static cuenta_contable cuentaCobrarCliente { get; set; }
+        public static cuenta_contable cuentaNotaCreditoVenta { get; set; }
+        public static cuenta_contable cuentaNotaDebitoVenta { get; set; }
+
+        //cxp
+        public static cuenta_contable cuentaPagarSuplidores { get; set; }
+        public static cuenta_contable cuentaNominaEmpleado { get; set; }
+
+        //inv
+        public static cuenta_contable cuentaCompraItbis{get; set; }
+        public static cuenta_contable cuentaCompra { get; set; }
+        public static cuenta_contable cuentaInventario { get; set; }
+        public static cuenta_contable cuentaNotaCreditoCompra { get; set; }
+        public static cuenta_contable cuentaNotaDebitoCompra { get; set; }
+
+        //fac
+        public static cuenta_contable cuentaEfectivo { get; set; }
+        public static cuenta_contable cuentaCajaChica { get; set; }
+
+        //con
+
+        #endregion
+
 
         //idiomas
         #region idiomas
