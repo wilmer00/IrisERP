@@ -299,6 +299,12 @@
     <Compile Include="modulo_contabilidad\ventana_banco.Designer.cs">
       <DependentUpon>ventana_banco.cs</DependentUpon>
     </Compile>
+    <Compile Include="modulo_contabilidad\ventana_busqueda_banco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modulo_contabilidad\ventana_busqueda_banco.Designer.cs">
+      <DependentUpon>ventana_busqueda_banco.cs</DependentUpon>
+    </Compile>
     <Compile Include="modulo_contabilidad\ventana_busqueda_cuenta_contable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -989,6 +995,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modulo_contabilidad\ventana_banco.resx">
       <DependentUpon>ventana_banco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modulo_contabilidad\ventana_busqueda_banco.resx">
+      <DependentUpon>ventana_busqueda_banco.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modulo_contabilidad\ventana_busqueda_cuenta_contable.resx">
       <DependentUpon>ventana_busqueda_cuenta_contable.cs</DependentUpon>

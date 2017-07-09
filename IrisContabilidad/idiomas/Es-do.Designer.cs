@@ -79,6 +79,15 @@ namespace IrisContabilidad.idiomas {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Buscar.
+        /// </summary>
+        internal static string buscar {
+            get {
+                return ResourceManager.GetString("buscar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Clave.
         /// </summary>
         internal static string clave {

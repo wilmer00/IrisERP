@@ -84,7 +84,7 @@ namespace IrisContabilidad.modulo_facturacion
             // nombreText
             // 
             this.nombreText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreText.Location = new System.Drawing.Point(81, 19);
+            this.nombreText.Location = new System.Drawing.Point(80, 19);
             this.nombreText.Name = "nombreText";
             this.nombreText.Size = new System.Drawing.Size(396, 26);
             this.nombreText.TabIndex = 20;

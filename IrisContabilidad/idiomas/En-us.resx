@@ -125,6 +125,10 @@
     <value>Bank</value>
     <comment>banco</comment>
   </data>
+  <data name="buscar" xml:space="preserve">
+    <value>Search</value>
+    <comment>buscar</comment>
+  </data>
   <data name="clave" xml:space="preserve">
     <value>Password</value>
     <comment>clave/contrasena</comment>

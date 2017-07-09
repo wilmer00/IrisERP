@@ -13,14 +13,11 @@ namespace IrisContabilidad.modulo_facturacion
         private caja caja;
 
         //listas
-        private List<caja> listaCaja;
-
-
-
+        private List<caja> lista;
+        
         //modelos
         private modeloCaja modeloCaja = new modeloCaja();
-
-
+        
         //variables 
         public bool mantenimiento = false;
         private int fila = 0;
@@ -33,15 +30,16 @@ namespace IrisContabilidad.modulo_facturacion
             this.mantenimiento = mantenimiento;
             loadLista();
         }
+
         public void loadLista()
         {
             try
             {
                 //si la lista esta null se inicializa
-                if (listaCaja == null)
+                if (lista == null)
                 {
-                    listaCaja = new List<caja>();
-                    listaCaja = modeloCaja.getListaCompleta(mantenimiento);
+                    lista = new List<caja>();
+                    lista = modeloCaja.getListaCompleta(mantenimiento);
                 }
                 //se limpia el grid si tiene datos
                 if (dataGridView1.Rows.Count > 0)
@@ -49,7 +47,7 @@ namespace IrisContabilidad.modulo_facturacion
                     dataGridView1.Rows.Clear();
                 }
                 //se agrega todos los datos de la lista en el gridView
-                listaCaja.ForEach(x =>
+                lista.ForEach(x =>
                 {
                     dataGridView1.Rows.Add(x.codigo, x.nombre, x.secuencia, x.activo);
 
@@ -60,6 +58,7 @@ namespace IrisContabilidad.modulo_facturacion
                 MessageBox.Show("Error loadLista.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         public caja getObjeto()
         {
             try
@@ -82,6 +81,7 @@ namespace IrisContabilidad.modulo_facturacion
             getObjeto();
             this.Close();
         }
+        
         public void Salir()
         {
             if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -106,8 +106,8 @@ namespace IrisContabilidad.modulo_facturacion
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    listaCaja = modeloCaja.getListaCompleta();
-                    listaCaja = listaCaja.FindAll(x => x.nombre.Contains(nombreText.Text));
+                    lista = modeloCaja.getListaCompleta();
+                    lista = lista.FindAll(x => x.nombre.Contains(nombreText.Text));
                     loadLista();
                 }
             }
@@ -124,7 +124,7 @@ namespace IrisContabilidad.modulo_facturacion
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            listaCaja = null;
+            lista = null;
             loadLista();
         }
 
