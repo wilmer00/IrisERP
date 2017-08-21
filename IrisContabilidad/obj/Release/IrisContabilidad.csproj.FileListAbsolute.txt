@@ -385,3 +385,6 @@ C:\Users\wilmer\Documents\GitHub\Iris\IrisContabilidad\obj\Release\IrisContabili
 C:\Users\wilmer\Documents\GitHub\Iris\IrisContabilidad\obj\Release\IrisContabilidad.exe.manifest
 C:\Users\wilmer\Documents\GitHub\Iris\IrisContabilidad\obj\Release\IrisContabilidad.application
 C:\Users\wilmer\Documents\GitHub\Iris\IrisContabilidad\obj\Release\IrisContabilidad.modulo_contabilidad.ventana_busqueda_banco.resources
+C:\Users\wilmer\Documents\GitHub\IrisERP\IrisContabilidad\bin\Release\IrisContabilidad.exe.config
+C:\Users\wilmer\Documents\GitHub\IrisERP\IrisContabilidad\obj\Release\IrisContabilidad.exe
+C:\Users\wilmer\Documents\GitHub\IrisERP\IrisContabilidad\obj\Release\IrisContabilidad.pdb
