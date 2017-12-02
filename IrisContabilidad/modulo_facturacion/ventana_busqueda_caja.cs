@@ -77,6 +77,7 @@ namespace IrisContabilidad.modulo_facturacion
 
         public void getAction()
         {
+
             this.DialogResult = DialogResult.OK;
             getObjeto();
             this.Close();

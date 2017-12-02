@@ -193,7 +193,7 @@ namespace IrisContabilidad.clases
                     MessageBox.Show("Query ingreso nulo","",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                     return null;
                 }
-                MySqlConnection conn = new MySqlConnection("server=localhost;uid=bc;" + "pwd=BlackCode123;database=iris;Allow Zero Datetime=false;");
+                MySqlConnection conn = new MySqlConnection("server=localhost;uid=wilmer;" + "pwd=wilmerlomas1;database=iris;Allow Zero Datetime=false;");
                 //MySqlConnection conn = new MySqlConnection("server=153.92.11.223;uid=bc1;" + "pwd=wilmerlomas1;database=iris;");
                 MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
                 DataSet ds = new DataSet();
