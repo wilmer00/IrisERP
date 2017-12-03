@@ -48,8 +48,9 @@ namespace IrisContabilidad.modulo_contabilidad
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(12, 355);
-            this.panel1.Size = new System.Drawing.Size(609, 54);
+            this.panel1.Location = new System.Drawing.Point(16, 437);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Size = new System.Drawing.Size(812, 66);
             // 
             // button2
             // 
@@ -59,37 +60,42 @@ namespace IrisContabilidad.modulo_contabilidad
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Location = new System.Drawing.Point(468, 5);
+            this.button1.Location = new System.Drawing.Point(624, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
-            this.panel2.Size = new System.Drawing.Size(633, 21);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Size = new System.Drawing.Size(844, 25);
             // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Location = new System.Drawing.Point(234, 5);
+            this.button3.Location = new System.Drawing.Point(312, 6);
+            this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(67, 20);
+            this.label2.Location = new System.Drawing.Point(89, 25);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 20);
+            this.label2.Size = new System.Drawing.Size(93, 25);
             this.label2.TabIndex = 117;
-            this.label2.Text = "Concepto";
+            this.label2.Text = "Concept";
             // 
             // button5
             // 
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(348, 15);
+            this.button5.Location = new System.Drawing.Point(464, 18);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(47, 37);
+            this.button5.Size = new System.Drawing.Size(63, 46);
             this.button5.TabIndex = 116;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -98,9 +104,10 @@ namespace IrisContabilidad.modulo_contabilidad
             // 
             this.conceptoIdText.BackColor = System.Drawing.Color.SkyBlue;
             this.conceptoIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conceptoIdText.Location = new System.Drawing.Point(159, 19);
+            this.conceptoIdText.Location = new System.Drawing.Point(212, 23);
+            this.conceptoIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.conceptoIdText.Name = "conceptoIdText";
-            this.conceptoIdText.Size = new System.Drawing.Size(183, 26);
+            this.conceptoIdText.Size = new System.Drawing.Size(243, 30);
             this.conceptoIdText.TabIndex = 115;
             this.conceptoIdText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.conceptoIdText_KeyDown);
             // 
@@ -109,9 +116,11 @@ namespace IrisContabilidad.modulo_contabilidad
             this.groupBox1.Controls.Add(this.conceptoIdText);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Location = new System.Drawing.Point(12, 27);
+            this.groupBox1.Location = new System.Drawing.Point(16, 33);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(609, 66);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(812, 81);
             this.groupBox1.TabIndex = 118;
             this.groupBox1.TabStop = false;
             // 
@@ -119,10 +128,11 @@ namespace IrisContabilidad.modulo_contabilidad
             // 
             this.conceptoText.BackColor = System.Drawing.Color.White;
             this.conceptoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conceptoText.Location = new System.Drawing.Point(171, 126);
+            this.conceptoText.Location = new System.Drawing.Point(228, 155);
+            this.conceptoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.conceptoText.MaxLength = 200;
             this.conceptoText.Name = "conceptoText";
-            this.conceptoText.Size = new System.Drawing.Size(236, 26);
+            this.conceptoText.Size = new System.Drawing.Size(313, 30);
             this.conceptoText.TabIndex = 119;
             this.conceptoText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.conceptoText_KeyDown);
             // 
@@ -130,11 +140,12 @@ namespace IrisContabilidad.modulo_contabilidad
             // 
             this.detalleText.BackColor = System.Drawing.Color.White;
             this.detalleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.detalleText.Location = new System.Drawing.Point(171, 173);
+            this.detalleText.Location = new System.Drawing.Point(228, 213);
+            this.detalleText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.detalleText.MaxLength = 200;
             this.detalleText.Multiline = true;
             this.detalleText.Name = "detalleText";
-            this.detalleText.Size = new System.Drawing.Size(344, 107);
+            this.detalleText.Size = new System.Drawing.Size(457, 131);
             this.detalleText.TabIndex = 120;
             this.detalleText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.detalleText_KeyDown);
             // 
@@ -142,21 +153,23 @@ namespace IrisContabilidad.modulo_contabilidad
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(94, 126);
+            this.label1.Location = new System.Drawing.Point(132, 155);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 20);
+            this.label1.Size = new System.Drawing.Size(68, 25);
             this.label1.TabIndex = 118;
-            this.label1.Text = "Nombre";
+            this.label1.Text = "Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(99, 173);
+            this.label3.Location = new System.Drawing.Point(132, 213);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 20);
+            this.label3.Size = new System.Drawing.Size(78, 25);
             this.label3.TabIndex = 121;
-            this.label3.Text = "Detalle";
+            this.label3.Text = "Details";
             // 
             // activoCheck
             // 
@@ -165,25 +178,27 @@ namespace IrisContabilidad.modulo_contabilidad
             this.activoCheck.CheckState = System.Windows.Forms.CheckState.Checked;
             this.activoCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.activoCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activoCheck.Location = new System.Drawing.Point(171, 300);
+            this.activoCheck.Location = new System.Drawing.Point(228, 369);
+            this.activoCheck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.activoCheck.Name = "activoCheck";
-            this.activoCheck.Size = new System.Drawing.Size(68, 21);
+            this.activoCheck.Size = new System.Drawing.Size(79, 24);
             this.activoCheck.TabIndex = 122;
-            this.activoCheck.Text = "Activo";
+            this.activoCheck.Text = "Active";
             this.activoCheck.UseVisualStyleBackColor = true;
             this.activoCheck.KeyDown += new System.Windows.Forms.KeyEventHandler(this.activoCheck_KeyDown);
             // 
             // ventana_nota_credito_debito_concepto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 421);
+            this.ClientSize = new System.Drawing.Size(844, 518);
             this.Controls.Add(this.activoCheck);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.detalleText);
             this.Controls.Add(this.conceptoText);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "ventana_nota_credito_debito_concepto";
             this.Text = "ventana_nota_credito_debito_concepto";
             this.Load += new System.EventHandler(this.ventana_nota_credito_debito_concepto_Load);
