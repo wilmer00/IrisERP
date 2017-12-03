@@ -338,7 +338,16 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
             reporteEncabezado = null;
             loadVentana();
         }
- 
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

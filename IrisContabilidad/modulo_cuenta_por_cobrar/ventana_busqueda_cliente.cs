@@ -196,5 +196,10 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
         {
             Salir();
         }
+
+        private void radioButtonRnc_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
