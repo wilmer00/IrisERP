@@ -511,22 +511,23 @@ namespace IrisContabilidad.modulo_nomina
 
         public void eliminarPermiso()
         {
-            try
-            {
-                //validar que tenga filas el datagrid
-                if (dataGridView1.Rows.Count < 0)
-                {
-                    return;
-                }
-                int fila = 0;
-                fila = dataGridView1.CurrentRow.Index;
-                dataGridView1.Rows.Remove(dataGridView1.Rows[fila]);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error eliminarPermiso.: " + ex.ToString(), "", MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
+            //try
+            //{
+            //    //validar que tenga filas el datagrid
+            //    if (dataGridView1.Rows.Count < 0)
+            //    {
+            //        return;
+            //    }
+            //    int fila = 0;
+            //    fila = dataGridView1.CurrentRow.Index;
+            //    dataGridView1.Rows.Remove(dataGridView1.Rows[fila]);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error eliminarPermiso.: " + ex.ToString(), "", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            //}
         }
+
         private void button13_Click(object sender, EventArgs e)
         {
             agregarPermiso();

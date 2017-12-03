@@ -47,8 +47,9 @@ namespace IrisContabilidad.modulo_contabilidad
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(12, 374);
-            this.panel1.Size = new System.Drawing.Size(708, 54);
+            this.panel1.Location = new System.Drawing.Point(16, 460);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Size = new System.Drawing.Size(944, 66);
             // 
             // button2
             // 
@@ -58,35 +59,41 @@ namespace IrisContabilidad.modulo_contabilidad
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Location = new System.Drawing.Point(567, 5);
+            this.button1.Location = new System.Drawing.Point(756, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
-            this.panel2.Size = new System.Drawing.Size(732, 21);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Size = new System.Drawing.Size(976, 25);
             // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Location = new System.Drawing.Point(284, 5);
+            this.button3.Location = new System.Drawing.Point(379, 6);
+            this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.nombreText);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(12, 27);
+            this.groupBox1.Location = new System.Drawing.Point(16, 33);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(708, 67);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(944, 82);
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
             // 
             // nombreText
             // 
             this.nombreText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreText.Location = new System.Drawing.Point(81, 19);
+            this.nombreText.Location = new System.Drawing.Point(108, 23);
+            this.nombreText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nombreText.Name = "nombreText";
-            this.nombreText.Size = new System.Drawing.Size(396, 26);
+            this.nombreText.Size = new System.Drawing.Size(527, 30);
             this.nombreText.TabIndex = 20;
             this.nombreText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nombreText_KeyDown);
             // 
@@ -94,11 +101,12 @@ namespace IrisContabilidad.modulo_contabilidad
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(10, 22);
+            this.label3.Location = new System.Drawing.Point(13, 27);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 20);
+            this.label3.Size = new System.Drawing.Size(81, 25);
             this.label3.TabIndex = 19;
-            this.label3.Text = "Buscar";
+            this.label3.Text = "Search";
             // 
             // dataGridView1
             // 
@@ -113,13 +121,14 @@ namespace IrisContabilidad.modulo_contabilidad
             this.secuenciacolumn,
             this.Detalle,
             this.activoColumn});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 107);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 132);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(705, 255);
+            this.dataGridView1.Size = new System.Drawing.Size(940, 314);
             this.dataGridView1.TabIndex = 28;
             // 
             // codigoColumn
@@ -131,30 +140,31 @@ namespace IrisContabilidad.modulo_contabilidad
             // 
             // secuenciacolumn
             // 
-            this.secuenciacolumn.HeaderText = "Concepto";
+            this.secuenciacolumn.HeaderText = "Concept";
             this.secuenciacolumn.Name = "secuenciacolumn";
             this.secuenciacolumn.ReadOnly = true;
             // 
             // Detalle
             // 
-            this.Detalle.HeaderText = "Detalle";
+            this.Detalle.HeaderText = "Details";
             this.Detalle.Name = "Detalle";
             this.Detalle.ReadOnly = true;
             // 
             // activoColumn
             // 
             this.activoColumn.FillWeight = 30F;
-            this.activoColumn.HeaderText = "Activo";
+            this.activoColumn.HeaderText = "Active";
             this.activoColumn.Name = "activoColumn";
             this.activoColumn.ReadOnly = true;
             // 
             // ventana_busqueda_nota_credito_debito_concepto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 440);
+            this.ClientSize = new System.Drawing.Size(976, 542);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "ventana_busqueda_nota_credito_debito_concepto";
             this.Text = "ventana_busqueda_nota_credito_debito_concepto";
             this.Load += new System.EventHandler(this.ventana_busqueda_nota_credito_debito_concepto_Load);

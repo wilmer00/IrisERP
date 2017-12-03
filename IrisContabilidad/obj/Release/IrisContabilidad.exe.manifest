@@ -53,11 +53,6 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="Microsoft.SqlServer.Types" version="11.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BarcodeLib.dll" size="107520">
       <assemblyIdentity name="BarcodeLib" version="1.0.0.22" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -94,14 +89,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IrisContabilidad.exe" size="5690368">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IrisContabilidad.exe" size="5691392">
       <assemblyIdentity name="IrisContabilidad" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>WOg+3HUpMiG76qgjK2MOKrBHpHHaE50R2x4c8J7dIhg=</dsig:DigestValue>
+        <dsig:DigestValue>lP75XJWURA2AoVdU4n5xCYRg+dMsfrCyPnAf1AUuvgs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -150,6 +145,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>vFXLqIYZkzMnVEVFg9aHZe9DAaJRjhtpvKvXbMp0cjM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.SqlServer.Types.dll" size="383576">
+      <assemblyIdentity name="Microsoft.SqlServer.Types" version="11.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>NsPl79BzHM9ayaNBxIi0/RTGl0f1o/bkzZdqfBKIs7A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -624,13 +631,13 @@
       <dsig:DigestValue>tk7gT5AiwcIbFpmc9F6ufalmbLDK/jGfZOhNvVuVpJ0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Release\Resources\imagenes_empleados\default1.png" size="25887">
+  <file name="bin\Release\Resources\imagenes_empleados\default1.png" size="14467">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>JFpl/yr3O4DiHwIoEtfZ1ngMLVXe7MNEVKbT2YAXCbc=</dsig:DigestValue>
+      <dsig:DigestValue>V0lYBCJLGPDOn7B9jo9BiZijNErOsrcuBGcp2sc4SLs=</dsig:DigestValue>
     </hash>
   </file>
   <file name="bin\Release\Resources\logo\logo.png" size="4389">

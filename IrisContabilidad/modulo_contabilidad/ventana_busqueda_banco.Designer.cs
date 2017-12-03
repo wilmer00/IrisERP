@@ -45,8 +45,9 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(12, 383);
-            this.panel1.Size = new System.Drawing.Size(667, 54);
+            this.panel1.Location = new System.Drawing.Point(16, 471);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Size = new System.Drawing.Size(889, 66);
             // 
             // button2
             // 
@@ -56,35 +57,41 @@
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Location = new System.Drawing.Point(526, 5);
+            this.button1.Location = new System.Drawing.Point(701, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
-            this.panel2.Size = new System.Drawing.Size(691, 21);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Size = new System.Drawing.Size(921, 25);
             // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Location = new System.Drawing.Point(263, 5);
+            this.button3.Location = new System.Drawing.Point(351, 6);
+            this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.nombreText);
             this.groupBox1.Controls.Add(this.labelBuscar);
-            this.groupBox1.Location = new System.Drawing.Point(12, 27);
+            this.groupBox1.Location = new System.Drawing.Point(16, 33);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(666, 84);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(888, 103);
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
             // 
             // nombreText
             // 
             this.nombreText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreText.Location = new System.Drawing.Point(102, 19);
+            this.nombreText.Location = new System.Drawing.Point(136, 23);
+            this.nombreText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nombreText.Name = "nombreText";
-            this.nombreText.Size = new System.Drawing.Size(396, 26);
+            this.nombreText.Size = new System.Drawing.Size(527, 30);
             this.nombreText.TabIndex = 20;
             this.nombreText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nombreText_KeyDown);
             // 
@@ -92,11 +99,12 @@
             // 
             this.labelBuscar.AutoSize = true;
             this.labelBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBuscar.Location = new System.Drawing.Point(10, 22);
+            this.labelBuscar.Location = new System.Drawing.Point(13, 27);
+            this.labelBuscar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelBuscar.Name = "labelBuscar";
-            this.labelBuscar.Size = new System.Drawing.Size(65, 20);
+            this.labelBuscar.Size = new System.Drawing.Size(81, 25);
             this.labelBuscar.TabIndex = 19;
-            this.labelBuscar.Text = "Buscar";
+            this.labelBuscar.Text = "Search";
             // 
             // dataGridView1
             // 
@@ -112,13 +120,14 @@
             this.telefono1Column,
             this.telefono2Column,
             this.activoColumn});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 117);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 144);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(666, 255);
+            this.dataGridView1.Size = new System.Drawing.Size(888, 314);
             this.dataGridView1.TabIndex = 28;
             // 
             // codigoColumn
@@ -131,38 +140,39 @@
             // nombreColumn
             // 
             this.nombreColumn.FillWeight = 70F;
-            this.nombreColumn.HeaderText = "Nombre";
+            this.nombreColumn.HeaderText = "Name";
             this.nombreColumn.Name = "nombreColumn";
             this.nombreColumn.ReadOnly = true;
             // 
             // telefono1Column
             // 
             this.telefono1Column.FillWeight = 30F;
-            this.telefono1Column.HeaderText = "Telefono1";
+            this.telefono1Column.HeaderText = "Telephone1";
             this.telefono1Column.Name = "telefono1Column";
             this.telefono1Column.ReadOnly = true;
             // 
             // telefono2Column
             // 
             this.telefono2Column.FillWeight = 30F;
-            this.telefono2Column.HeaderText = "Telefono2";
+            this.telefono2Column.HeaderText = "Telephone2";
             this.telefono2Column.Name = "telefono2Column";
             this.telefono2Column.ReadOnly = true;
             // 
             // activoColumn
             // 
             this.activoColumn.FillWeight = 30F;
-            this.activoColumn.HeaderText = "Activo";
+            this.activoColumn.HeaderText = "Active";
             this.activoColumn.Name = "activoColumn";
             this.activoColumn.ReadOnly = true;
             // 
             // ventana_busqueda_banco
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 449);
+            this.ClientSize = new System.Drawing.Size(921, 553);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "ventana_busqueda_banco";
             this.Text = "ventana_busqueda_banco";
             this.Load += new System.EventHandler(this.ventana_busqueda_banco_Load);
