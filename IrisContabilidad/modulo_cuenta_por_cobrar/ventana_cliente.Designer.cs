@@ -227,9 +227,9 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
             this.clienteContadoCheck.Location = new System.Drawing.Point(635, 462);
             this.clienteContadoCheck.Margin = new System.Windows.Forms.Padding(4);
             this.clienteContadoCheck.Name = "clienteContadoCheck";
-            this.clienteContadoCheck.Size = new System.Drawing.Size(179, 24);
+            this.clienteContadoCheck.Size = new System.Drawing.Size(154, 24);
             this.clienteContadoCheck.TabIndex = 60;
-            this.clienteContadoCheck.Text = "Cliente al contado";
+            this.clienteContadoCheck.Text = "Cash customer";
             this.clienteContadoCheck.UseVisualStyleBackColor = true;
             this.clienteContadoCheck.KeyDown += new System.Windows.Forms.KeyEventHandler(this.clienteContadoCheck_KeyDown);
             // 
