@@ -241,9 +241,9 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
             this.label1.Location = new System.Drawing.Point(16, 145);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 25);
+            this.label1.Size = new System.Drawing.Size(220, 25);
             this.label1.TabIndex = 105;
-            this.label1.Text = "Reason cancellation";
+            this.label1.Text = "Cancellation\'s reason";
             // 
             // motivoAnularText
             // 
