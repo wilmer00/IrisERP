@@ -40,17 +40,6 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             this.button5 = new System.Windows.Forms.Button();
             this.suplidorIdText = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idPrductoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diasVencimientoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.empleadoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoCompraColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeroComprobanteFiscalColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaLimiteColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MontoPendienteColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MontoAbonoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.metoopagoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -65,6 +54,17 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             this.label5 = new System.Windows.Forms.Label();
             this.totalDescontadoText = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.idPrductoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diasVencimientoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empleadoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoCompraColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroComprobanteFiscalColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaLimiteColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MontoPendienteColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MontoAbonoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metoopagoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -74,7 +74,7 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(16, 731);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Size = new System.Drawing.Size(1452, 66);
             // 
             // button2
@@ -86,19 +86,19 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             // 
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Location = new System.Drawing.Point(1264, 6);
-            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Size = new System.Drawing.Size(1484, 25);
             // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.Location = new System.Drawing.Point(632, 6);
-            this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button3.Margin = new System.Windows.Forms.Padding(5);
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox1
@@ -108,9 +108,9 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.suplidorIdText);
             this.groupBox1.Location = new System.Drawing.Point(16, 33);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1448, 119);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
@@ -132,7 +132,7 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             this.suplidorText.BackColor = System.Drawing.Color.White;
             this.suplidorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.suplidorText.Location = new System.Drawing.Point(128, 66);
-            this.suplidorText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.suplidorText.Margin = new System.Windows.Forms.Padding(4);
             this.suplidorText.MaxLength = 200;
             this.suplidorText.Name = "suplidorText";
             this.suplidorText.ReadOnly = true;
@@ -145,7 +145,7 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Location = new System.Drawing.Point(380, 16);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(63, 46);
             this.button5.TabIndex = 74;
@@ -157,7 +157,7 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             this.suplidorIdText.BackColor = System.Drawing.Color.SkyBlue;
             this.suplidorIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.suplidorIdText.Location = new System.Drawing.Point(128, 21);
-            this.suplidorIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.suplidorIdText.Margin = new System.Windows.Forms.Padding(4);
             this.suplidorIdText.Name = "suplidorIdText";
             this.suplidorIdText.Size = new System.Drawing.Size(243, 30);
             this.suplidorIdText.TabIndex = 71;
@@ -184,7 +184,7 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             this.Column1,
             this.metoopagoColumn});
             this.dataGridView1.Location = new System.Drawing.Point(16, 239);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -194,99 +194,13 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             this.dataGridView1.TabIndex = 88;
             this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
             // 
-            // idPrductoColumn
-            // 
-            this.idPrductoColumn.FillWeight = 50F;
-            this.idPrductoColumn.HeaderText = "ID";
-            this.idPrductoColumn.Name = "idPrductoColumn";
-            this.idPrductoColumn.ReadOnly = true;
-            // 
-            // fechaColumn
-            // 
-            this.fechaColumn.FillWeight = 70F;
-            this.fechaColumn.HeaderText = "Fecha";
-            this.fechaColumn.Name = "fechaColumn";
-            this.fechaColumn.ReadOnly = true;
-            // 
-            // diasVencimientoColumn
-            // 
-            this.diasVencimientoColumn.FillWeight = 70F;
-            this.diasVencimientoColumn.HeaderText = "Dias ven.";
-            this.diasVencimientoColumn.Name = "diasVencimientoColumn";
-            this.diasVencimientoColumn.ReadOnly = true;
-            // 
-            // empleadoColumn
-            // 
-            this.empleadoColumn.FillWeight = 120F;
-            this.empleadoColumn.HeaderText = "Empleado";
-            this.empleadoColumn.Name = "empleadoColumn";
-            this.empleadoColumn.ReadOnly = true;
-            // 
-            // TipoCompraColumn
-            // 
-            this.TipoCompraColumn.FillWeight = 80F;
-            this.TipoCompraColumn.HeaderText = "Tipo compra";
-            this.TipoCompraColumn.Name = "TipoCompraColumn";
-            this.TipoCompraColumn.ReadOnly = true;
-            // 
-            // numeroComprobanteFiscalColumn
-            // 
-            this.numeroComprobanteFiscalColumn.FillWeight = 120F;
-            this.numeroComprobanteFiscalColumn.HeaderText = "NCF";
-            this.numeroComprobanteFiscalColumn.Name = "numeroComprobanteFiscalColumn";
-            this.numeroComprobanteFiscalColumn.ReadOnly = true;
-            // 
-            // FechaLimiteColumn
-            // 
-            this.FechaLimiteColumn.FillWeight = 70F;
-            this.FechaLimiteColumn.HeaderText = "Fecha limite";
-            this.FechaLimiteColumn.Name = "FechaLimiteColumn";
-            this.FechaLimiteColumn.ReadOnly = true;
-            // 
-            // MontoPendienteColumn
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Tomato;
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = "0";
-            this.MontoPendienteColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            this.MontoPendienteColumn.FillWeight = 80F;
-            this.MontoPendienteColumn.HeaderText = "Pendiente";
-            this.MontoPendienteColumn.Name = "MontoPendienteColumn";
-            this.MontoPendienteColumn.ReadOnly = true;
-            // 
-            // MontoAbonoColumn
-            // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = "0";
-            this.MontoAbonoColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.MontoAbonoColumn.FillWeight = 80F;
-            this.MontoAbonoColumn.HeaderText = "Abonar";
-            this.MontoAbonoColumn.Name = "MontoAbonoColumn";
-            this.MontoAbonoColumn.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 80F;
-            this.Column1.HeaderText = "Descuento";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // metoopagoColumn
-            // 
-            this.metoopagoColumn.FillWeight = 80F;
-            this.metoopagoColumn.HeaderText = "Metodo pago";
-            this.metoopagoColumn.Name = "metoopagoColumn";
-            this.metoopagoColumn.ReadOnly = true;
-            // 
             // button19
             // 
             this.button19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button19.BackgroundImage")));
             this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button19.Location = new System.Drawing.Point(1379, 160);
-            this.button19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button19.Margin = new System.Windows.Forms.Padding(4);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(85, 71);
             this.button19.TabIndex = 103;
@@ -299,7 +213,7 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button20.Location = new System.Drawing.Point(1284, 160);
-            this.button20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button20.Margin = new System.Windows.Forms.Padding(4);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(87, 71);
             this.button20.TabIndex = 102;
@@ -327,7 +241,7 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             "Deposito",
             "Cheque"});
             this.metodoPagoComboBox.Location = new System.Drawing.Point(197, 199);
-            this.metodoPagoComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metodoPagoComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.metodoPagoComboBox.Name = "metodoPagoComboBox";
             this.metodoPagoComboBox.Size = new System.Drawing.Size(251, 24);
             this.metodoPagoComboBox.TabIndex = 104;
@@ -349,7 +263,7 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             // 
             this.montoAbonoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.montoAbonoText.Location = new System.Drawing.Point(663, 195);
-            this.montoAbonoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.montoAbonoText.Margin = new System.Windows.Forms.Padding(4);
             this.montoAbonoText.Name = "montoAbonoText";
             this.montoAbonoText.Size = new System.Drawing.Size(204, 30);
             this.montoAbonoText.TabIndex = 107;
@@ -362,7 +276,7 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             this.totalPendienteText.BackColor = System.Drawing.Color.SkyBlue;
             this.totalPendienteText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalPendienteText.Location = new System.Drawing.Point(327, 662);
-            this.totalPendienteText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.totalPendienteText.Margin = new System.Windows.Forms.Padding(4);
             this.totalPendienteText.MaxLength = 200;
             this.totalPendienteText.Name = "totalPendienteText";
             this.totalPendienteText.ReadOnly = true;
@@ -374,19 +288,19 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(139, 671);
+            this.label14.Location = new System.Drawing.Point(175, 671);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(162, 25);
+            this.label14.Size = new System.Drawing.Size(144, 25);
             this.label14.TabIndex = 108;
-            this.label14.Text = "Total pendiente";
+            this.label14.Text = "Total pending";
             // 
             // totalAbonadoText
             // 
             this.totalAbonadoText.BackColor = System.Drawing.Color.SkyBlue;
             this.totalAbonadoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalAbonadoText.Location = new System.Drawing.Point(1207, 662);
-            this.totalAbonadoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.totalAbonadoText.Margin = new System.Windows.Forms.Padding(4);
             this.totalAbonadoText.MaxLength = 200;
             this.totalAbonadoText.Name = "totalAbonadoText";
             this.totalAbonadoText.ReadOnly = true;
@@ -398,18 +312,18 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1033, 671);
+            this.label4.Location = new System.Drawing.Point(1048, 671);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(151, 25);
+            this.label4.Size = new System.Drawing.Size(145, 25);
             this.label4.TabIndex = 110;
-            this.label4.Text = "Total abonado";
+            this.label4.Text = "Total charged";
             // 
             // montoDescuentoText
             // 
             this.montoDescuentoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.montoDescuentoText.Location = new System.Drawing.Point(1013, 197);
-            this.montoDescuentoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.montoDescuentoText.Margin = new System.Windows.Forms.Padding(4);
             this.montoDescuentoText.Name = "montoDescuentoText";
             this.montoDescuentoText.Size = new System.Drawing.Size(204, 30);
             this.montoDescuentoText.TabIndex = 115;
@@ -433,7 +347,7 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             this.totalDescontadoText.BackColor = System.Drawing.Color.SkyBlue;
             this.totalDescontadoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalDescontadoText.Location = new System.Drawing.Point(784, 662);
-            this.totalDescontadoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.totalDescontadoText.Margin = new System.Windows.Forms.Padding(4);
             this.totalDescontadoText.MaxLength = 200;
             this.totalDescontadoText.Name = "totalDescontadoText";
             this.totalDescontadoText.ReadOnly = true;
@@ -445,12 +359,98 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(592, 671);
+            this.label6.Location = new System.Drawing.Point(628, 671);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(167, 25);
+            this.label6.Size = new System.Drawing.Size(148, 25);
             this.label6.TabIndex = 116;
-            this.label6.Text = "Total descuento";
+            this.label6.Text = "Total discount";
+            // 
+            // idPrductoColumn
+            // 
+            this.idPrductoColumn.FillWeight = 50F;
+            this.idPrductoColumn.HeaderText = "ID";
+            this.idPrductoColumn.Name = "idPrductoColumn";
+            this.idPrductoColumn.ReadOnly = true;
+            // 
+            // fechaColumn
+            // 
+            this.fechaColumn.FillWeight = 70F;
+            this.fechaColumn.HeaderText = "Date";
+            this.fechaColumn.Name = "fechaColumn";
+            this.fechaColumn.ReadOnly = true;
+            // 
+            // diasVencimientoColumn
+            // 
+            this.diasVencimientoColumn.FillWeight = 70F;
+            this.diasVencimientoColumn.HeaderText = "Expired days";
+            this.diasVencimientoColumn.Name = "diasVencimientoColumn";
+            this.diasVencimientoColumn.ReadOnly = true;
+            // 
+            // empleadoColumn
+            // 
+            this.empleadoColumn.FillWeight = 120F;
+            this.empleadoColumn.HeaderText = "Employee";
+            this.empleadoColumn.Name = "empleadoColumn";
+            this.empleadoColumn.ReadOnly = true;
+            // 
+            // TipoCompraColumn
+            // 
+            this.TipoCompraColumn.FillWeight = 80F;
+            this.TipoCompraColumn.HeaderText = "Purchase type";
+            this.TipoCompraColumn.Name = "TipoCompraColumn";
+            this.TipoCompraColumn.ReadOnly = true;
+            // 
+            // numeroComprobanteFiscalColumn
+            // 
+            this.numeroComprobanteFiscalColumn.FillWeight = 120F;
+            this.numeroComprobanteFiscalColumn.HeaderText = "NCF";
+            this.numeroComprobanteFiscalColumn.Name = "numeroComprobanteFiscalColumn";
+            this.numeroComprobanteFiscalColumn.ReadOnly = true;
+            // 
+            // FechaLimiteColumn
+            // 
+            this.FechaLimiteColumn.FillWeight = 70F;
+            this.FechaLimiteColumn.HeaderText = "Deadline";
+            this.FechaLimiteColumn.Name = "FechaLimiteColumn";
+            this.FechaLimiteColumn.ReadOnly = true;
+            // 
+            // MontoPendienteColumn
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Tomato;
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = "0";
+            this.MontoPendienteColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.MontoPendienteColumn.FillWeight = 80F;
+            this.MontoPendienteColumn.HeaderText = "Pending";
+            this.MontoPendienteColumn.Name = "MontoPendienteColumn";
+            this.MontoPendienteColumn.ReadOnly = true;
+            // 
+            // MontoAbonoColumn
+            // 
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = "0";
+            this.MontoAbonoColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.MontoAbonoColumn.FillWeight = 80F;
+            this.MontoAbonoColumn.HeaderText = "Charge";
+            this.MontoAbonoColumn.Name = "MontoAbonoColumn";
+            this.MontoAbonoColumn.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 80F;
+            this.Column1.HeaderText = "Discount";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // metoopagoColumn
+            // 
+            this.metoopagoColumn.FillWeight = 80F;
+            this.metoopagoColumn.HeaderText = "Payment method";
+            this.metoopagoColumn.Name = "metoopagoColumn";
+            this.metoopagoColumn.ReadOnly = true;
             // 
             // ventana_compra_pagos
             // 
@@ -473,7 +473,7 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             this.Controls.Add(this.button20);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "ventana_compra_pagos";
             this.Text = "ventana_compra_pagos";
             this.Load += new System.EventHandler(this.ventana_compra_pagos_Load);
@@ -527,6 +527,8 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
         private Label label4;
         private TextBox montoDescuentoText;
         private Label label5;
+        private TextBox totalDescontadoText;
+        private Label label6;
         private DataGridViewTextBoxColumn idPrductoColumn;
         private DataGridViewTextBoxColumn fechaColumn;
         private DataGridViewTextBoxColumn diasVencimientoColumn;
@@ -538,7 +540,5 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
         private DataGridViewTextBoxColumn MontoAbonoColumn;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn metoopagoColumn;
-        private TextBox totalDescontadoText;
-        private Label label6;
     }
 }
