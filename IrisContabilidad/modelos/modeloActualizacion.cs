@@ -513,7 +513,7 @@ namespace IrisContabilidad.modelos
                 sql = "ALTER TABLE `iris`.`compra` MODIFY COLUMN `codigo_tipo_compra` INTEGER NOT NULL DEFAULT 0 COMMENT 'para saber si es contado,credito,cotizacion,pedido';";
                 utilidades.ejecutarcomando_mysql(sql);
                 //nuevo query
-                sql = "";
+                sql = "ALTER TABLE `iris`.`producto` ADD COLUMN `variable` BOOLEAN NOT NULL DEFAULT 0 COMMENT 'en caso de que se pida por ejemplo un bagel, que puede ser de papa con huevo como solamente bacon huevo y queso' AFTER `producto_titular`;";
                 utilidades.ejecutarcomando_mysql(sql);
 
 
