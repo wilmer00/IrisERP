@@ -56,8 +56,9 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(12, 401);
-            this.panel1.Size = new System.Drawing.Size(530, 54);
+            this.panel1.Location = new System.Drawing.Point(16, 494);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Size = new System.Drawing.Size(707, 66);
             // 
             // button2
             // 
@@ -67,17 +68,20 @@ namespace IrisContabilidad.modulo_facturacion
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Location = new System.Drawing.Point(389, 5);
+            this.button1.Location = new System.Drawing.Point(519, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
-            this.panel2.Size = new System.Drawing.Size(554, 21);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Size = new System.Drawing.Size(739, 25);
             // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Location = new System.Drawing.Point(195, 5);
+            this.button3.Location = new System.Drawing.Point(260, 6);
+            this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // activoCheck
@@ -87,11 +91,12 @@ namespace IrisContabilidad.modulo_facturacion
             this.activoCheck.CheckState = System.Windows.Forms.CheckState.Checked;
             this.activoCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.activoCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activoCheck.Location = new System.Drawing.Point(114, 352);
+            this.activoCheck.Location = new System.Drawing.Point(152, 433);
+            this.activoCheck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.activoCheck.Name = "activoCheck";
-            this.activoCheck.Size = new System.Drawing.Size(68, 21);
+            this.activoCheck.Size = new System.Drawing.Size(79, 24);
             this.activoCheck.TabIndex = 76;
-            this.activoCheck.Text = "Activo";
+            this.activoCheck.Text = "Active";
             this.activoCheck.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -99,9 +104,11 @@ namespace IrisContabilidad.modulo_facturacion
             this.groupBox1.Controls.Add(this.cajeroIdText);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Location = new System.Drawing.Point(12, 27);
+            this.groupBox1.Location = new System.Drawing.Point(16, 33);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(529, 66);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(705, 81);
             this.groupBox1.TabIndex = 73;
             this.groupBox1.TabStop = false;
             // 
@@ -109,29 +116,32 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             this.cajeroIdText.BackColor = System.Drawing.Color.SkyBlue;
             this.cajeroIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cajeroIdText.Location = new System.Drawing.Point(155, 21);
+            this.cajeroIdText.Location = new System.Drawing.Point(207, 26);
+            this.cajeroIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cajeroIdText.Name = "cajeroIdText";
-            this.cajeroIdText.Size = new System.Drawing.Size(155, 26);
+            this.cajeroIdText.Size = new System.Drawing.Size(205, 30);
             this.cajeroIdText.TabIndex = 18;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(88, 24);
+            this.label2.Location = new System.Drawing.Point(112, 26);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 20);
+            this.label2.Size = new System.Drawing.Size(87, 25);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Cajero";
+            this.label2.Text = "Cashier";
             // 
             // button4
             // 
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(316, 16);
+            this.button4.Location = new System.Drawing.Point(421, 20);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(47, 37);
+            this.button4.Size = new System.Drawing.Size(63, 46);
             this.button4.TabIndex = 23;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -140,20 +150,22 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             this.cajaIdText.BackColor = System.Drawing.Color.SkyBlue;
             this.cajaIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cajaIdText.Location = new System.Drawing.Point(114, 119);
+            this.cajaIdText.Location = new System.Drawing.Point(152, 146);
+            this.cajaIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cajaIdText.Name = "cajaIdText";
-            this.cajaIdText.Size = new System.Drawing.Size(155, 26);
+            this.cajaIdText.Size = new System.Drawing.Size(205, 30);
             this.cajaIdText.TabIndex = 78;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(63, 120);
+            this.label1.Location = new System.Drawing.Point(46, 148);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 20);
+            this.label1.Size = new System.Drawing.Size(98, 25);
             this.label1.TabIndex = 77;
-            this.label1.Text = "Caja";
+            this.label1.Text = "Cashbox";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button5
@@ -161,9 +173,10 @@ namespace IrisContabilidad.modulo_facturacion
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(275, 114);
+            this.button5.Location = new System.Drawing.Point(367, 140);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(47, 37);
+            this.button5.Size = new System.Drawing.Size(63, 46);
             this.button5.TabIndex = 79;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -172,51 +185,56 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             this.cajaText.BackColor = System.Drawing.Color.White;
             this.cajaText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cajaText.Location = new System.Drawing.Point(114, 157);
+            this.cajaText.Location = new System.Drawing.Point(152, 193);
+            this.cajaText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cajaText.MaxLength = 100;
             this.cajaText.Name = "cajaText";
             this.cajaText.ReadOnly = true;
-            this.cajaText.Size = new System.Drawing.Size(286, 26);
+            this.cajaText.Size = new System.Drawing.Size(380, 30);
             this.cajaText.TabIndex = 80;
             // 
             // empleadoText
             // 
             this.empleadoText.BackColor = System.Drawing.Color.White;
             this.empleadoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empleadoText.Location = new System.Drawing.Point(114, 244);
+            this.empleadoText.Location = new System.Drawing.Point(152, 300);
+            this.empleadoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.empleadoText.MaxLength = 100;
             this.empleadoText.Name = "empleadoText";
             this.empleadoText.ReadOnly = true;
-            this.empleadoText.Size = new System.Drawing.Size(286, 26);
+            this.empleadoText.Size = new System.Drawing.Size(380, 30);
             this.empleadoText.TabIndex = 84;
             // 
             // empleadoIdText
             // 
             this.empleadoIdText.BackColor = System.Drawing.Color.SkyBlue;
             this.empleadoIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empleadoIdText.Location = new System.Drawing.Point(114, 206);
+            this.empleadoIdText.Location = new System.Drawing.Point(152, 254);
+            this.empleadoIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.empleadoIdText.Name = "empleadoIdText";
-            this.empleadoIdText.Size = new System.Drawing.Size(155, 26);
+            this.empleadoIdText.Size = new System.Drawing.Size(205, 30);
             this.empleadoIdText.TabIndex = 82;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 208);
+            this.label3.Location = new System.Drawing.Point(37, 255);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 20);
+            this.label3.Size = new System.Drawing.Size(107, 25);
             this.label3.TabIndex = 81;
-            this.label3.Text = "Empleado";
+            this.label3.Text = "Employee";
             // 
             // button6
             // 
             this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(275, 201);
+            this.button6.Location = new System.Drawing.Point(367, 247);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(47, 37);
+            this.button6.Size = new System.Drawing.Size(63, 46);
             this.button6.TabIndex = 83;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -225,20 +243,23 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             this.groupBox2.Controls.Add(this.radioButtonHojaRollo);
             this.groupBox2.Controls.Add(this.radioButtonHojaGrande);
-            this.groupBox2.Location = new System.Drawing.Point(114, 276);
+            this.groupBox2.Location = new System.Drawing.Point(152, 340);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(358, 70);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(477, 86);
             this.groupBox2.TabIndex = 85;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Tipo de impresion venta";
+            this.groupBox2.Text = "Type of sale printing";
             // 
             // radioButtonHojaRollo
             // 
             this.radioButtonHojaRollo.AutoSize = true;
             this.radioButtonHojaRollo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonHojaRollo.Location = new System.Drawing.Point(194, 31);
+            this.radioButtonHojaRollo.Location = new System.Drawing.Point(259, 38);
+            this.radioButtonHojaRollo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButtonHojaRollo.Name = "radioButtonHojaRollo";
-            this.radioButtonHojaRollo.Size = new System.Drawing.Size(116, 19);
+            this.radioButtonHojaRollo.Size = new System.Drawing.Size(136, 22);
             this.radioButtonHojaRollo.TabIndex = 1;
             this.radioButtonHojaRollo.Text = "Hoja Rollo(3\")";
             this.radioButtonHojaRollo.UseVisualStyleBackColor = true;
@@ -248,9 +269,10 @@ namespace IrisContabilidad.modulo_facturacion
             this.radioButtonHojaGrande.AutoSize = true;
             this.radioButtonHojaGrande.Checked = true;
             this.radioButtonHojaGrande.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonHojaGrande.Location = new System.Drawing.Point(15, 31);
+            this.radioButtonHojaGrande.Location = new System.Drawing.Point(20, 38);
+            this.radioButtonHojaGrande.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButtonHojaGrande.Name = "radioButtonHojaGrande";
-            this.radioButtonHojaGrande.Size = new System.Drawing.Size(146, 19);
+            this.radioButtonHojaGrande.Size = new System.Drawing.Size(171, 22);
             this.radioButtonHojaGrande.TabIndex = 0;
             this.radioButtonHojaGrande.TabStop = true;
             this.radioButtonHojaGrande.Text = "Hoja Carta(8.5x11)";
@@ -258,9 +280,9 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             // ventana_cajero
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 467);
+            this.ClientSize = new System.Drawing.Size(739, 575);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.empleadoText);
             this.Controls.Add(this.empleadoIdText);
@@ -272,6 +294,7 @@ namespace IrisContabilidad.modulo_facturacion
             this.Controls.Add(this.button5);
             this.Controls.Add(this.activoCheck);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "ventana_cajero";
             this.Text = "ventana_cajero";
             this.Load += new System.EventHandler(this.ventana_cajero_Load);

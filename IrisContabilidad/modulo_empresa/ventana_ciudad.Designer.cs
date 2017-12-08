@@ -46,8 +46,9 @@ namespace IrisContabilidad.modulo_empresa
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(12, 255);
-            this.panel1.Size = new System.Drawing.Size(537, 54);
+            this.panel1.Location = new System.Drawing.Point(16, 314);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Size = new System.Drawing.Size(716, 66);
             // 
             // button2
             // 
@@ -57,17 +58,20 @@ namespace IrisContabilidad.modulo_empresa
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Location = new System.Drawing.Point(396, 5);
+            this.button1.Location = new System.Drawing.Point(528, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
-            this.panel2.Size = new System.Drawing.Size(561, 21);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Size = new System.Drawing.Size(748, 25);
             // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Location = new System.Drawing.Point(198, 5);
+            this.button3.Location = new System.Drawing.Point(264, 6);
+            this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // groupBox1
@@ -75,9 +79,11 @@ namespace IrisContabilidad.modulo_empresa
             this.groupBox1.Controls.Add(this.ciudadIdText);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Location = new System.Drawing.Point(16, 27);
+            this.groupBox1.Location = new System.Drawing.Point(21, 33);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(530, 66);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(707, 81);
             this.groupBox1.TabIndex = 63;
             this.groupBox1.TabStop = false;
             // 
@@ -85,29 +91,32 @@ namespace IrisContabilidad.modulo_empresa
             // 
             this.ciudadIdText.BackColor = System.Drawing.Color.SkyBlue;
             this.ciudadIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ciudadIdText.Location = new System.Drawing.Point(138, 22);
+            this.ciudadIdText.Location = new System.Drawing.Point(184, 27);
+            this.ciudadIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ciudadIdText.Name = "ciudadIdText";
-            this.ciudadIdText.Size = new System.Drawing.Size(155, 26);
+            this.ciudadIdText.Size = new System.Drawing.Size(205, 30);
             this.ciudadIdText.TabIndex = 18;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(71, 24);
+            this.label2.Location = new System.Drawing.Point(126, 29);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 20);
+            this.label2.Size = new System.Drawing.Size(50, 25);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Ciudad";
+            this.label2.Text = "City";
             // 
             // button4
             // 
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(299, 17);
+            this.button4.Location = new System.Drawing.Point(399, 21);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(47, 37);
+            this.button4.Size = new System.Drawing.Size(63, 46);
             this.button4.TabIndex = 23;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -115,43 +124,47 @@ namespace IrisContabilidad.modulo_empresa
             // nombreText
             // 
             this.nombreText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreText.Location = new System.Drawing.Point(154, 129);
+            this.nombreText.Location = new System.Drawing.Point(205, 159);
+            this.nombreText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nombreText.MaxLength = 30;
             this.nombreText.Name = "nombreText";
-            this.nombreText.Size = new System.Drawing.Size(253, 26);
+            this.nombreText.Size = new System.Drawing.Size(336, 30);
             this.nombreText.TabIndex = 65;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(77, 129);
+            this.label3.Location = new System.Drawing.Point(129, 159);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 20);
+            this.label3.Size = new System.Drawing.Size(68, 25);
             this.label3.TabIndex = 64;
-            this.label3.Text = "Nombre";
+            this.label3.Text = "Name";
             // 
             // activoCheck
             // 
             this.activoCheck.AutoSize = true;
             this.activoCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.activoCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activoCheck.Location = new System.Drawing.Point(154, 181);
+            this.activoCheck.Location = new System.Drawing.Point(205, 223);
+            this.activoCheck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.activoCheck.Name = "activoCheck";
-            this.activoCheck.Size = new System.Drawing.Size(68, 21);
+            this.activoCheck.Size = new System.Drawing.Size(79, 24);
             this.activoCheck.TabIndex = 66;
-            this.activoCheck.Text = "Activo";
+            this.activoCheck.Text = "Active";
             this.activoCheck.UseVisualStyleBackColor = true;
             // 
             // ventana_ciudad
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(561, 321);
+            this.ClientSize = new System.Drawing.Size(748, 395);
             this.Controls.Add(this.activoCheck);
             this.Controls.Add(this.nombreText);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "ventana_ciudad";
             this.Text = "ventana_ciudad";
             this.Load += new System.EventHandler(this.ventana_ciudad_Load);

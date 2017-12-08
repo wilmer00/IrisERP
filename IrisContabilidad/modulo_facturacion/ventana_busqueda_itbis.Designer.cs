@@ -47,8 +47,9 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(12, 376);
-            this.panel1.Size = new System.Drawing.Size(667, 54);
+            this.panel1.Location = new System.Drawing.Point(16, 463);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Size = new System.Drawing.Size(889, 66);
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button2
@@ -59,35 +60,41 @@ namespace IrisContabilidad.modulo_facturacion
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Location = new System.Drawing.Point(526, 5);
+            this.button1.Location = new System.Drawing.Point(701, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
-            this.panel2.Size = new System.Drawing.Size(691, 21);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Size = new System.Drawing.Size(921, 25);
             // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Location = new System.Drawing.Point(263, 5);
+            this.button3.Location = new System.Drawing.Point(351, 6);
+            this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.nombreText);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(12, 40);
+            this.groupBox1.Location = new System.Drawing.Point(16, 49);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(666, 67);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(888, 82);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             // 
             // nombreText
             // 
             this.nombreText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreText.Location = new System.Drawing.Point(81, 19);
+            this.nombreText.Location = new System.Drawing.Point(108, 23);
+            this.nombreText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nombreText.Name = "nombreText";
-            this.nombreText.Size = new System.Drawing.Size(396, 26);
+            this.nombreText.Size = new System.Drawing.Size(527, 30);
             this.nombreText.TabIndex = 20;
             this.nombreText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nombreText_KeyDown);
             // 
@@ -95,11 +102,12 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(10, 22);
+            this.label3.Location = new System.Drawing.Point(13, 27);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 20);
+            this.label3.Size = new System.Drawing.Size(81, 25);
             this.label3.TabIndex = 19;
-            this.label3.Text = "Buscar";
+            this.label3.Text = "Search";
             // 
             // dataGridView1
             // 
@@ -114,50 +122,52 @@ namespace IrisContabilidad.modulo_facturacion
             this.secuenciacolumn,
             this.porcientoColumn,
             this.activoColumn});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 113);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 139);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(666, 255);
+            this.dataGridView1.Size = new System.Drawing.Size(888, 314);
             this.dataGridView1.TabIndex = 24;
             // 
             // codigoColumn
             // 
             this.codigoColumn.FillWeight = 20F;
-            this.codigoColumn.HeaderText = "Id";
+            this.codigoColumn.HeaderText = "ID";
             this.codigoColumn.Name = "codigoColumn";
             this.codigoColumn.ReadOnly = true;
             // 
             // secuenciacolumn
             // 
             this.secuenciacolumn.FillWeight = 50F;
-            this.secuenciacolumn.HeaderText = "Nombre";
+            this.secuenciacolumn.HeaderText = "Name";
             this.secuenciacolumn.Name = "secuenciacolumn";
             this.secuenciacolumn.ReadOnly = true;
             // 
             // porcientoColumn
             // 
             this.porcientoColumn.FillWeight = 50F;
-            this.porcientoColumn.HeaderText = "Porciento";
+            this.porcientoColumn.HeaderText = "Percent";
             this.porcientoColumn.Name = "porcientoColumn";
             this.porcientoColumn.ReadOnly = true;
             // 
             // activoColumn
             // 
             this.activoColumn.FillWeight = 30F;
-            this.activoColumn.HeaderText = "Activo";
+            this.activoColumn.HeaderText = "Active";
             this.activoColumn.Name = "activoColumn";
             this.activoColumn.ReadOnly = true;
             // 
             // ventana_busqueda_itbis
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 442);
+            this.ClientSize = new System.Drawing.Size(921, 544);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "ventana_busqueda_itbis";
             this.Text = "ventana_busqueda_itbis";
             this.Load += new System.EventHandler(this.ventana_busqueda_itbis_Load);

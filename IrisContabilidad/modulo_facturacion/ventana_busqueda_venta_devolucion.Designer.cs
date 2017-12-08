@@ -33,12 +33,12 @@ namespace IrisContabilidad.modulo_facturacion
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioMonto = new System.Windows.Forms.RadioButton();
+            this.radioFecha = new System.Windows.Forms.RadioButton();
             this.radioNCF = new System.Windows.Forms.RadioButton();
             this.radioID = new System.Windows.Forms.RadioButton();
             this.nombreText = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.radioFecha = new System.Windows.Forms.RadioButton();
             this.codigoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,8 +52,9 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(12, 382);
-            this.panel1.Size = new System.Drawing.Size(786, 54);
+            this.panel1.Location = new System.Drawing.Point(16, 470);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Size = new System.Drawing.Size(1048, 66);
             // 
             // button2
             // 
@@ -63,17 +64,20 @@ namespace IrisContabilidad.modulo_facturacion
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Location = new System.Drawing.Point(645, 5);
+            this.button1.Location = new System.Drawing.Point(860, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
-            this.panel2.Size = new System.Drawing.Size(810, 21);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Size = new System.Drawing.Size(1080, 25);
             // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Location = new System.Drawing.Point(323, 5);
+            this.button3.Location = new System.Drawing.Point(431, 6);
+            this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox1
@@ -84,9 +88,11 @@ namespace IrisContabilidad.modulo_facturacion
             this.groupBox1.Controls.Add(this.radioID);
             this.groupBox1.Controls.Add(this.nombreText);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(16, 27);
+            this.groupBox1.Location = new System.Drawing.Point(21, 33);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(782, 87);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1043, 107);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             // 
@@ -94,20 +100,35 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             this.radioMonto.AutoSize = true;
             this.radioMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioMonto.Location = new System.Drawing.Point(357, 51);
+            this.radioMonto.Location = new System.Drawing.Point(539, 63);
+            this.radioMonto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioMonto.Name = "radioMonto";
-            this.radioMonto.Size = new System.Drawing.Size(70, 21);
+            this.radioMonto.Size = new System.Drawing.Size(93, 24);
             this.radioMonto.TabIndex = 28;
-            this.radioMonto.Text = "Monto";
+            this.radioMonto.Text = "Amount";
             this.radioMonto.UseVisualStyleBackColor = true;
+            // 
+            // radioFecha
+            // 
+            this.radioFecha.AutoSize = true;
+            this.radioFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioFecha.Location = new System.Drawing.Point(387, 63);
+            this.radioFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioFecha.Name = "radioFecha";
+            this.radioFecha.Size = new System.Drawing.Size(70, 24);
+            this.radioFecha.TabIndex = 27;
+            this.radioFecha.Text = "Date";
+            this.radioFecha.UseVisualStyleBackColor = true;
+            this.radioFecha.CheckedChanged += new System.EventHandler(this.radioFecha_CheckedChanged);
             // 
             // radioNCF
             // 
             this.radioNCF.AutoSize = true;
             this.radioNCF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioNCF.Location = new System.Drawing.Point(163, 51);
+            this.radioNCF.Location = new System.Drawing.Point(239, 63);
+            this.radioNCF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioNCF.Name = "radioNCF";
-            this.radioNCF.Size = new System.Drawing.Size(56, 21);
+            this.radioNCF.Size = new System.Drawing.Size(67, 24);
             this.radioNCF.TabIndex = 26;
             this.radioNCF.Text = "NCF";
             this.radioNCF.UseVisualStyleBackColor = true;
@@ -117,9 +138,10 @@ namespace IrisContabilidad.modulo_facturacion
             this.radioID.AutoSize = true;
             this.radioID.Checked = true;
             this.radioID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioID.Location = new System.Drawing.Point(85, 51);
+            this.radioID.Location = new System.Drawing.Point(113, 63);
+            this.radioID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioID.Name = "radioID";
-            this.radioID.Size = new System.Drawing.Size(41, 21);
+            this.radioID.Size = new System.Drawing.Size(49, 24);
             this.radioID.TabIndex = 25;
             this.radioID.TabStop = true;
             this.radioID.Text = "ID";
@@ -128,20 +150,22 @@ namespace IrisContabilidad.modulo_facturacion
             // nombreText
             // 
             this.nombreText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreText.Location = new System.Drawing.Point(81, 19);
+            this.nombreText.Location = new System.Drawing.Point(108, 23);
+            this.nombreText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nombreText.Name = "nombreText";
-            this.nombreText.Size = new System.Drawing.Size(396, 26);
+            this.nombreText.Size = new System.Drawing.Size(527, 30);
             this.nombreText.TabIndex = 20;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(10, 22);
+            this.label3.Location = new System.Drawing.Point(13, 27);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 20);
+            this.label3.Size = new System.Drawing.Size(81, 25);
             this.label3.TabIndex = 19;
-            this.label3.Text = "Buscar";
+            this.label3.Text = "Search";
             // 
             // dataGridView1
             // 
@@ -157,37 +181,27 @@ namespace IrisContabilidad.modulo_facturacion
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 120);
+            this.dataGridView1.Location = new System.Drawing.Point(21, 148);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(782, 256);
+            this.dataGridView1.Size = new System.Drawing.Size(1043, 315);
             this.dataGridView1.TabIndex = 30;
-            // 
-            // radioFecha
-            // 
-            this.radioFecha.AutoSize = true;
-            this.radioFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioFecha.Location = new System.Drawing.Point(245, 51);
-            this.radioFecha.Name = "radioFecha";
-            this.radioFecha.Size = new System.Drawing.Size(70, 21);
-            this.radioFecha.TabIndex = 27;
-            this.radioFecha.Text = "Fecha";
-            this.radioFecha.UseVisualStyleBackColor = true;
             // 
             // codigoColumn
             // 
             this.codigoColumn.FillWeight = 30F;
-            this.codigoColumn.HeaderText = "Id";
+            this.codigoColumn.HeaderText = "ID";
             this.codigoColumn.Name = "codigoColumn";
             this.codigoColumn.ReadOnly = true;
             // 
             // Column1
             // 
             this.Column1.FillWeight = 50F;
-            this.Column1.HeaderText = "Fecha";
+            this.Column1.HeaderText = "Date";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
@@ -199,24 +213,25 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Venta";
+            this.Column3.HeaderText = "Sale ID";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.FillWeight = 50F;
-            this.Column4.HeaderText = "Monto";
+            this.Column4.HeaderText = "Amount";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // ventana_busqueda_venta_devolucion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 448);
+            this.ClientSize = new System.Drawing.Size(1080, 551);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "ventana_busqueda_venta_devolucion";
             this.Text = "ventana_busqueda_venta_devolucion";
             this.Load += new System.EventHandler(this.ventana_busqueda_venta_devolucion_Load);

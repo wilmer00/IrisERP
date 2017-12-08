@@ -200,5 +200,10 @@ namespace IrisContabilidad.modulo_facturacion
             listaventaDevolucion = null;
             loadLista();
         }
+
+        private void radioFecha_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
