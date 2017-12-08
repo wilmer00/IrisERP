@@ -32,8 +32,8 @@ namespace IrisContabilidad.modulo_facturacion
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ventana_venta_cobros));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label5 = new System.Windows.Forms.Label();
             this.totalCobradoText = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,6 +45,12 @@ namespace IrisContabilidad.modulo_facturacion
             this.metodoPagoComboBox = new System.Windows.Forms.ComboBox();
             this.button20 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.clienteText = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.clienteIdText = new System.Windows.Forms.TextBox();
+            this.button19 = new System.Windows.Forms.Button();
             this.idPrductoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diasVencimientoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,12 +61,6 @@ namespace IrisContabilidad.modulo_facturacion
             this.MontoPendienteColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MontoAbonoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metoopagoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.clienteText = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.clienteIdText = new System.Windows.Forms.TextBox();
-            this.button19 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -69,8 +69,9 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(12, 536);
-            this.panel1.Size = new System.Drawing.Size(1021, 54);
+            this.panel1.Location = new System.Drawing.Point(16, 660);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Size = new System.Drawing.Size(1361, 66);
             // 
             // button2
             // 
@@ -80,36 +81,41 @@ namespace IrisContabilidad.modulo_facturacion
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Location = new System.Drawing.Point(880, 5);
+            this.button1.Location = new System.Drawing.Point(1173, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             // 
             // panel2
             // 
-            this.panel2.Size = new System.Drawing.Size(1045, 21);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Size = new System.Drawing.Size(1393, 25);
             // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Location = new System.Drawing.Point(440, 5);
+            this.button3.Location = new System.Drawing.Point(587, 6);
+            this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(327, 167);
+            this.label5.Location = new System.Drawing.Point(436, 206);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 20);
+            this.label5.Size = new System.Drawing.Size(135, 25);
             this.label5.TabIndex = 124;
-            this.label5.Text = "Cambiar (F2)";
+            this.label5.Text = "Change (F2)";
             // 
             // totalCobradoText
             // 
             this.totalCobradoText.BackColor = System.Drawing.Color.SkyBlue;
             this.totalCobradoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalCobradoText.Location = new System.Drawing.Point(836, 486);
+            this.totalCobradoText.Location = new System.Drawing.Point(1115, 598);
+            this.totalCobradoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.totalCobradoText.MaxLength = 200;
             this.totalCobradoText.Name = "totalCobradoText";
             this.totalCobradoText.ReadOnly = true;
-            this.totalCobradoText.Size = new System.Drawing.Size(193, 38);
+            this.totalCobradoText.Size = new System.Drawing.Size(256, 45);
             this.totalCobradoText.TabIndex = 123;
             this.totalCobradoText.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -117,9 +123,10 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(706, 493);
+            this.label4.Location = new System.Drawing.Point(941, 607);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 20);
+            this.label4.Size = new System.Drawing.Size(151, 25);
             this.label4.TabIndex = 122;
             this.label4.Text = "Total abonado";
             // 
@@ -127,11 +134,12 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             this.totalPendienteText.BackColor = System.Drawing.Color.SkyBlue;
             this.totalPendienteText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalPendienteText.Location = new System.Drawing.Point(507, 486);
+            this.totalPendienteText.Location = new System.Drawing.Point(676, 598);
+            this.totalPendienteText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.totalPendienteText.MaxLength = 200;
             this.totalPendienteText.Name = "totalPendienteText";
             this.totalPendienteText.ReadOnly = true;
-            this.totalPendienteText.Size = new System.Drawing.Size(193, 38);
+            this.totalPendienteText.Size = new System.Drawing.Size(256, 45);
             this.totalPendienteText.TabIndex = 121;
             this.totalPendienteText.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -139,18 +147,20 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(367, 493);
+            this.label14.Location = new System.Drawing.Point(489, 607);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(134, 20);
+            this.label14.Size = new System.Drawing.Size(162, 25);
             this.label14.TabIndex = 120;
             this.label14.Text = "Total pendiente";
             // 
             // montoAbonoText
             // 
             this.montoAbonoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.montoAbonoText.Location = new System.Drawing.Point(587, 163);
+            this.montoAbonoText.Location = new System.Drawing.Point(783, 201);
+            this.montoAbonoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.montoAbonoText.Name = "montoAbonoText";
-            this.montoAbonoText.Size = new System.Drawing.Size(176, 26);
+            this.montoAbonoText.Size = new System.Drawing.Size(233, 30);
             this.montoAbonoText.TabIndex = 119;
             this.montoAbonoText.Text = "0.00";
             // 
@@ -158,21 +168,23 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(467, 166);
+            this.label3.Location = new System.Drawing.Point(623, 204);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 20);
+            this.label3.Size = new System.Drawing.Size(160, 25);
             this.label3.TabIndex = 118;
-            this.label3.Text = "Monto cobro";
+            this.label3.Text = "Charge amount";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 166);
+            this.label1.Location = new System.Drawing.Point(12, 204);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 20);
+            this.label1.Size = new System.Drawing.Size(160, 25);
             this.label1.TabIndex = 117;
-            this.label1.Text = "Metodo cobro";
+            this.label1.Text = "Charge method";
             // 
             // metodoPagoComboBox
             // 
@@ -182,9 +194,10 @@ namespace IrisContabilidad.modulo_facturacion
             "Efectivo",
             "Deposito",
             "Cheque"});
-            this.metodoPagoComboBox.Location = new System.Drawing.Point(132, 167);
+            this.metodoPagoComboBox.Location = new System.Drawing.Point(178, 206);
+            this.metodoPagoComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metodoPagoComboBox.Name = "metodoPagoComboBox";
-            this.metodoPagoComboBox.Size = new System.Drawing.Size(189, 21);
+            this.metodoPagoComboBox.Size = new System.Drawing.Size(251, 24);
             this.metodoPagoComboBox.TabIndex = 116;
             this.metodoPagoComboBox.Tag = "";
             // 
@@ -193,9 +206,10 @@ namespace IrisContabilidad.modulo_facturacion
             this.button20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button20.BackgroundImage")));
             this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.Location = new System.Drawing.Point(893, 131);
+            this.button20.Location = new System.Drawing.Point(1191, 161);
+            this.button20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(65, 58);
+            this.button20.Size = new System.Drawing.Size(87, 71);
             this.button20.TabIndex = 115;
             this.button20.UseVisualStyleBackColor = true;
             // 
@@ -218,14 +232,86 @@ namespace IrisContabilidad.modulo_facturacion
             this.MontoPendienteColumn,
             this.MontoAbonoColumn,
             this.metoopagoColumn});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 194);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 239);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1016, 286);
+            this.dataGridView1.Size = new System.Drawing.Size(1355, 352);
             this.dataGridView1.TabIndex = 114;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.clienteText);
+            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.clienteIdText);
+            this.groupBox1.Location = new System.Drawing.Point(16, 33);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1355, 119);
+            this.groupBox1.TabIndex = 113;
+            this.groupBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(20, 22);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 25);
+            this.label2.TabIndex = 78;
+            this.label2.Text = "Customer";
+            // 
+            // clienteText
+            // 
+            this.clienteText.BackColor = System.Drawing.Color.White;
+            this.clienteText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clienteText.Location = new System.Drawing.Point(128, 66);
+            this.clienteText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clienteText.MaxLength = 200;
+            this.clienteText.Name = "clienteText";
+            this.clienteText.ReadOnly = true;
+            this.clienteText.Size = new System.Drawing.Size(313, 30);
+            this.clienteText.TabIndex = 77;
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(380, 16);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(63, 46);
+            this.button5.TabIndex = 74;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // clienteIdText
+            // 
+            this.clienteIdText.BackColor = System.Drawing.Color.SkyBlue;
+            this.clienteIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clienteIdText.Location = new System.Drawing.Point(128, 21);
+            this.clienteIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clienteIdText.Name = "clienteIdText";
+            this.clienteIdText.Size = new System.Drawing.Size(243, 30);
+            this.clienteIdText.TabIndex = 71;
+            // 
+            // button19
+            // 
+            this.button19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button19.BackgroundImage")));
+            this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button19.Location = new System.Drawing.Point(1287, 161);
+            this.button19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(85, 71);
+            this.button19.TabIndex = 125;
+            this.button19.UseVisualStyleBackColor = true;
             // 
             // idPrductoColumn
             // 
@@ -237,26 +323,26 @@ namespace IrisContabilidad.modulo_facturacion
             // fechaColumn
             // 
             this.fechaColumn.FillWeight = 70F;
-            this.fechaColumn.HeaderText = "Fecha";
+            this.fechaColumn.HeaderText = "Date";
             this.fechaColumn.Name = "fechaColumn";
             this.fechaColumn.ReadOnly = true;
             // 
             // diasVencimientoColumn
             // 
-            this.diasVencimientoColumn.HeaderText = "Dias vencimiento";
+            this.diasVencimientoColumn.HeaderText = "Expiration days";
             this.diasVencimientoColumn.Name = "diasVencimientoColumn";
             this.diasVencimientoColumn.ReadOnly = true;
             // 
             // empleadoColumn
             // 
             this.empleadoColumn.FillWeight = 120F;
-            this.empleadoColumn.HeaderText = "Empleado";
+            this.empleadoColumn.HeaderText = "Employee";
             this.empleadoColumn.Name = "empleadoColumn";
             this.empleadoColumn.ReadOnly = true;
             // 
             // TipoCompraColumn
             // 
-            this.TipoCompraColumn.HeaderText = "Tipo compra";
+            this.TipoCompraColumn.HeaderText = "Purchase type";
             this.TipoCompraColumn.Name = "TipoCompraColumn";
             this.TipoCompraColumn.ReadOnly = true;
             // 
@@ -270,107 +356,43 @@ namespace IrisContabilidad.modulo_facturacion
             // FechaLimiteColumn
             // 
             this.FechaLimiteColumn.FillWeight = 70F;
-            this.FechaLimiteColumn.HeaderText = "Fecha limite";
+            this.FechaLimiteColumn.HeaderText = "Deadline";
             this.FechaLimiteColumn.Name = "FechaLimiteColumn";
             this.FechaLimiteColumn.ReadOnly = true;
             // 
             // MontoPendienteColumn
             // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Tomato;
-            dataGridViewCellStyle11.Format = "N2";
-            dataGridViewCellStyle11.NullValue = "0";
-            this.MontoPendienteColumn.DefaultCellStyle = dataGridViewCellStyle11;
-            this.MontoPendienteColumn.HeaderText = "Pendiente";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Tomato;
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = "0";
+            this.MontoPendienteColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.MontoPendienteColumn.HeaderText = "Pending";
             this.MontoPendienteColumn.Name = "MontoPendienteColumn";
             this.MontoPendienteColumn.ReadOnly = true;
             // 
             // MontoAbonoColumn
             // 
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle12.Format = "N2";
-            dataGridViewCellStyle12.NullValue = "0";
-            this.MontoAbonoColumn.DefaultCellStyle = dataGridViewCellStyle12;
-            this.MontoAbonoColumn.HeaderText = "Abonar";
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = "0";
+            this.MontoAbonoColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.MontoAbonoColumn.HeaderText = "Pay";
             this.MontoAbonoColumn.Name = "MontoAbonoColumn";
             this.MontoAbonoColumn.ReadOnly = true;
             // 
             // metoopagoColumn
             // 
             this.metoopagoColumn.FillWeight = 80F;
-            this.metoopagoColumn.HeaderText = "Metodo cobro";
+            this.metoopagoColumn.HeaderText = "Charge method";
             this.metoopagoColumn.Name = "metoopagoColumn";
             this.metoopagoColumn.ReadOnly = true;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.clienteText);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.clienteIdText);
-            this.groupBox1.Location = new System.Drawing.Point(12, 27);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1016, 97);
-            this.groupBox1.TabIndex = 113;
-            this.groupBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 20);
-            this.label2.TabIndex = 78;
-            this.label2.Text = "Cliente";
-            // 
-            // clienteText
-            // 
-            this.clienteText.BackColor = System.Drawing.Color.White;
-            this.clienteText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clienteText.Location = new System.Drawing.Point(96, 54);
-            this.clienteText.MaxLength = 200;
-            this.clienteText.Name = "clienteText";
-            this.clienteText.ReadOnly = true;
-            this.clienteText.Size = new System.Drawing.Size(236, 26);
-            this.clienteText.TabIndex = 77;
-            // 
-            // button5
-            // 
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(285, 13);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(47, 37);
-            this.button5.TabIndex = 74;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // clienteIdText
-            // 
-            this.clienteIdText.BackColor = System.Drawing.Color.SkyBlue;
-            this.clienteIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clienteIdText.Location = new System.Drawing.Point(96, 17);
-            this.clienteIdText.Name = "clienteIdText";
-            this.clienteIdText.Size = new System.Drawing.Size(183, 26);
-            this.clienteIdText.TabIndex = 71;
-            // 
-            // button19
-            // 
-            this.button19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button19.BackgroundImage")));
-            this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Location = new System.Drawing.Point(965, 131);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(64, 58);
-            this.button19.TabIndex = 125;
-            this.button19.UseVisualStyleBackColor = true;
-            // 
             // ventana_venta_cobros
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1045, 602);
+            this.ClientSize = new System.Drawing.Size(1393, 741);
             this.Controls.Add(this.button19);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.totalCobradoText);
@@ -384,6 +406,7 @@ namespace IrisContabilidad.modulo_facturacion
             this.Controls.Add(this.button20);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "ventana_venta_cobros";
             this.Text = "ventana_venta_cobros";
             this.Load += new System.EventHandler(this.ventana_venta_cobros_Load);

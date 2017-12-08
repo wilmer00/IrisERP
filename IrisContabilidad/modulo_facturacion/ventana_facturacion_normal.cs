@@ -1155,7 +1155,29 @@ namespace IrisContabilidad.modulo_facturacion
 
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

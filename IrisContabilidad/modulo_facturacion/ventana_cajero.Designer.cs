@@ -259,9 +259,9 @@ namespace IrisContabilidad.modulo_facturacion
             this.radioButtonHojaRollo.Location = new System.Drawing.Point(259, 38);
             this.radioButtonHojaRollo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButtonHojaRollo.Name = "radioButtonHojaRollo";
-            this.radioButtonHojaRollo.Size = new System.Drawing.Size(136, 22);
+            this.radioButtonHojaRollo.Size = new System.Drawing.Size(132, 22);
             this.radioButtonHojaRollo.TabIndex = 1;
-            this.radioButtonHojaRollo.Text = "Hoja Rollo(3\")";
+            this.radioButtonHojaRollo.Text = "Roll sheet(3\")";
             this.radioButtonHojaRollo.UseVisualStyleBackColor = true;
             // 
             // radioButtonHojaGrande
@@ -272,10 +272,10 @@ namespace IrisContabilidad.modulo_facturacion
             this.radioButtonHojaGrande.Location = new System.Drawing.Point(20, 38);
             this.radioButtonHojaGrande.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButtonHojaGrande.Name = "radioButtonHojaGrande";
-            this.radioButtonHojaGrande.Size = new System.Drawing.Size(171, 22);
+            this.radioButtonHojaGrande.Size = new System.Drawing.Size(133, 22);
             this.radioButtonHojaGrande.TabIndex = 0;
             this.radioButtonHojaGrande.TabStop = true;
-            this.radioButtonHojaGrande.Text = "Hoja Carta(8.5x11)";
+            this.radioButtonHojaGrande.Text = "Letter(8.5x11)";
             this.radioButtonHojaGrande.UseVisualStyleBackColor = true;
             // 
             // ventana_cajero

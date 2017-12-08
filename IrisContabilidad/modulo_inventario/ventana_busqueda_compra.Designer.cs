@@ -32,6 +32,7 @@ namespace IrisContabilidad.modulo_inventario
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numeroCompraRadioButton = new System.Windows.Forms.RadioButton();
             this.tipoCompraRadionButton = new System.Windows.Forms.RadioButton();
             this.ncfRadionButton = new System.Windows.Forms.RadioButton();
             this.suplidorRadioButton = new System.Windows.Forms.RadioButton();
@@ -46,7 +47,6 @@ namespace IrisContabilidad.modulo_inventario
             this.ncfColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipocompraColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empleadocolumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeroCompraRadioButton = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -55,8 +55,9 @@ namespace IrisContabilidad.modulo_inventario
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(12, 555);
-            this.panel1.Size = new System.Drawing.Size(924, 54);
+            this.panel1.Location = new System.Drawing.Point(16, 683);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Size = new System.Drawing.Size(1232, 66);
             // 
             // button2
             // 
@@ -66,17 +67,20 @@ namespace IrisContabilidad.modulo_inventario
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Location = new System.Drawing.Point(783, 5);
+            this.button1.Location = new System.Drawing.Point(1044, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
-            this.panel2.Size = new System.Drawing.Size(948, 21);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Size = new System.Drawing.Size(1264, 25);
             // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Location = new System.Drawing.Point(392, 5);
+            this.button3.Location = new System.Drawing.Point(523, 6);
+            this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox1
@@ -88,23 +92,40 @@ namespace IrisContabilidad.modulo_inventario
             this.groupBox1.Controls.Add(this.todoRadioButton);
             this.groupBox1.Controls.Add(this.nombreText);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(12, 29);
+            this.groupBox1.Location = new System.Drawing.Point(16, 36);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(924, 108);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1232, 133);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
+            // 
+            // numeroCompraRadioButton
+            // 
+            this.numeroCompraRadioButton.AutoSize = true;
+            this.numeroCompraRadioButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.numeroCompraRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numeroCompraRadioButton.Location = new System.Drawing.Point(190, 79);
+            this.numeroCompraRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numeroCompraRadioButton.Name = "numeroCompraRadioButton";
+            this.numeroCompraRadioButton.Size = new System.Drawing.Size(180, 25);
+            this.numeroCompraRadioButton.TabIndex = 25;
+            this.numeroCompraRadioButton.TabStop = true;
+            this.numeroCompraRadioButton.Text = "Purchase number";
+            this.numeroCompraRadioButton.UseVisualStyleBackColor = true;
             // 
             // tipoCompraRadionButton
             // 
             this.tipoCompraRadionButton.AutoSize = true;
             this.tipoCompraRadionButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.tipoCompraRadionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tipoCompraRadionButton.Location = new System.Drawing.Point(486, 64);
+            this.tipoCompraRadionButton.Location = new System.Drawing.Point(648, 79);
+            this.tipoCompraRadionButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tipoCompraRadionButton.Name = "tipoCompraRadionButton";
-            this.tipoCompraRadionButton.Size = new System.Drawing.Size(117, 22);
+            this.tipoCompraRadionButton.Size = new System.Drawing.Size(153, 25);
             this.tipoCompraRadionButton.TabIndex = 24;
             this.tipoCompraRadionButton.TabStop = true;
-            this.tipoCompraRadionButton.Text = "tipo compra";
+            this.tipoCompraRadionButton.Text = "Purchase type";
             this.tipoCompraRadionButton.UseVisualStyleBackColor = true;
             // 
             // ncfRadionButton
@@ -112,9 +133,10 @@ namespace IrisContabilidad.modulo_inventario
             this.ncfRadionButton.AutoSize = true;
             this.ncfRadionButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.ncfRadionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ncfRadionButton.Location = new System.Drawing.Point(397, 64);
+            this.ncfRadionButton.Location = new System.Drawing.Point(538, 79);
+            this.ncfRadionButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ncfRadionButton.Name = "ncfRadionButton";
-            this.ncfRadionButton.Size = new System.Drawing.Size(62, 22);
+            this.ncfRadionButton.Size = new System.Drawing.Size(70, 25);
             this.ncfRadionButton.TabIndex = 23;
             this.ncfRadionButton.TabStop = true;
             this.ncfRadionButton.Text = "NCF";
@@ -125,12 +147,13 @@ namespace IrisContabilidad.modulo_inventario
             this.suplidorRadioButton.AutoSize = true;
             this.suplidorRadioButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.suplidorRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.suplidorRadioButton.Location = new System.Drawing.Point(283, 64);
+            this.suplidorRadioButton.Location = new System.Drawing.Point(404, 79);
+            this.suplidorRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.suplidorRadioButton.Name = "suplidorRadioButton";
-            this.suplidorRadioButton.Size = new System.Drawing.Size(90, 22);
+            this.suplidorRadioButton.Size = new System.Drawing.Size(102, 25);
             this.suplidorRadioButton.TabIndex = 22;
             this.suplidorRadioButton.TabStop = true;
-            this.suplidorRadioButton.Text = "suplidor";
+            this.suplidorRadioButton.Text = "Supplier";
             this.suplidorRadioButton.UseVisualStyleBackColor = true;
             // 
             // todoRadioButton
@@ -139,20 +162,22 @@ namespace IrisContabilidad.modulo_inventario
             this.todoRadioButton.Checked = true;
             this.todoRadioButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.todoRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.todoRadioButton.Location = new System.Drawing.Point(84, 64);
+            this.todoRadioButton.Location = new System.Drawing.Point(112, 79);
+            this.todoRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.todoRadioButton.Name = "todoRadioButton";
-            this.todoRadioButton.Size = new System.Drawing.Size(69, 22);
+            this.todoRadioButton.Size = new System.Drawing.Size(55, 25);
             this.todoRadioButton.TabIndex = 21;
             this.todoRadioButton.TabStop = true;
-            this.todoRadioButton.Text = "Todo";
+            this.todoRadioButton.Text = "All";
             this.todoRadioButton.UseVisualStyleBackColor = true;
             // 
             // nombreText
             // 
             this.nombreText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreText.Location = new System.Drawing.Point(81, 19);
+            this.nombreText.Location = new System.Drawing.Point(108, 23);
+            this.nombreText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nombreText.Name = "nombreText";
-            this.nombreText.Size = new System.Drawing.Size(396, 26);
+            this.nombreText.Size = new System.Drawing.Size(527, 30);
             this.nombreText.TabIndex = 20;
             this.nombreText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nombreText_KeyDown);
             // 
@@ -160,11 +185,12 @@ namespace IrisContabilidad.modulo_inventario
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(10, 22);
+            this.label3.Location = new System.Drawing.Point(13, 27);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 20);
+            this.label3.Size = new System.Drawing.Size(81, 25);
             this.label3.TabIndex = 19;
-            this.label3.Text = "Buscar";
+            this.label3.Text = "Search";
             // 
             // dataGridView1
             // 
@@ -182,39 +208,40 @@ namespace IrisContabilidad.modulo_inventario
             this.ncfColumn,
             this.tipocompraColumn,
             this.empleadocolumn});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 143);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 176);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(921, 397);
+            this.dataGridView1.Size = new System.Drawing.Size(1228, 489);
             this.dataGridView1.TabIndex = 30;
             // 
             // codigoColumn
             // 
             this.codigoColumn.FillWeight = 30F;
-            this.codigoColumn.HeaderText = "Id";
+            this.codigoColumn.HeaderText = "ID";
             this.codigoColumn.Name = "codigoColumn";
             this.codigoColumn.ReadOnly = true;
             // 
             // fechaColumn
             // 
             this.fechaColumn.FillWeight = 70F;
-            this.fechaColumn.HeaderText = "Fecha";
+            this.fechaColumn.HeaderText = "Date";
             this.fechaColumn.Name = "fechaColumn";
             this.fechaColumn.ReadOnly = true;
             // 
             // fechaVenceColumn
             // 
             this.fechaVenceColumn.FillWeight = 70F;
-            this.fechaVenceColumn.HeaderText = "Vencimiento";
+            this.fechaVenceColumn.HeaderText = "Deadline";
             this.fechaVenceColumn.Name = "fechaVenceColumn";
             this.fechaVenceColumn.ReadOnly = true;
             // 
             // suplidorColumn
             // 
-            this.suplidorColumn.HeaderText = "Suplidor";
+            this.suplidorColumn.HeaderText = "Supplier";
             this.suplidorColumn.Name = "suplidorColumn";
             this.suplidorColumn.ReadOnly = true;
             // 
@@ -226,36 +253,24 @@ namespace IrisContabilidad.modulo_inventario
             // 
             // tipocompraColumn
             // 
-            this.tipocompraColumn.HeaderText = "Tipo Compra";
+            this.tipocompraColumn.HeaderText = "Purchase type";
             this.tipocompraColumn.Name = "tipocompraColumn";
             this.tipocompraColumn.ReadOnly = true;
             // 
             // empleadocolumn
             // 
-            this.empleadocolumn.HeaderText = "Empleado";
+            this.empleadocolumn.HeaderText = "Employee";
             this.empleadocolumn.Name = "empleadocolumn";
             this.empleadocolumn.ReadOnly = true;
             // 
-            // numeroCompraRadioButton
-            // 
-            this.numeroCompraRadioButton.AutoSize = true;
-            this.numeroCompraRadioButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.numeroCompraRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numeroCompraRadioButton.Location = new System.Drawing.Point(170, 64);
-            this.numeroCompraRadioButton.Name = "numeroCompraRadioButton";
-            this.numeroCompraRadioButton.Size = new System.Drawing.Size(101, 22);
-            this.numeroCompraRadioButton.TabIndex = 25;
-            this.numeroCompraRadioButton.TabStop = true;
-            this.numeroCompraRadioButton.Text = "# Compra";
-            this.numeroCompraRadioButton.UseVisualStyleBackColor = true;
-            // 
             // ventana_busqueda_compra
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(948, 621);
+            this.ClientSize = new System.Drawing.Size(1264, 764);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "ventana_busqueda_compra";
             this.Text = "ventana_busqueda_compra";
             this.Load += new System.EventHandler(this.ventana_busqueda_compra_Load);
@@ -284,6 +299,7 @@ namespace IrisContabilidad.modulo_inventario
         private Label label3;
         private DataGridView dataGridView1;
         private RadioButton suplidorRadioButton;
+        private RadioButton numeroCompraRadioButton;
         private DataGridViewTextBoxColumn codigoColumn;
         private DataGridViewTextBoxColumn fechaColumn;
         private DataGridViewTextBoxColumn fechaVenceColumn;
@@ -291,6 +307,5 @@ namespace IrisContabilidad.modulo_inventario
         private DataGridViewTextBoxColumn ncfColumn;
         private DataGridViewTextBoxColumn tipocompraColumn;
         private DataGridViewTextBoxColumn empleadocolumn;
-        private RadioButton numeroCompraRadioButton;
     }
 }

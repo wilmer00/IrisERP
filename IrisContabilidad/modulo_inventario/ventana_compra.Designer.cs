@@ -32,10 +32,10 @@ namespace IrisContabilidad.modulo_inventario
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ventana_compra));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.botonImprimir = new System.Windows.Forms.Button();
@@ -57,15 +57,6 @@ namespace IrisContabilidad.modulo_inventario
             this.suplidorIdText = new System.Windows.Forms.TextBox();
             this.numerocComprobanteFiscalText = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idPrductoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idUnidadColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unidadColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itebisColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descuentoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.importeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.productoIdText = new System.Windows.Forms.TextBox();
@@ -89,6 +80,15 @@ namespace IrisContabilidad.modulo_inventario
             this.label14 = new System.Windows.Forms.Label();
             this.totalItebisText = new System.Windows.Forms.TextBox();
             this.totalCompraText = new System.Windows.Forms.TextBox();
+            this.idPrductoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idUnidadColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unidadColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itebisColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descuentoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.importeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -100,7 +100,7 @@ namespace IrisContabilidad.modulo_inventario
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(16, 722);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Size = new System.Drawing.Size(1335, 66);
             // 
             // button2
@@ -112,19 +112,19 @@ namespace IrisContabilidad.modulo_inventario
             // 
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Location = new System.Drawing.Point(1147, 6);
-            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Size = new System.Drawing.Size(1367, 25);
             // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.Location = new System.Drawing.Point(573, 6);
-            this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button3.Margin = new System.Windows.Forms.Padding(5);
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // groupBox1
@@ -148,9 +148,9 @@ namespace IrisContabilidad.modulo_inventario
             this.groupBox1.Controls.Add(this.suplidorIdText);
             this.groupBox1.Controls.Add(this.numerocComprobanteFiscalText);
             this.groupBox1.Location = new System.Drawing.Point(16, 32);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1335, 262);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
@@ -160,9 +160,9 @@ namespace IrisContabilidad.modulo_inventario
             // 
             this.groupBox3.Controls.Add(this.botonImprimir);
             this.groupBox3.Location = new System.Drawing.Point(880, 14);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(447, 97);
             this.groupBox3.TabIndex = 105;
             this.groupBox3.TabStop = false;
@@ -173,7 +173,7 @@ namespace IrisContabilidad.modulo_inventario
             this.botonImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.botonImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonImprimir.Location = new System.Drawing.Point(321, 9);
-            this.botonImprimir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonImprimir.Margin = new System.Windows.Forms.Padding(4);
             this.botonImprimir.Name = "botonImprimir";
             this.botonImprimir.Size = new System.Drawing.Size(117, 84);
             this.botonImprimir.TabIndex = 104;
@@ -183,7 +183,7 @@ namespace IrisContabilidad.modulo_inventario
             // fechaFinalText
             // 
             this.fechaFinalText.Location = new System.Drawing.Point(705, 74);
-            this.fechaFinalText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fechaFinalText.Margin = new System.Windows.Forms.Padding(4);
             this.fechaFinalText.Mask = "00/00/0000";
             this.fechaFinalText.Name = "fechaFinalText";
             this.fechaFinalText.Size = new System.Drawing.Size(165, 22);
@@ -193,7 +193,7 @@ namespace IrisContabilidad.modulo_inventario
             // fechaInicialText
             // 
             this.fechaInicialText.Location = new System.Drawing.Point(705, 23);
-            this.fechaInicialText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fechaInicialText.Margin = new System.Windows.Forms.Padding(4);
             this.fechaInicialText.Mask = "00/00/0000";
             this.fechaInicialText.Name = "fechaInicialText";
             this.fechaInicialText.Size = new System.Drawing.Size(165, 22);
@@ -206,18 +206,18 @@ namespace IrisContabilidad.modulo_inventario
             this.suplidorInformalCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.suplidorInformalCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.suplidorInformalCheck.Location = new System.Drawing.Point(705, 220);
-            this.suplidorInformalCheck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.suplidorInformalCheck.Margin = new System.Windows.Forms.Padding(4);
             this.suplidorInformalCheck.Name = "suplidorInformalCheck";
-            this.suplidorInformalCheck.Size = new System.Drawing.Size(170, 24);
+            this.suplidorInformalCheck.Size = new System.Drawing.Size(168, 24);
             this.suplidorInformalCheck.TabIndex = 87;
-            this.suplidorInformalCheck.Text = "Suplidor informal";
+            this.suplidorInformalCheck.Text = "Informal supplier";
             this.suplidorInformalCheck.UseVisualStyleBackColor = true;
             this.suplidorInformalCheck.KeyDown += new System.Windows.Forms.KeyEventHandler(this.suplidorInformalCheck_KeyDown);
             // 
             // detalleText
             // 
             this.detalleText.Location = new System.Drawing.Point(705, 122);
-            this.detalleText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.detalleText.Margin = new System.Windows.Forms.Padding(4);
             this.detalleText.MaxLength = 500;
             this.detalleText.Multiline = true;
             this.detalleText.Name = "detalleText";
@@ -229,52 +229,52 @@ namespace IrisContabilidad.modulo_inventario
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(608, 124);
+            this.label6.Location = new System.Drawing.Point(619, 120);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 25);
+            this.label6.Size = new System.Drawing.Size(78, 25);
             this.label6.TabIndex = 85;
-            this.label6.Text = "Detalle";
+            this.label6.Text = "Details";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(537, 71);
+            this.label5.Location = new System.Drawing.Point(580, 72);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(143, 25);
+            this.label5.Size = new System.Drawing.Size(117, 25);
             this.label5.TabIndex = 84;
-            this.label5.Text = "Fecha credito";
+            this.label5.Text = "Date\'s limit";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(617, 21);
+            this.label4.Location = new System.Drawing.Point(640, 19);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 25);
+            this.label4.Size = new System.Drawing.Size(57, 25);
             this.label4.TabIndex = 83;
-            this.label4.Text = "Fecha";
+            this.label4.Text = "Date";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 222);
+            this.label1.Location = new System.Drawing.Point(34, 223);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 25);
+            this.label1.Size = new System.Drawing.Size(150, 25);
             this.label1.TabIndex = 80;
-            this.label1.Text = "Tipo compra";
+            this.label1.Text = "Purchase type";
             // 
             // tipoCompraComboBox
             // 
             this.tipoCompraComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tipoCompraComboBox.FormattingEnabled = true;
-            this.tipoCompraComboBox.Location = new System.Drawing.Point(163, 224);
-            this.tipoCompraComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tipoCompraComboBox.Location = new System.Drawing.Point(192, 224);
+            this.tipoCompraComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.tipoCompraComboBox.Name = "tipoCompraComboBox";
             this.tipoCompraComboBox.Size = new System.Drawing.Size(313, 24);
             this.tipoCompraComboBox.TabIndex = 79;
@@ -286,21 +286,21 @@ namespace IrisContabilidad.modulo_inventario
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(54, 25);
+            this.linkLabel1.Location = new System.Drawing.Point(92, 23);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(92, 25);
             this.linkLabel1.TabIndex = 78;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Suplidor";
+            this.linkLabel1.Text = "Supplier";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // numeroFacturaText
             // 
             this.numeroFacturaText.BackColor = System.Drawing.Color.White;
             this.numeroFacturaText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numeroFacturaText.Location = new System.Drawing.Point(163, 114);
-            this.numeroFacturaText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numeroFacturaText.Location = new System.Drawing.Point(192, 114);
+            this.numeroFacturaText.Margin = new System.Windows.Forms.Padding(4);
             this.numeroFacturaText.MaxLength = 30;
             this.numeroFacturaText.Name = "numeroFacturaText";
             this.numeroFacturaText.Size = new System.Drawing.Size(313, 30);
@@ -311,8 +311,8 @@ namespace IrisContabilidad.modulo_inventario
             // 
             this.suplidorText.BackColor = System.Drawing.Color.White;
             this.suplidorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.suplidorText.Location = new System.Drawing.Point(163, 66);
-            this.suplidorText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.suplidorText.Location = new System.Drawing.Point(192, 66);
+            this.suplidorText.Margin = new System.Windows.Forms.Padding(4);
             this.suplidorText.MaxLength = 200;
             this.suplidorText.Name = "suplidorText";
             this.suplidorText.ReadOnly = true;
@@ -324,20 +324,20 @@ namespace IrisContabilidad.modulo_inventario
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(60, 117);
+            this.label2.Location = new System.Drawing.Point(3, 115);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 25);
+            this.label2.Size = new System.Drawing.Size(181, 25);
             this.label2.TabIndex = 73;
-            this.label2.Text = "Factura";
+            this.label2.Text = "Purchase number";
             // 
             // button5
             // 
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(415, 16);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Location = new System.Drawing.Point(444, 16);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(63, 46);
             this.button5.TabIndex = 74;
@@ -348,7 +348,7 @@ namespace IrisContabilidad.modulo_inventario
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(96, 174);
+            this.label3.Location = new System.Drawing.Point(128, 172);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 25);
@@ -359,8 +359,8 @@ namespace IrisContabilidad.modulo_inventario
             // 
             this.suplidorIdText.BackColor = System.Drawing.Color.SkyBlue;
             this.suplidorIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.suplidorIdText.Location = new System.Drawing.Point(163, 21);
-            this.suplidorIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.suplidorIdText.Location = new System.Drawing.Point(192, 21);
+            this.suplidorIdText.Margin = new System.Windows.Forms.Padding(4);
             this.suplidorIdText.Name = "suplidorIdText";
             this.suplidorIdText.Size = new System.Drawing.Size(243, 30);
             this.suplidorIdText.TabIndex = 71;
@@ -370,8 +370,8 @@ namespace IrisContabilidad.modulo_inventario
             // 
             this.numerocComprobanteFiscalText.BackColor = System.Drawing.Color.White;
             this.numerocComprobanteFiscalText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numerocComprobanteFiscalText.Location = new System.Drawing.Point(163, 170);
-            this.numerocComprobanteFiscalText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numerocComprobanteFiscalText.Location = new System.Drawing.Point(192, 170);
+            this.numerocComprobanteFiscalText.Margin = new System.Windows.Forms.Padding(4);
             this.numerocComprobanteFiscalText.MaxLength = 19;
             this.numerocComprobanteFiscalText.Name = "numerocComprobanteFiscalText";
             this.numerocComprobanteFiscalText.Size = new System.Drawing.Size(313, 30);
@@ -397,7 +397,7 @@ namespace IrisContabilidad.modulo_inventario
             this.descuentoColumn,
             this.importeColumn});
             this.dataGridView1.Location = new System.Drawing.Point(16, 417);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -407,70 +407,6 @@ namespace IrisContabilidad.modulo_inventario
             this.dataGridView1.TabIndex = 87;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // idPrductoColumn
-            // 
-            this.idPrductoColumn.FillWeight = 50F;
-            this.idPrductoColumn.HeaderText = "ID";
-            this.idPrductoColumn.Name = "idPrductoColumn";
-            this.idPrductoColumn.ReadOnly = true;
-            // 
-            // ProductoColumn
-            // 
-            this.ProductoColumn.HeaderText = "Producto";
-            this.ProductoColumn.Name = "ProductoColumn";
-            this.ProductoColumn.ReadOnly = true;
-            // 
-            // idUnidadColumn
-            // 
-            this.idUnidadColumn.FillWeight = 50F;
-            this.idUnidadColumn.HeaderText = "ID";
-            this.idUnidadColumn.Name = "idUnidadColumn";
-            this.idUnidadColumn.ReadOnly = true;
-            // 
-            // unidadColumn
-            // 
-            this.unidadColumn.HeaderText = "Unidad";
-            this.unidadColumn.Name = "unidadColumn";
-            this.unidadColumn.ReadOnly = true;
-            // 
-            // cantidadColumn
-            // 
-            this.cantidadColumn.HeaderText = "Cantidad";
-            this.cantidadColumn.Name = "cantidadColumn";
-            this.cantidadColumn.ReadOnly = true;
-            // 
-            // precioColumn
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.precioColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            this.precioColumn.HeaderText = "Precio";
-            this.precioColumn.Name = "precioColumn";
-            this.precioColumn.ReadOnly = true;
-            // 
-            // itebisColumn
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.itebisColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.itebisColumn.HeaderText = "Itbis";
-            this.itebisColumn.Name = "itebisColumn";
-            this.itebisColumn.ReadOnly = true;
-            // 
-            // descuentoColumn
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.descuentoColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.descuentoColumn.HeaderText = "Descuento";
-            this.descuentoColumn.Name = "descuentoColumn";
-            this.descuentoColumn.ReadOnly = true;
-            // 
-            // importeColumn
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.importeColumn.DefaultCellStyle = dataGridViewCellStyle4;
-            this.importeColumn.HeaderText = "Importe";
-            this.importeColumn.Name = "importeColumn";
-            this.importeColumn.ReadOnly = true;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -478,9 +414,9 @@ namespace IrisContabilidad.modulo_inventario
             this.label7.Location = new System.Drawing.Point(7, 20);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 20);
+            this.label7.Size = new System.Drawing.Size(99, 20);
             this.label7.TabIndex = 88;
-            this.label7.Text = "Producto";
+            this.label7.Text = "Product ID";
             // 
             // label8
             // 
@@ -489,15 +425,15 @@ namespace IrisContabilidad.modulo_inventario
             this.label8.Location = new System.Drawing.Point(341, 20);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 20);
+            this.label8.Size = new System.Drawing.Size(43, 20);
             this.label8.TabIndex = 89;
-            this.label8.Text = "Unidad";
+            this.label8.Text = "Unit";
             // 
             // productoIdText
             // 
             this.productoIdText.BackColor = System.Drawing.Color.SkyBlue;
             this.productoIdText.Location = new System.Drawing.Point(112, 18);
-            this.productoIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productoIdText.Margin = new System.Windows.Forms.Padding(4);
             this.productoIdText.Name = "productoIdText";
             this.productoIdText.Size = new System.Drawing.Size(165, 22);
             this.productoIdText.TabIndex = 90;
@@ -509,7 +445,7 @@ namespace IrisContabilidad.modulo_inventario
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(287, 12);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(44, 37);
             this.button4.TabIndex = 88;
@@ -519,7 +455,7 @@ namespace IrisContabilidad.modulo_inventario
             // productoText
             // 
             this.productoText.Location = new System.Drawing.Point(8, 50);
-            this.productoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productoText.Margin = new System.Windows.Forms.Padding(4);
             this.productoText.Name = "productoText";
             this.productoText.ReadOnly = true;
             this.productoText.Size = new System.Drawing.Size(321, 22);
@@ -530,7 +466,7 @@ namespace IrisContabilidad.modulo_inventario
             this.unidadComboText.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.unidadComboText.FormattingEnabled = true;
             this.unidadComboText.Location = new System.Drawing.Point(344, 47);
-            this.unidadComboText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.unidadComboText.Margin = new System.Windows.Forms.Padding(4);
             this.unidadComboText.Name = "unidadComboText";
             this.unidadComboText.Size = new System.Drawing.Size(161, 24);
             this.unidadComboText.TabIndex = 88;
@@ -545,14 +481,14 @@ namespace IrisContabilidad.modulo_inventario
             this.label9.Location = new System.Drawing.Point(512, 20);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(83, 20);
+            this.label9.Size = new System.Drawing.Size(79, 20);
             this.label9.TabIndex = 92;
-            this.label9.Text = "Cantidad";
+            this.label9.Text = "Quantity";
             // 
             // cantidadText
             // 
             this.cantidadText.Location = new System.Drawing.Point(515, 47);
-            this.cantidadText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cantidadText.Margin = new System.Windows.Forms.Padding(4);
             this.cantidadText.Name = "cantidadText";
             this.cantidadText.Size = new System.Drawing.Size(143, 22);
             this.cantidadText.TabIndex = 93;
@@ -563,7 +499,7 @@ namespace IrisContabilidad.modulo_inventario
             // precioText
             // 
             this.precioText.Location = new System.Drawing.Point(668, 47);
-            this.precioText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.precioText.Margin = new System.Windows.Forms.Padding(4);
             this.precioText.Name = "precioText";
             this.precioText.Size = new System.Drawing.Size(143, 22);
             this.precioText.TabIndex = 95;
@@ -578,14 +514,14 @@ namespace IrisContabilidad.modulo_inventario
             this.label10.Location = new System.Drawing.Point(665, 20);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 20);
+            this.label10.Size = new System.Drawing.Size(53, 20);
             this.label10.TabIndex = 94;
-            this.label10.Text = "Precio";
+            this.label10.Text = "Price";
             // 
             // importeText
             // 
             this.importeText.Location = new System.Drawing.Point(975, 47);
-            this.importeText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.importeText.Margin = new System.Windows.Forms.Padding(4);
             this.importeText.Name = "importeText";
             this.importeText.ReadOnly = true;
             this.importeText.Size = new System.Drawing.Size(143, 22);
@@ -599,14 +535,14 @@ namespace IrisContabilidad.modulo_inventario
             this.label11.Location = new System.Drawing.Point(972, 20);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(72, 20);
+            this.label11.Size = new System.Drawing.Size(51, 20);
             this.label11.TabIndex = 96;
-            this.label11.Text = "Importe";
+            this.label11.Text = "Total";
             // 
             // descuentoText
             // 
             this.descuentoText.Location = new System.Drawing.Point(821, 47);
-            this.descuentoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.descuentoText.Margin = new System.Windows.Forms.Padding(4);
             this.descuentoText.MaxLength = 5;
             this.descuentoText.Name = "descuentoText";
             this.descuentoText.Size = new System.Drawing.Size(143, 22);
@@ -623,9 +559,9 @@ namespace IrisContabilidad.modulo_inventario
             this.label12.Location = new System.Drawing.Point(819, 20);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(129, 20);
+            this.label12.Size = new System.Drawing.Size(114, 20);
             this.label12.TabIndex = 98;
-            this.label12.Text = "Descuento(%)";
+            this.label12.Text = "Discount(%)";
             // 
             // groupBox2
             // 
@@ -648,9 +584,9 @@ namespace IrisContabilidad.modulo_inventario
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.cantidadText);
             this.groupBox2.Location = new System.Drawing.Point(16, 294);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(1335, 119);
             this.groupBox2.TabIndex = 100;
             this.groupBox2.TabStop = false;
@@ -684,7 +620,7 @@ namespace IrisContabilidad.modulo_inventario
             this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button19.Location = new System.Drawing.Point(1241, 37);
-            this.button19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button19.Margin = new System.Windows.Forms.Padding(4);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(85, 71);
             this.button19.TabIndex = 101;
@@ -697,7 +633,7 @@ namespace IrisContabilidad.modulo_inventario
             this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button20.Location = new System.Drawing.Point(1147, 37);
-            this.button20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button20.Margin = new System.Windows.Forms.Padding(4);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(87, 71);
             this.button20.TabIndex = 100;
@@ -708,12 +644,12 @@ namespace IrisContabilidad.modulo_inventario
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(759, 688);
+            this.label13.Location = new System.Drawing.Point(777, 688);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(64, 25);
+            this.label13.Size = new System.Drawing.Size(49, 25);
             this.label13.TabIndex = 88;
-            this.label13.Text = "Itebis";
+            this.label13.Text = "Tax";
             // 
             // label14
             // 
@@ -731,7 +667,7 @@ namespace IrisContabilidad.modulo_inventario
             this.totalItebisText.BackColor = System.Drawing.Color.SkyBlue;
             this.totalItebisText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalItebisText.Location = new System.Drawing.Point(839, 684);
-            this.totalItebisText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.totalItebisText.Margin = new System.Windows.Forms.Padding(4);
             this.totalItebisText.MaxLength = 200;
             this.totalItebisText.Name = "totalItebisText";
             this.totalItebisText.ReadOnly = true;
@@ -744,13 +680,77 @@ namespace IrisContabilidad.modulo_inventario
             this.totalCompraText.BackColor = System.Drawing.Color.SkyBlue;
             this.totalCompraText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalCompraText.Location = new System.Drawing.Point(1151, 684);
-            this.totalCompraText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.totalCompraText.Margin = new System.Windows.Forms.Padding(4);
             this.totalCompraText.MaxLength = 200;
             this.totalCompraText.Name = "totalCompraText";
             this.totalCompraText.ReadOnly = true;
             this.totalCompraText.Size = new System.Drawing.Size(199, 30);
             this.totalCompraText.TabIndex = 102;
             this.totalCompraText.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // idPrductoColumn
+            // 
+            this.idPrductoColumn.FillWeight = 50F;
+            this.idPrductoColumn.HeaderText = "ID";
+            this.idPrductoColumn.Name = "idPrductoColumn";
+            this.idPrductoColumn.ReadOnly = true;
+            // 
+            // ProductoColumn
+            // 
+            this.ProductoColumn.HeaderText = "Product";
+            this.ProductoColumn.Name = "ProductoColumn";
+            this.ProductoColumn.ReadOnly = true;
+            // 
+            // idUnidadColumn
+            // 
+            this.idUnidadColumn.FillWeight = 50F;
+            this.idUnidadColumn.HeaderText = "ID";
+            this.idUnidadColumn.Name = "idUnidadColumn";
+            this.idUnidadColumn.ReadOnly = true;
+            // 
+            // unidadColumn
+            // 
+            this.unidadColumn.HeaderText = "Unit";
+            this.unidadColumn.Name = "unidadColumn";
+            this.unidadColumn.ReadOnly = true;
+            // 
+            // cantidadColumn
+            // 
+            this.cantidadColumn.HeaderText = "Quantity";
+            this.cantidadColumn.Name = "cantidadColumn";
+            this.cantidadColumn.ReadOnly = true;
+            // 
+            // precioColumn
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.precioColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.precioColumn.HeaderText = "Price";
+            this.precioColumn.Name = "precioColumn";
+            this.precioColumn.ReadOnly = true;
+            // 
+            // itebisColumn
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.itebisColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.itebisColumn.HeaderText = "Tax";
+            this.itebisColumn.Name = "itebisColumn";
+            this.itebisColumn.ReadOnly = true;
+            // 
+            // descuentoColumn
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.descuentoColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            this.descuentoColumn.HeaderText = "Discount";
+            this.descuentoColumn.Name = "descuentoColumn";
+            this.descuentoColumn.ReadOnly = true;
+            // 
+            // importeColumn
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.importeColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            this.importeColumn.HeaderText = "Total";
+            this.importeColumn.Name = "importeColumn";
+            this.importeColumn.ReadOnly = true;
             // 
             // ventana_compra
             // 
@@ -764,7 +764,7 @@ namespace IrisContabilidad.modulo_inventario
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "ventana_compra";
             this.Text = "ventana_compra";
             this.Load += new System.EventHandler(this.ventana_compra_Load);
@@ -836,6 +836,8 @@ namespace IrisContabilidad.modulo_inventario
         private Label label15;
         private MaskedTextBox fechaFinalText;
         private MaskedTextBox fechaInicialText;
+        private Button botonImprimir;
+        private GroupBox groupBox3;
         private DataGridViewTextBoxColumn idPrductoColumn;
         private DataGridViewTextBoxColumn ProductoColumn;
         private DataGridViewTextBoxColumn idUnidadColumn;
@@ -845,7 +847,5 @@ namespace IrisContabilidad.modulo_inventario
         private DataGridViewTextBoxColumn itebisColumn;
         private DataGridViewTextBoxColumn descuentoColumn;
         private DataGridViewTextBoxColumn importeColumn;
-        private Button botonImprimir;
-        private GroupBox groupBox3;
     }
 }

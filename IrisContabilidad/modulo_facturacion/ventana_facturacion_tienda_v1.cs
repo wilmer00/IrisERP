@@ -1012,5 +1012,9 @@ namespace IrisContabilidad.modulo_facturacion
 
         }
 
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -530,5 +530,10 @@ namespace IrisContabilidad.modulo_facturacion
             ventaDevolucion = null;
             loadVentaDevolucion();
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -375,5 +375,10 @@ namespace IrisContabilidad.modulo_facturacion
                 egresoCajaAutomaticoCheck.Checked = !(bool) egresoCajaAutomaticoCheck.Checked;
             }
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

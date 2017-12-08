@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ventana_facturacion_touch1));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -36,9 +35,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ventana_facturacion_touch1));
             this.flowLayoutCategorias = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutProductos = new System.Windows.Forms.FlowLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ProductoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unidadColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itebisColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descuentoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.importeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalVentaText = new System.Windows.Forms.TextBox();
             this.totalItebisText = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -61,13 +68,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.unidadComboText = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.ProductoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unidadColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itebisColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descuentoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.importeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -75,8 +75,9 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(12, 612);
-            this.panel1.Size = new System.Drawing.Size(1346, 54);
+            this.panel1.Location = new System.Drawing.Point(16, 753);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
+            this.panel1.Size = new System.Drawing.Size(1795, 66);
             // 
             // button2
             // 
@@ -86,20 +87,23 @@
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Location = new System.Drawing.Point(1205, 5);
+            this.button1.Location = new System.Drawing.Point(1607, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.fechaLabelText);
-            this.panel2.Size = new System.Drawing.Size(1370, 21);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
+            this.panel2.Size = new System.Drawing.Size(1827, 25);
             this.panel2.Controls.SetChildIndex(this.tituloLabel, 0);
             this.panel2.Controls.SetChildIndex(this.fechaLabelText, 0);
             // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Location = new System.Drawing.Point(603, 5);
+            this.button3.Location = new System.Drawing.Point(804, 6);
+            this.button3.Margin = new System.Windows.Forms.Padding(5);
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // flowLayoutCategorias
@@ -110,9 +114,10 @@
             this.flowLayoutCategorias.BackColor = System.Drawing.Color.LightSkyBlue;
             this.flowLayoutCategorias.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.flowLayoutCategorias.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutCategorias.Location = new System.Drawing.Point(12, 27);
+            this.flowLayoutCategorias.Location = new System.Drawing.Point(16, 33);
+            this.flowLayoutCategorias.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutCategorias.Name = "flowLayoutCategorias";
-            this.flowLayoutCategorias.Size = new System.Drawing.Size(1343, 99);
+            this.flowLayoutCategorias.Size = new System.Drawing.Size(1791, 122);
             this.flowLayoutCategorias.TabIndex = 13;
             // 
             // flowLayoutProductos
@@ -122,9 +127,10 @@
             this.flowLayoutProductos.AutoScroll = true;
             this.flowLayoutProductos.BackColor = System.Drawing.Color.LightSkyBlue;
             this.flowLayoutProductos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.flowLayoutProductos.Location = new System.Drawing.Point(918, 132);
+            this.flowLayoutProductos.Location = new System.Drawing.Point(1224, 162);
+            this.flowLayoutProductos.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutProductos.Name = "flowLayoutProductos";
-            this.flowLayoutProductos.Size = new System.Drawing.Size(437, 396);
+            this.flowLayoutProductos.Size = new System.Drawing.Size(583, 487);
             this.flowLayoutProductos.TabIndex = 14;
             // 
             // dataGridView1
@@ -146,269 +152,15 @@
             this.itebisColumn,
             this.descuentoColumn,
             this.importeColumn});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 215);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 265);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(900, 343);
+            this.dataGridView1.Size = new System.Drawing.Size(1200, 422);
             this.dataGridView1.TabIndex = 106;
-            // 
-            // totalVentaText
-            // 
-            this.totalVentaText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.totalVentaText.BackColor = System.Drawing.Color.SkyBlue;
-            this.totalVentaText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalVentaText.Location = new System.Drawing.Point(683, 564);
-            this.totalVentaText.MaxLength = 200;
-            this.totalVentaText.Name = "totalVentaText";
-            this.totalVentaText.ReadOnly = true;
-            this.totalVentaText.Size = new System.Drawing.Size(218, 35);
-            this.totalVentaText.TabIndex = 142;
-            this.totalVentaText.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // totalItebisText
-            // 
-            this.totalItebisText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.totalItebisText.BackColor = System.Drawing.Color.SkyBlue;
-            this.totalItebisText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalItebisText.Location = new System.Drawing.Point(357, 565);
-            this.totalItebisText.MaxLength = 200;
-            this.totalItebisText.Name = "totalItebisText";
-            this.totalItebisText.ReadOnly = true;
-            this.totalItebisText.Size = new System.Drawing.Size(217, 35);
-            this.totalItebisText.TabIndex = 139;
-            this.totalItebisText.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(604, 565);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 29);
-            this.label14.TabIndex = 141;
-            this.label14.Text = "Total";
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(272, 567);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(84, 29);
-            this.label13.TabIndex = 140;
-            this.label13.Text = "Taxes";
-            // 
-            // button15
-            // 
-            this.button15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button15.BackColor = System.Drawing.Color.White;
-            this.button15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button15.BackgroundImage")));
-            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(710, 136);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(92, 73);
-            this.button15.TabIndex = 143;
-            this.button15.UseVisualStyleBackColor = false;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
-            // 
-            // fechaLabelText
-            // 
-            this.fechaLabelText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.fechaLabelText.AutoSize = true;
-            this.fechaLabelText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fechaLabelText.ForeColor = System.Drawing.Color.White;
-            this.fechaLabelText.Location = new System.Drawing.Point(1213, 0);
-            this.fechaLabelText.Name = "fechaLabelText";
-            this.fechaLabelText.Size = new System.Drawing.Size(59, 20);
-            this.fechaLabelText.TabIndex = 116;
-            this.fechaLabelText.Text = "Fecha";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 135);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 20);
-            this.label2.TabIndex = 145;
-            this.label2.Text = "Sell type";
-            // 
-            // tipoVentaComboBox
-            // 
-            this.tipoVentaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.tipoVentaComboBox.FormattingEnabled = true;
-            this.tipoVentaComboBox.Location = new System.Drawing.Point(112, 135);
-            this.tipoVentaComboBox.Name = "tipoVentaComboBox";
-            this.tipoVentaComboBox.Size = new System.Drawing.Size(128, 21);
-            this.tipoVentaComboBox.TabIndex = 144;
-            this.tipoVentaComboBox.Tag = "";
-            // 
-            // detalleText
-            // 
-            this.detalleText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.detalleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.detalleText.Location = new System.Drawing.Point(918, 534);
-            this.detalleText.MaxLength = 500;
-            this.detalleText.Multiline = true;
-            this.detalleText.Name = "detalleText";
-            this.detalleText.Size = new System.Drawing.Size(437, 72);
-            this.detalleText.TabIndex = 146;
-            this.detalleText.Text = "Any description";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(253, 134);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(44, 20);
-            this.label20.TabIndex = 148;
-            this.label20.Text = "NCF";
-            this.label20.Visible = false;
-            // 
-            // tipoComprobanteCombo
-            // 
-            this.tipoComprobanteCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.tipoComprobanteCombo.FormattingEnabled = true;
-            this.tipoComprobanteCombo.Items.AddRange(new object[] {
-            "CON",
-            "COT",
-            "CRE",
-            "PED"});
-            this.tipoComprobanteCombo.Location = new System.Drawing.Point(303, 135);
-            this.tipoComprobanteCombo.Name = "tipoComprobanteCombo";
-            this.tipoComprobanteCombo.Size = new System.Drawing.Size(236, 21);
-            this.tipoComprobanteCombo.TabIndex = 147;
-            this.tipoComprobanteCombo.Tag = "";
-            this.tipoComprobanteCombo.Visible = false;
-            // 
-            // descuentoText
-            // 
-            this.descuentoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descuentoText.Location = new System.Drawing.Point(269, 181);
-            this.descuentoText.MaxLength = 5;
-            this.descuentoText.Name = "descuentoText";
-            this.descuentoText.Size = new System.Drawing.Size(119, 26);
-            this.descuentoText.TabIndex = 156;
-            this.descuentoText.Text = "0.00";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(267, 160);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(106, 18);
-            this.label12.TabIndex = 155;
-            this.label12.Text = "Discount (%)";
-            // 
-            // importeText
-            // 
-            this.importeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.importeText.Location = new System.Drawing.Point(398, 182);
-            this.importeText.Name = "importeText";
-            this.importeText.ReadOnly = true;
-            this.importeText.Size = new System.Drawing.Size(119, 26);
-            this.importeText.TabIndex = 154;
-            this.importeText.Text = "0.00";
-            this.importeText.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(397, 161);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 18);
-            this.label11.TabIndex = 153;
-            this.label11.Text = "Total";
-            // 
-            // precioText
-            // 
-            this.precioText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precioText.Location = new System.Drawing.Point(138, 182);
-            this.precioText.Name = "precioText";
-            this.precioText.ReadOnly = true;
-            this.precioText.Size = new System.Drawing.Size(119, 26);
-            this.precioText.TabIndex = 152;
-            this.precioText.Text = "0.00";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(140, 161);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 18);
-            this.label10.TabIndex = 151;
-            this.label10.Text = "Price";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(9, 161);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(70, 18);
-            this.label9.TabIndex = 149;
-            this.label9.Text = "Quantity";
-            // 
-            // cantidadText
-            // 
-            this.cantidadText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cantidadText.Location = new System.Drawing.Point(11, 182);
-            this.cantidadText.Name = "cantidadText";
-            this.cantidadText.Size = new System.Drawing.Size(119, 26);
-            this.cantidadText.TabIndex = 150;
-            this.cantidadText.Text = "0";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(525, 159);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 17);
-            this.label8.TabIndex = 158;
-            this.label8.Text = "Unity";
-            // 
-            // unidadComboText
-            // 
-            this.unidadComboText.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.unidadComboText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unidadComboText.FormattingEnabled = true;
-            this.unidadComboText.Location = new System.Drawing.Point(529, 181);
-            this.unidadComboText.Name = "unidadComboText";
-            this.unidadComboText.Size = new System.Drawing.Size(164, 28);
-            this.unidadComboText.TabIndex = 157;
-            this.unidadComboText.Tag = "";
-            this.unidadComboText.TextChanged += new System.EventHandler(this.unidadComboText_TextChanged);
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(820, 136);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(92, 73);
-            this.button4.TabIndex = 159;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // ProductoColumn
             // 
@@ -476,11 +228,288 @@
             this.importeColumn.Name = "importeColumn";
             this.importeColumn.ReadOnly = true;
             // 
+            // totalVentaText
+            // 
+            this.totalVentaText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.totalVentaText.BackColor = System.Drawing.Color.SkyBlue;
+            this.totalVentaText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalVentaText.Location = new System.Drawing.Point(911, 694);
+            this.totalVentaText.Margin = new System.Windows.Forms.Padding(4);
+            this.totalVentaText.MaxLength = 200;
+            this.totalVentaText.Name = "totalVentaText";
+            this.totalVentaText.ReadOnly = true;
+            this.totalVentaText.Size = new System.Drawing.Size(289, 41);
+            this.totalVentaText.TabIndex = 142;
+            this.totalVentaText.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // totalItebisText
+            // 
+            this.totalItebisText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.totalItebisText.BackColor = System.Drawing.Color.SkyBlue;
+            this.totalItebisText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalItebisText.Location = new System.Drawing.Point(476, 695);
+            this.totalItebisText.Margin = new System.Windows.Forms.Padding(4);
+            this.totalItebisText.MaxLength = 200;
+            this.totalItebisText.Name = "totalItebisText";
+            this.totalItebisText.ReadOnly = true;
+            this.totalItebisText.Size = new System.Drawing.Size(288, 41);
+            this.totalItebisText.TabIndex = 139;
+            this.totalItebisText.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(805, 695);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(86, 36);
+            this.label14.TabIndex = 141;
+            this.label14.Text = "Total";
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(363, 698);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(67, 36);
+            this.label13.TabIndex = 140;
+            this.label13.Text = "Tax";
+            // 
+            // button15
+            // 
+            this.button15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button15.BackColor = System.Drawing.Color.White;
+            this.button15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button15.BackgroundImage")));
+            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button15.FlatAppearance.BorderSize = 0;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.ForeColor = System.Drawing.Color.White;
+            this.button15.Location = new System.Drawing.Point(947, 170);
+            this.button15.Margin = new System.Windows.Forms.Padding(4);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(123, 90);
+            this.button15.TabIndex = 143;
+            this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // fechaLabelText
+            // 
+            this.fechaLabelText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.fechaLabelText.AutoSize = true;
+            this.fechaLabelText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fechaLabelText.ForeColor = System.Drawing.Color.White;
+            this.fechaLabelText.Location = new System.Drawing.Point(1618, 0);
+            this.fechaLabelText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.fechaLabelText.Name = "fechaLabelText";
+            this.fechaLabelText.Size = new System.Drawing.Size(57, 25);
+            this.fechaLabelText.TabIndex = 116;
+            this.fechaLabelText.Text = "Date";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(16, 166);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(103, 25);
+            this.label2.TabIndex = 145;
+            this.label2.Text = "Sale type";
+            // 
+            // tipoVentaComboBox
+            // 
+            this.tipoVentaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tipoVentaComboBox.FormattingEnabled = true;
+            this.tipoVentaComboBox.Location = new System.Drawing.Point(149, 166);
+            this.tipoVentaComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.tipoVentaComboBox.Name = "tipoVentaComboBox";
+            this.tipoVentaComboBox.Size = new System.Drawing.Size(169, 24);
+            this.tipoVentaComboBox.TabIndex = 144;
+            this.tipoVentaComboBox.Tag = "";
+            // 
+            // detalleText
+            // 
+            this.detalleText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.detalleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.detalleText.Location = new System.Drawing.Point(1224, 657);
+            this.detalleText.Margin = new System.Windows.Forms.Padding(4);
+            this.detalleText.MaxLength = 500;
+            this.detalleText.Multiline = true;
+            this.detalleText.Name = "detalleText";
+            this.detalleText.Size = new System.Drawing.Size(581, 88);
+            this.detalleText.TabIndex = 146;
+            this.detalleText.Text = "Any description";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(337, 165);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(56, 25);
+            this.label20.TabIndex = 148;
+            this.label20.Text = "NCF";
+            this.label20.Visible = false;
+            // 
+            // tipoComprobanteCombo
+            // 
+            this.tipoComprobanteCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tipoComprobanteCombo.FormattingEnabled = true;
+            this.tipoComprobanteCombo.Items.AddRange(new object[] {
+            "CON",
+            "COT",
+            "CRE",
+            "PED"});
+            this.tipoComprobanteCombo.Location = new System.Drawing.Point(404, 166);
+            this.tipoComprobanteCombo.Margin = new System.Windows.Forms.Padding(4);
+            this.tipoComprobanteCombo.Name = "tipoComprobanteCombo";
+            this.tipoComprobanteCombo.Size = new System.Drawing.Size(313, 24);
+            this.tipoComprobanteCombo.TabIndex = 147;
+            this.tipoComprobanteCombo.Tag = "";
+            this.tipoComprobanteCombo.Visible = false;
+            // 
+            // descuentoText
+            // 
+            this.descuentoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descuentoText.Location = new System.Drawing.Point(359, 226);
+            this.descuentoText.Margin = new System.Windows.Forms.Padding(4);
+            this.descuentoText.MaxLength = 5;
+            this.descuentoText.Name = "descuentoText";
+            this.descuentoText.Size = new System.Drawing.Size(157, 30);
+            this.descuentoText.TabIndex = 156;
+            this.descuentoText.Text = "0.00";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(356, 200);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(127, 24);
+            this.label12.TabIndex = 155;
+            this.label12.Text = "Discount (%)";
+            // 
+            // importeText
+            // 
+            this.importeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.importeText.Location = new System.Drawing.Point(531, 227);
+            this.importeText.Margin = new System.Windows.Forms.Padding(4);
+            this.importeText.Name = "importeText";
+            this.importeText.ReadOnly = true;
+            this.importeText.Size = new System.Drawing.Size(157, 30);
+            this.importeText.TabIndex = 154;
+            this.importeText.Text = "0.00";
+            this.importeText.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(529, 201);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(56, 24);
+            this.label11.TabIndex = 153;
+            this.label11.Text = "Total";
+            // 
+            // precioText
+            // 
+            this.precioText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.precioText.Location = new System.Drawing.Point(184, 227);
+            this.precioText.Margin = new System.Windows.Forms.Padding(4);
+            this.precioText.Name = "precioText";
+            this.precioText.ReadOnly = true;
+            this.precioText.Size = new System.Drawing.Size(157, 30);
+            this.precioText.TabIndex = 152;
+            this.precioText.Text = "0.00";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(187, 201);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(58, 24);
+            this.label10.TabIndex = 151;
+            this.label10.Text = "Price";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(15, 201);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(86, 24);
+            this.label9.TabIndex = 149;
+            this.label9.Text = "Quantity";
+            // 
+            // cantidadText
+            // 
+            this.cantidadText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cantidadText.Location = new System.Drawing.Point(15, 227);
+            this.cantidadText.Margin = new System.Windows.Forms.Padding(4);
+            this.cantidadText.Name = "cantidadText";
+            this.cantidadText.Size = new System.Drawing.Size(157, 30);
+            this.cantidadText.TabIndex = 150;
+            this.cantidadText.Text = "0";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(700, 199);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 20);
+            this.label8.TabIndex = 158;
+            this.label8.Text = "Unit";
+            // 
+            // unidadComboText
+            // 
+            this.unidadComboText.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.unidadComboText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unidadComboText.FormattingEnabled = true;
+            this.unidadComboText.Location = new System.Drawing.Point(705, 226);
+            this.unidadComboText.Margin = new System.Windows.Forms.Padding(4);
+            this.unidadComboText.Name = "unidadComboText";
+            this.unidadComboText.Size = new System.Drawing.Size(217, 33);
+            this.unidadComboText.TabIndex = 157;
+            this.unidadComboText.Tag = "";
+            this.unidadComboText.TextChanged += new System.EventHandler(this.unidadComboText_TextChanged);
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(1093, 170);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(123, 90);
+            this.button4.TabIndex = 159;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // ventana_facturacion_touch1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 678);
+            this.ClientSize = new System.Drawing.Size(1827, 834);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.unidadComboText);
@@ -505,6 +534,7 @@
             this.Controls.Add(this.flowLayoutProductos);
             this.Controls.Add(this.flowLayoutCategorias);
             this.Controls.Add(this.button15);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = true;
             this.Name = "ventana_facturacion_touch1";
             this.Text = "ventana_facturacion_touch1";
