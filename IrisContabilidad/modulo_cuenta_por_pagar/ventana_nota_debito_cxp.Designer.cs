@@ -58,8 +58,9 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(12, 389);
-            this.panel1.Size = new System.Drawing.Size(888, 54);
+            this.panel1.Location = new System.Drawing.Point(16, 479);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Size = new System.Drawing.Size(1184, 66);
             // 
             // button2
             // 
@@ -69,17 +70,20 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Location = new System.Drawing.Point(747, 5);
+            this.button1.Location = new System.Drawing.Point(996, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
-            this.panel2.Size = new System.Drawing.Size(912, 21);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Size = new System.Drawing.Size(1216, 25);
             // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Location = new System.Drawing.Point(374, 5);
+            this.button3.Location = new System.Drawing.Point(499, 6);
+            this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // activoCheck
@@ -88,22 +92,24 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             this.activoCheck.Checked = true;
             this.activoCheck.CheckState = System.Windows.Forms.CheckState.Checked;
             this.activoCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activoCheck.Location = new System.Drawing.Point(525, 273);
+            this.activoCheck.Location = new System.Drawing.Point(700, 336);
+            this.activoCheck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.activoCheck.Name = "activoCheck";
-            this.activoCheck.Size = new System.Drawing.Size(71, 21);
+            this.activoCheck.Size = new System.Drawing.Size(83, 24);
             this.activoCheck.TabIndex = 102;
-            this.activoCheck.Text = "Activo";
+            this.activoCheck.Text = "Active";
             this.activoCheck.UseVisualStyleBackColor = true;
             this.activoCheck.KeyDown += new System.Windows.Forms.KeyEventHandler(this.activoCheck_KeyDown);
             // 
             // detalleText
             // 
             this.detalleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.detalleText.Location = new System.Drawing.Point(525, 110);
+            this.detalleText.Location = new System.Drawing.Point(700, 135);
+            this.detalleText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.detalleText.MaxLength = 160;
             this.detalleText.Multiline = true;
             this.detalleText.Name = "detalleText";
-            this.detalleText.Size = new System.Drawing.Size(370, 148);
+            this.detalleText.Size = new System.Drawing.Size(492, 181);
             this.detalleText.TabIndex = 101;
             this.detalleText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.detalleText_KeyDown);
             // 
@@ -111,18 +117,20 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(521, 87);
+            this.label7.Location = new System.Drawing.Point(695, 107);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 20);
+            this.label7.Size = new System.Drawing.Size(78, 25);
             this.label7.TabIndex = 100;
-            this.label7.Text = "Detalles";
+            this.label7.Text = "Details";
             // 
             // montoText
             // 
             this.montoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.montoText.Location = new System.Drawing.Point(134, 239);
+            this.montoText.Location = new System.Drawing.Point(179, 294);
+            this.montoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.montoText.Name = "montoText";
-            this.montoText.Size = new System.Drawing.Size(275, 26);
+            this.montoText.Size = new System.Drawing.Size(365, 30);
             this.montoText.TabIndex = 99;
             this.montoText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.montoText_KeyDown);
             this.montoText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.montoText_KeyPress);
@@ -131,29 +139,32 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(65, 239);
+            this.label6.Location = new System.Drawing.Point(59, 291);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 20);
+            this.label6.Size = new System.Drawing.Size(86, 25);
             this.label6.TabIndex = 98;
-            this.label6.Text = "Monto";
+            this.label6.Text = "Amount";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(37, 189);
+            this.label5.Location = new System.Drawing.Point(59, 230);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 20);
+            this.label5.Size = new System.Drawing.Size(93, 25);
             this.label5.TabIndex = 97;
-            this.label5.Text = "Concepto";
+            this.label5.Text = "Concept";
             // 
             // conceptoComboBox
             // 
             this.conceptoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.conceptoComboBox.FormattingEnabled = true;
-            this.conceptoComboBox.Location = new System.Drawing.Point(135, 190);
+            this.conceptoComboBox.Location = new System.Drawing.Point(180, 234);
+            this.conceptoComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.conceptoComboBox.Name = "conceptoComboBox";
-            this.conceptoComboBox.Size = new System.Drawing.Size(236, 21);
+            this.conceptoComboBox.Size = new System.Drawing.Size(313, 24);
             this.conceptoComboBox.TabIndex = 96;
             this.conceptoComboBox.Tag = "";
             this.conceptoComboBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.conceptoComboBox_KeyDown);
@@ -161,19 +172,21 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             // NcfText
             // 
             this.NcfText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NcfText.Location = new System.Drawing.Point(134, 135);
+            this.NcfText.Location = new System.Drawing.Point(179, 166);
+            this.NcfText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NcfText.Name = "NcfText";
             this.NcfText.ReadOnly = true;
-            this.NcfText.Size = new System.Drawing.Size(275, 26);
+            this.NcfText.Size = new System.Drawing.Size(365, 30);
             this.NcfText.TabIndex = 95;
             // 
             // compraIdText
             // 
             this.compraIdText.BackColor = System.Drawing.Color.SkyBlue;
             this.compraIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.compraIdText.Location = new System.Drawing.Point(134, 97);
+            this.compraIdText.Location = new System.Drawing.Point(179, 119);
+            this.compraIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.compraIdText.Name = "compraIdText";
-            this.compraIdText.Size = new System.Drawing.Size(155, 26);
+            this.compraIdText.Size = new System.Drawing.Size(205, 30);
             this.compraIdText.TabIndex = 93;
             this.compraIdText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ventaIdText_KeyDown);
             // 
@@ -181,30 +194,33 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(65, 99);
+            this.label4.Location = new System.Drawing.Point(59, 119);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 20);
+            this.label4.Size = new System.Drawing.Size(103, 25);
             this.label4.TabIndex = 92;
-            this.label4.Text = "Compra";
+            this.label4.Text = "Purchase";
             // 
             // button6
             // 
             this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(295, 92);
+            this.button6.Location = new System.Drawing.Point(393, 113);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(47, 37);
+            this.button6.Size = new System.Drawing.Size(63, 46);
             this.button6.TabIndex = 94;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // fechaText
             // 
-            this.fechaText.Location = new System.Drawing.Point(134, 296);
+            this.fechaText.Location = new System.Drawing.Point(179, 364);
+            this.fechaText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fechaText.Mask = "00/00/0000";
             this.fechaText.Name = "fechaText";
-            this.fechaText.Size = new System.Drawing.Size(155, 20);
+            this.fechaText.Size = new System.Drawing.Size(205, 22);
             this.fechaText.TabIndex = 91;
             this.fechaText.ValidatingType = typeof(System.DateTime);
             this.fechaText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.fechaText_KeyDown);
@@ -213,20 +229,23 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(63, 294);
+            this.label3.Location = new System.Drawing.Point(59, 359);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 20);
+            this.label3.Size = new System.Drawing.Size(57, 25);
             this.label3.TabIndex = 90;
-            this.label3.Text = "Fecha";
+            this.label3.Text = "Date";
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.notaCreditoIdText);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Location = new System.Drawing.Point(12, 27);
+            this.groupBox1.Location = new System.Drawing.Point(16, 33);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(888, 56);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1184, 69);
             this.groupBox1.TabIndex = 89;
             this.groupBox1.TabStop = false;
             // 
@@ -234,9 +253,10 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             // 
             this.notaCreditoIdText.BackColor = System.Drawing.Color.SkyBlue;
             this.notaCreditoIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.notaCreditoIdText.Location = new System.Drawing.Point(204, 17);
+            this.notaCreditoIdText.Location = new System.Drawing.Point(272, 21);
+            this.notaCreditoIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.notaCreditoIdText.Name = "notaCreditoIdText";
-            this.notaCreditoIdText.Size = new System.Drawing.Size(155, 26);
+            this.notaCreditoIdText.Size = new System.Drawing.Size(205, 30);
             this.notaCreditoIdText.TabIndex = 18;
             this.notaCreditoIdText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.notaCreditoIdText_KeyDown);
             // 
@@ -244,20 +264,22 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(88, 19);
+            this.label2.Location = new System.Drawing.Point(154, 21);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 20);
+            this.label2.Size = new System.Drawing.Size(110, 25);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Nota Debito";
+            this.label2.Text = "Debit note";
             // 
             // button4
             // 
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(365, 12);
+            this.button4.Location = new System.Drawing.Point(487, 15);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(47, 37);
+            this.button4.Size = new System.Drawing.Size(63, 46);
             this.button4.TabIndex = 23;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -270,11 +292,12 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(759, 338);
+            this.button5.Location = new System.Drawing.Point(1012, 416);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(138, 45);
+            this.button5.Size = new System.Drawing.Size(184, 55);
             this.button5.TabIndex = 103;
-            this.button5.Text = "Imprimir";
+            this.button5.Text = "Print";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -282,17 +305,18 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(78, 138);
+            this.label1.Location = new System.Drawing.Point(59, 167);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 20);
+            this.label1.Size = new System.Drawing.Size(56, 25);
             this.label1.TabIndex = 104;
             this.label1.Text = "NCF";
             // 
-            // ventana_nota_debito_cxc
+            // ventana_nota_debito_cxp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(912, 455);
+            this.ClientSize = new System.Drawing.Size(1216, 560);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.activoCheck);
@@ -309,7 +333,8 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             this.Controls.Add(this.fechaText);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
-            this.Name = "ventana_nota_debito_cxc";
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Name = "ventana_nota_debito_cxp";
             this.Text = "ventana_nota_debito_cxc";
             this.Load += new System.EventHandler(this.ventana_nota_debito_cxc_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
