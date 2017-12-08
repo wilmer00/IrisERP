@@ -435,16 +435,28 @@ namespace IrisContabilidad.modelos
                 utilidades.ejecutarcomando_mysql(sql);
                 #endregion
 
-                //
+                //primeros ingredientes
                 #region
-                sql = "";
+                sql = "insert into ingredientes_variacion(codigo,nombre,activo,descripcion) values('1','Huevo revuelto',true,'Huevo revuelto a la plancha');";
                 utilidades.ejecutarcomando_mysql(sql);
-                sql = "";
+                sql = "insert into ingredientes_variacion(codigo,nombre,activo,descripcion) values('2','Queso',true,'');";
+                utilidades.ejecutarcomando_mysql(sql);
+                sql = "insert into ingredientes_variacion(codigo,nombre,activo,descripcion) values('3','Bacon',true,'Sabroso bacon');";
+                utilidades.ejecutarcomando_mysql(sql);
+                sql = "insert into ingredientes_variacion(codigo,nombre,activo,descripcion) values('4','Jamon',true,'');";
+                utilidades.ejecutarcomando_mysql(sql);
+                sql = "insert into ingredientes_variacion(codigo,nombre,activo,descripcion) values('5','Papas',true,'tiernas papas');";
+                utilidades.ejecutarcomando_mysql(sql);
+                sql = "insert into ingredientes_variacion(codigo,nombre,activo,descripcion) values('6','Jalapeño',true,'bien picante');";
+                utilidades.ejecutarcomando_mysql(sql);
+                sql = "insert into ingredientes_variacion(codigo,nombre,activo,descripcion) values('7','Tomates',true,'Bien jugoso');";
+                utilidades.ejecutarcomando_mysql(sql);
+                sql = "ALTER TABLE `iris`.`ingredientes_variacion` ADD COLUMN `nombre_abreviado` VARCHAR(100) NOT NULL DEFAULT '' AFTER `descripcion`;";
                 utilidades.ejecutarcomando_mysql(sql);
                 #endregion
 
-                
-                
+
+
 
             }
             catch (Exception ex)

@@ -142,10 +142,7 @@ namespace IrisContabilidad.modulo_inventario
                     cantidadProduccionText.Text = "";
 
 
-                    if (dataGridView1.Rows.Count > 0)
-                    {
-                        dataGridView1.Rows.Clear();
-                    }
+                    
                     if (dataGridView2.Rows.Count > 0)
                     {
                         dataGridView2.Rows.Clear();

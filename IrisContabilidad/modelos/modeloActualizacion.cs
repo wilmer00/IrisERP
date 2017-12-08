@@ -548,7 +548,7 @@ namespace IrisContabilidad.modelos
                 #region querys version5
 
                 //nuevo query
-                sql = "";
+                sql = "CREATETABLE`iris`.`ingredientes_variacion`( `codigo`INTEGER, `nombre`VARCHAR(100)NOTNULLDEFAULT'', `activo`BOOLEANNOTNULLDEFAULT1, `descripcion`VARCHAR(500), PRIMARYKEY(`codigo`) ) ENGINE=In";
                 utilidades.ejecutarcomando_mysql(sql);
                 //nuevo query
                 sql = "";
