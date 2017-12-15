@@ -47,8 +47,8 @@ namespace IrisContabilidad
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(16, 407);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Location = new System.Drawing.Point(16, 531);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Size = new System.Drawing.Size(867, 66);
             // 
             // button2
@@ -60,29 +60,29 @@ namespace IrisContabilidad
             // 
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Location = new System.Drawing.Point(679, 6);
-            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // panel2
             // 
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Size = new System.Drawing.Size(899, 25);
             // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.Location = new System.Drawing.Point(340, 6);
-            this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button3.Margin = new System.Windows.Forms.Padding(5);
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // panel4
             // 
             this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Location = new System.Drawing.Point(321, 33);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Location = new System.Drawing.Point(294, 33);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(293, 213);
+            this.panel4.Size = new System.Drawing.Size(323, 252);
             this.panel4.TabIndex = 9;
             // 
             // groupBox2
@@ -91,10 +91,10 @@ namespace IrisContabilidad
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.claveText);
             this.groupBox2.Controls.Add(this.usuarioText);
-            this.groupBox2.Location = new System.Drawing.Point(21, 254);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(21, 308);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(857, 137);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
@@ -125,7 +125,7 @@ namespace IrisContabilidad
             // 
             this.claveText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.claveText.Location = new System.Drawing.Point(300, 76);
-            this.claveText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.claveText.Margin = new System.Windows.Forms.Padding(4);
             this.claveText.MaxLength = 30;
             this.claveText.Name = "claveText";
             this.claveText.PasswordChar = '*';
@@ -137,7 +137,7 @@ namespace IrisContabilidad
             // 
             this.usuarioText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuarioText.Location = new System.Drawing.Point(300, 23);
-            this.usuarioText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usuarioText.Margin = new System.Windows.Forms.Padding(4);
             this.usuarioText.MaxLength = 30;
             this.usuarioText.Name = "usuarioText";
             this.usuarioText.Size = new System.Drawing.Size(292, 34);
@@ -149,10 +149,10 @@ namespace IrisContabilidad
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(899, 489);
+            this.ClientSize = new System.Drawing.Size(899, 613);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel4);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load_1);
             this.Controls.SetChildIndex(this.panel1, 0);

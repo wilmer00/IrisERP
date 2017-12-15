@@ -63,6 +63,7 @@ namespace IrisContabilidad.modulo_inventario
                 MessageBox.Show("Error loadLista.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         public almacen getObjeto()
         {
             try
@@ -85,6 +86,7 @@ namespace IrisContabilidad.modulo_inventario
             getObjeto();
             this.Close();
         }
+
         public void Salir()
         {
             if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -93,6 +95,7 @@ namespace IrisContabilidad.modulo_inventario
                 this.Close();
             }
         }
+
         private void ventana_busqueda_almacen_Load(object sender, EventArgs e)
         {
 

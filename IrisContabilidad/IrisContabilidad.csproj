@@ -161,6 +161,7 @@
     <Compile Include="clases\FileFolderDialog.cs" />
     <Compile Include="clases\gasto.cs" />
     <Compile Include="clases\grupo_usuarios.cs" />
+    <Compile Include="clases\ingredientes_variacion.cs" />
     <Compile Include="clases\ingreso_caja.cs" />
     <Compile Include="clases\itebis.cs" />
     <Compile Include="clases\log_reportes_generados.cs" />
@@ -266,6 +267,7 @@
     <Compile Include="modelos\modeloEntidades.cs" />
     <Compile Include="modelos\modeloGasto.cs" />
     <Compile Include="modelos\modeloGrupoUsuarios.cs" />
+    <Compile Include="modelos\modeloIngredientesVariacion.cs" />
     <Compile Include="modelos\modeloIngresoCaja.cs" />
     <Compile Include="modelos\modeloItebis.cs" />
     <Compile Include="modelos\modeloLogReporteGenerado.cs" />
@@ -761,6 +763,12 @@
     <Compile Include="modulo_inventario\ventana_busqueda_compra.Designer.cs">
       <DependentUpon>ventana_busqueda_compra.cs</DependentUpon>
     </Compile>
+    <Compile Include="modulo_inventario\ventana_busqueda_ingredientes_variacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modulo_inventario\ventana_busqueda_ingredientes_variacion.Designer.cs">
+      <DependentUpon>ventana_busqueda_ingredientes_variacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="modulo_inventario\ventana_busqueda_producto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -790,6 +798,12 @@
     </Compile>
     <Compile Include="modulo_inventario\ventana_compra.Designer.cs">
       <DependentUpon>ventana_compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modulo_inventario\ventana_ingredientes_variacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modulo_inventario\ventana_ingredientes_variacion.Designer.cs">
+      <DependentUpon>ventana_ingredientes_variacion.cs</DependentUpon>
     </Compile>
     <Compile Include="modulo_inventario\ventana_producto.cs">
       <SubType>Form</SubType>
@@ -1241,6 +1255,9 @@
     <EmbeddedResource Include="modulo_inventario\ventana_busqueda_compra.resx">
       <DependentUpon>ventana_busqueda_compra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="modulo_inventario\ventana_busqueda_ingredientes_variacion.resx">
+      <DependentUpon>ventana_busqueda_ingredientes_variacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="modulo_inventario\ventana_busqueda_producto.resx">
       <DependentUpon>ventana_busqueda_producto.cs</DependentUpon>
     </EmbeddedResource>
@@ -1255,6 +1272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modulo_inventario\ventana_compra.resx">
       <DependentUpon>ventana_compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modulo_inventario\ventana_ingredientes_variacion.resx">
+      <DependentUpon>ventana_ingredientes_variacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modulo_inventario\ventana_producto.resx">
       <DependentUpon>ventana_producto.cs</DependentUpon>

@@ -520,3 +520,5 @@ C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\bin\Release\IrisContabi
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\bin\Release\Microsoft.SqlServer.Types.dll
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Release\IrisContabilidad.application
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Release\IrisContabilidad.csprojResolveAssemblyReference.cache
+C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Release\IrisContabilidad.modulo_inventario.ventana_busqueda_ingredientes_variacion.resources
+C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Release\IrisContabilidad.modulo_inventario.ventana_ingredientes_variacion.resources

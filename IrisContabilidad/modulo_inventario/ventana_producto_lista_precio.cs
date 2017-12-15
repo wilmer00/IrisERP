@@ -70,21 +70,24 @@ namespace IrisContabilidad.modulo_inventario
         {
             try
             {
-                if (listaPrecioVenta == null)
-                {
+                //if (listaPrecioVenta == null)
+                //{
                     listaPrecioVenta = new List<producto_precio_venta>();
                     listaPrecioVenta = modeloProducto.getListaProductoPrecioVenta();
-                }
+                //}
                 //limpiar dataGridView
                 if (dataGridView1.Rows.Count > 0)
                 {
                     dataGridView1.Rows.Clear();
                 }
                 
+                //si producto existe que filtre la lista en base al producto existente
                 if (producto != null)
                 {
                     listaPrecioVenta = listaPrecioVenta.FindAll(x => x.codigo_producto == producto.codigo);
                 }
+
+                //agregando cada item de la lista al datagridview
                 listaPrecioVenta.ForEach(x =>
                 {
                     producto=new producto();
@@ -213,6 +216,7 @@ namespace IrisContabilidad.modulo_inventario
 
         private void button3_Click(object sender, EventArgs e)
         {
+            producto = null;
             listaPrecioVenta = null;
             loadListaPrecioProducto();
         }
@@ -243,10 +247,15 @@ namespace IrisContabilidad.modulo_inventario
             {
                 producto = ventana.getObjeto();
                 loadProducto();
+                loadListaPrecioProducto();
             }
         }
 
         private void button5_Click(object sender, EventArgs e)
+        {
+            buscar();
+        }
+        public void buscar()
         {
             try
             {
@@ -255,11 +264,11 @@ namespace IrisContabilidad.modulo_inventario
                 producto = modeloProducto.getProductoById(Convert.ToInt16(productoIdText.Text));
                 loadListaPrecioProducto();
             }
-            catch (Exception)
-            {   
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error buscando.: "+ex.ToString(),"",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             GetAction();

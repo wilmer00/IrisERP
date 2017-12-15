@@ -32,9 +32,9 @@ namespace IrisContabilidad.modulo_inventario
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ventana_producto));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.linkLabel5 = new System.Windows.Forms.LinkLabel();
@@ -77,6 +77,7 @@ namespace IrisContabilidad.modulo_inventario
             this.productoIdText = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.codigoBarraText = new System.Windows.Forms.TextBox();
@@ -88,6 +89,9 @@ namespace IrisContabilidad.modulo_inventario
             this.button11 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.barraColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -124,15 +128,11 @@ namespace IrisContabilidad.modulo_inventario
             this.button22 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.barraColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idProductoREquisitoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idUnidadColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -154,7 +154,7 @@ namespace IrisContabilidad.modulo_inventario
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(16, 737);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Size = new System.Drawing.Size(1255, 66);
             // 
             // button2
@@ -166,19 +166,19 @@ namespace IrisContabilidad.modulo_inventario
             // 
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Location = new System.Drawing.Point(1067, 6);
-            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Size = new System.Drawing.Size(1287, 25);
             // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.Location = new System.Drawing.Point(533, 6);
-            this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button3.Margin = new System.Windows.Forms.Padding(5);
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // tabControl1
@@ -189,7 +189,7 @@ namespace IrisContabilidad.modulo_inventario
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Location = new System.Drawing.Point(21, 33);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1249, 697);
@@ -233,9 +233,9 @@ namespace IrisContabilidad.modulo_inventario
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(1241, 668);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Product";
@@ -246,7 +246,7 @@ namespace IrisContabilidad.modulo_inventario
             this.linkLabel5.AutoSize = true;
             this.linkLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel5.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel5.Location = new System.Drawing.Point(144, 480);
+            this.linkLabel5.Location = new System.Drawing.Point(154, 478);
             this.linkLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel5.Name = "linkLabel5";
             this.linkLabel5.Size = new System.Drawing.Size(49, 25);
@@ -274,7 +274,7 @@ namespace IrisContabilidad.modulo_inventario
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel3.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel3.Location = new System.Drawing.Point(77, 576);
+            this.linkLabel3.Location = new System.Drawing.Point(80, 574);
             this.linkLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(123, 25);
@@ -288,7 +288,7 @@ namespace IrisContabilidad.modulo_inventario
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel2.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel2.Location = new System.Drawing.Point(41, 287);
+            this.linkLabel2.Location = new System.Drawing.Point(56, 285);
             this.linkLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(147, 25);
@@ -302,7 +302,7 @@ namespace IrisContabilidad.modulo_inventario
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(87, 188);
+            this.linkLabel1.Location = new System.Drawing.Point(103, 186);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(100, 25);
@@ -318,7 +318,7 @@ namespace IrisContabilidad.modulo_inventario
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button15.ForeColor = System.Drawing.Color.White;
             this.button15.Location = new System.Drawing.Point(844, 475);
-            this.button15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button15.Margin = new System.Windows.Forms.Padding(4);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(247, 46);
             this.button15.TabIndex = 69;
@@ -334,7 +334,7 @@ namespace IrisContabilidad.modulo_inventario
             this.activoCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.activoCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activoCheck.Location = new System.Drawing.Point(808, 567);
-            this.activoCheck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.activoCheck.Margin = new System.Windows.Forms.Padding(4);
             this.activoCheck.Name = "activoCheck";
             this.activoCheck.Size = new System.Drawing.Size(79, 24);
             this.activoCheck.TabIndex = 54;
@@ -345,7 +345,7 @@ namespace IrisContabilidad.modulo_inventario
             // 
             this.imagenProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.imagenProducto.Location = new System.Drawing.Point(808, 241);
-            this.imagenProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imagenProducto.Margin = new System.Windows.Forms.Padding(4);
             this.imagenProducto.Name = "imagenProducto";
             this.imagenProducto.Size = new System.Drawing.Size(315, 226);
             this.imagenProducto.TabIndex = 53;
@@ -355,7 +355,7 @@ namespace IrisContabilidad.modulo_inventario
             this.unidadMinimaText.BackColor = System.Drawing.Color.White;
             this.unidadMinimaText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unidadMinimaText.Location = new System.Drawing.Point(808, 139);
-            this.unidadMinimaText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.unidadMinimaText.Margin = new System.Windows.Forms.Padding(4);
             this.unidadMinimaText.MaxLength = 200;
             this.unidadMinimaText.Name = "unidadMinimaText";
             this.unidadMinimaText.ReadOnly = true;
@@ -368,7 +368,7 @@ namespace IrisContabilidad.modulo_inventario
             this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Location = new System.Drawing.Point(1060, 89);
-            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button10.Margin = new System.Windows.Forms.Padding(4);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(63, 46);
             this.button10.TabIndex = 51;
@@ -380,7 +380,7 @@ namespace IrisContabilidad.modulo_inventario
             this.unidadMinimaIdText.BackColor = System.Drawing.Color.SkyBlue;
             this.unidadMinimaIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unidadMinimaIdText.Location = new System.Drawing.Point(808, 94);
-            this.unidadMinimaIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.unidadMinimaIdText.Margin = new System.Windows.Forms.Padding(4);
             this.unidadMinimaIdText.Name = "unidadMinimaIdText";
             this.unidadMinimaIdText.Size = new System.Drawing.Size(243, 30);
             this.unidadMinimaIdText.TabIndex = 49;
@@ -392,7 +392,7 @@ namespace IrisContabilidad.modulo_inventario
             this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Location = new System.Drawing.Point(1060, 188);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button9.Margin = new System.Windows.Forms.Padding(4);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(63, 46);
             this.button9.TabIndex = 48;
@@ -415,7 +415,7 @@ namespace IrisContabilidad.modulo_inventario
             this.rutaImagenText.BackColor = System.Drawing.Color.SkyBlue;
             this.rutaImagenText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rutaImagenText.Location = new System.Drawing.Point(808, 193);
-            this.rutaImagenText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rutaImagenText.Margin = new System.Windows.Forms.Padding(4);
             this.rutaImagenText.Name = "rutaImagenText";
             this.rutaImagenText.Size = new System.Drawing.Size(243, 30);
             this.rutaImagenText.TabIndex = 46;
@@ -426,7 +426,7 @@ namespace IrisContabilidad.modulo_inventario
             this.almacenText.BackColor = System.Drawing.Color.White;
             this.almacenText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.almacenText.Location = new System.Drawing.Point(211, 618);
-            this.almacenText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.almacenText.Margin = new System.Windows.Forms.Padding(4);
             this.almacenText.MaxLength = 200;
             this.almacenText.Name = "almacenText";
             this.almacenText.ReadOnly = true;
@@ -439,7 +439,7 @@ namespace IrisContabilidad.modulo_inventario
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Location = new System.Drawing.Point(463, 567);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(63, 46);
             this.button8.TabIndex = 44;
@@ -451,7 +451,7 @@ namespace IrisContabilidad.modulo_inventario
             this.almacenIdText.BackColor = System.Drawing.Color.SkyBlue;
             this.almacenIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.almacenIdText.Location = new System.Drawing.Point(211, 572);
-            this.almacenIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.almacenIdText.Margin = new System.Windows.Forms.Padding(4);
             this.almacenIdText.Name = "almacenIdText";
             this.almacenIdText.Size = new System.Drawing.Size(243, 30);
             this.almacenIdText.TabIndex = 42;
@@ -462,7 +462,7 @@ namespace IrisContabilidad.modulo_inventario
             this.itebisText.BackColor = System.Drawing.Color.White;
             this.itebisText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.itebisText.Location = new System.Drawing.Point(211, 522);
-            this.itebisText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.itebisText.Margin = new System.Windows.Forms.Padding(4);
             this.itebisText.MaxLength = 200;
             this.itebisText.Name = "itebisText";
             this.itebisText.ReadOnly = true;
@@ -475,7 +475,7 @@ namespace IrisContabilidad.modulo_inventario
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Location = new System.Drawing.Point(463, 471);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(63, 46);
             this.button7.TabIndex = 40;
@@ -487,7 +487,7 @@ namespace IrisContabilidad.modulo_inventario
             this.itebisIdText.BackColor = System.Drawing.Color.SkyBlue;
             this.itebisIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.itebisIdText.Location = new System.Drawing.Point(211, 476);
-            this.itebisIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.itebisIdText.Margin = new System.Windows.Forms.Padding(4);
             this.itebisIdText.Name = "itebisIdText";
             this.itebisIdText.Size = new System.Drawing.Size(243, 30);
             this.itebisIdText.TabIndex = 38;
@@ -498,7 +498,7 @@ namespace IrisContabilidad.modulo_inventario
             this.puntoReordenText.BackColor = System.Drawing.Color.White;
             this.puntoReordenText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.puntoReordenText.Location = new System.Drawing.Point(211, 425);
-            this.puntoReordenText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.puntoReordenText.Margin = new System.Windows.Forms.Padding(4);
             this.puntoReordenText.MaxLength = 200;
             this.puntoReordenText.Name = "puntoReordenText";
             this.puntoReordenText.Size = new System.Drawing.Size(313, 30);
@@ -511,7 +511,7 @@ namespace IrisContabilidad.modulo_inventario
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(56, 427);
+            this.label7.Location = new System.Drawing.Point(57, 425);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(146, 25);
@@ -523,7 +523,7 @@ namespace IrisContabilidad.modulo_inventario
             this.puntoMaximoText.BackColor = System.Drawing.Color.White;
             this.puntoMaximoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.puntoMaximoText.Location = new System.Drawing.Point(211, 375);
-            this.puntoMaximoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.puntoMaximoText.Margin = new System.Windows.Forms.Padding(4);
             this.puntoMaximoText.MaxLength = 200;
             this.puntoMaximoText.Name = "puntoMaximoText";
             this.puntoMaximoText.Size = new System.Drawing.Size(313, 30);
@@ -536,7 +536,7 @@ namespace IrisContabilidad.modulo_inventario
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(64, 379);
+            this.label6.Location = new System.Drawing.Point(70, 377);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(133, 25);
@@ -548,7 +548,7 @@ namespace IrisContabilidad.modulo_inventario
             this.subCategoriaText.BackColor = System.Drawing.Color.White;
             this.subCategoriaText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subCategoriaText.Location = new System.Drawing.Point(211, 329);
-            this.subCategoriaText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.subCategoriaText.Margin = new System.Windows.Forms.Padding(4);
             this.subCategoriaText.MaxLength = 200;
             this.subCategoriaText.Name = "subCategoriaText";
             this.subCategoriaText.ReadOnly = true;
@@ -561,7 +561,7 @@ namespace IrisContabilidad.modulo_inventario
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Location = new System.Drawing.Point(463, 278);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(63, 46);
             this.button6.TabIndex = 32;
@@ -573,7 +573,7 @@ namespace IrisContabilidad.modulo_inventario
             this.subcategoriaIdText.BackColor = System.Drawing.Color.SkyBlue;
             this.subcategoriaIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subcategoriaIdText.Location = new System.Drawing.Point(211, 283);
-            this.subcategoriaIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.subcategoriaIdText.Margin = new System.Windows.Forms.Padding(4);
             this.subcategoriaIdText.Name = "subcategoriaIdText";
             this.subcategoriaIdText.Size = new System.Drawing.Size(243, 30);
             this.subcategoriaIdText.TabIndex = 30;
@@ -584,7 +584,7 @@ namespace IrisContabilidad.modulo_inventario
             this.categoriaText.BackColor = System.Drawing.Color.White;
             this.categoriaText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoriaText.Location = new System.Drawing.Point(211, 230);
-            this.categoriaText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.categoriaText.Margin = new System.Windows.Forms.Padding(4);
             this.categoriaText.MaxLength = 200;
             this.categoriaText.Name = "categoriaText";
             this.categoriaText.ReadOnly = true;
@@ -597,7 +597,7 @@ namespace IrisContabilidad.modulo_inventario
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Location = new System.Drawing.Point(463, 180);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(63, 46);
             this.button5.TabIndex = 27;
@@ -609,7 +609,7 @@ namespace IrisContabilidad.modulo_inventario
             this.referenciaText.BackColor = System.Drawing.Color.White;
             this.referenciaText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.referenciaText.Location = new System.Drawing.Point(211, 132);
-            this.referenciaText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.referenciaText.Margin = new System.Windows.Forms.Padding(4);
             this.referenciaText.MaxLength = 20;
             this.referenciaText.Name = "referenciaText";
             this.referenciaText.Size = new System.Drawing.Size(313, 30);
@@ -620,7 +620,7 @@ namespace IrisContabilidad.modulo_inventario
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(73, 134);
+            this.label3.Location = new System.Drawing.Point(93, 132);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 25);
@@ -632,7 +632,7 @@ namespace IrisContabilidad.modulo_inventario
             this.categoriaIdText.BackColor = System.Drawing.Color.SkyBlue;
             this.categoriaIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoriaIdText.Location = new System.Drawing.Point(211, 185);
-            this.categoriaIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.categoriaIdText.Margin = new System.Windows.Forms.Padding(4);
             this.categoriaIdText.Name = "categoriaIdText";
             this.categoriaIdText.Size = new System.Drawing.Size(243, 30);
             this.categoriaIdText.TabIndex = 25;
@@ -643,7 +643,7 @@ namespace IrisContabilidad.modulo_inventario
             this.productoText.BackColor = System.Drawing.Color.White;
             this.productoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productoText.Location = new System.Drawing.Point(211, 90);
-            this.productoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productoText.Margin = new System.Windows.Forms.Padding(4);
             this.productoText.MaxLength = 30;
             this.productoText.Name = "productoText";
             this.productoText.Size = new System.Drawing.Size(313, 30);
@@ -654,7 +654,7 @@ namespace IrisContabilidad.modulo_inventario
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(108, 92);
+            this.label2.Location = new System.Drawing.Point(135, 90);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 25);
@@ -667,9 +667,9 @@ namespace IrisContabilidad.modulo_inventario
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.productoIdText);
             this.groupBox1.Location = new System.Drawing.Point(8, 7);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1223, 75);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
@@ -681,7 +681,7 @@ namespace IrisContabilidad.modulo_inventario
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(455, 18);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(63, 46);
             this.button4.TabIndex = 24;
@@ -704,7 +704,7 @@ namespace IrisContabilidad.modulo_inventario
             this.productoIdText.BackColor = System.Drawing.Color.SkyBlue;
             this.productoIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productoIdText.Location = new System.Drawing.Point(203, 23);
-            this.productoIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productoIdText.Margin = new System.Windows.Forms.Padding(4);
             this.productoIdText.Name = "productoIdText";
             this.productoIdText.Size = new System.Drawing.Size(243, 30);
             this.productoIdText.TabIndex = 0;
@@ -714,9 +714,9 @@ namespace IrisContabilidad.modulo_inventario
             // 
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(1241, 668);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Restrinctions";
@@ -726,22 +726,34 @@ namespace IrisContabilidad.modulo_inventario
             // 
             this.groupBox3.Controls.Add(this.checkBox1);
             this.groupBox3.Location = new System.Drawing.Point(15, 16);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(1205, 644);
             this.groupBox3.TabIndex = 65;
             this.groupBox3.TabStop = false;
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(27, 48);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(118, 24);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.groupBox2);
             this.tabPage3.Controls.Add(this.dataGridView2);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage3.Size = new System.Drawing.Size(1241, 668);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Barcodes";
@@ -758,9 +770,9 @@ namespace IrisContabilidad.modulo_inventario
             this.groupBox2.Controls.Add(this.button11);
             this.groupBox2.Controls.Add(this.button16);
             this.groupBox2.Location = new System.Drawing.Point(21, 27);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(1205, 112);
             this.groupBox2.TabIndex = 67;
             this.groupBox2.TabStop = false;
@@ -771,7 +783,7 @@ namespace IrisContabilidad.modulo_inventario
             this.codigoBarraText.BackColor = System.Drawing.Color.White;
             this.codigoBarraText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.codigoBarraText.Location = new System.Drawing.Point(468, 68);
-            this.codigoBarraText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.codigoBarraText.Margin = new System.Windows.Forms.Padding(4);
             this.codigoBarraText.MaxLength = 30;
             this.codigoBarraText.Name = "codigoBarraText";
             this.codigoBarraText.Size = new System.Drawing.Size(313, 30);
@@ -793,7 +805,7 @@ namespace IrisContabilidad.modulo_inventario
             this.unidadTextCodigoBarra.BackColor = System.Drawing.Color.White;
             this.unidadTextCodigoBarra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unidadTextCodigoBarra.Location = new System.Drawing.Point(101, 69);
-            this.unidadTextCodigoBarra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.unidadTextCodigoBarra.Margin = new System.Windows.Forms.Padding(4);
             this.unidadTextCodigoBarra.MaxLength = 200;
             this.unidadTextCodigoBarra.Name = "unidadTextCodigoBarra";
             this.unidadTextCodigoBarra.ReadOnly = true;
@@ -806,7 +818,7 @@ namespace IrisContabilidad.modulo_inventario
             this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button17.Location = new System.Drawing.Point(353, 18);
-            this.button17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button17.Margin = new System.Windows.Forms.Padding(4);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(63, 46);
             this.button17.TabIndex = 55;
@@ -829,7 +841,7 @@ namespace IrisContabilidad.modulo_inventario
             this.unidadIdCodigoBarraText.BackColor = System.Drawing.Color.SkyBlue;
             this.unidadIdCodigoBarraText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unidadIdCodigoBarraText.Location = new System.Drawing.Point(101, 23);
-            this.unidadIdCodigoBarraText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.unidadIdCodigoBarraText.Margin = new System.Windows.Forms.Padding(4);
             this.unidadIdCodigoBarraText.Name = "unidadIdCodigoBarraText";
             this.unidadIdCodigoBarraText.Size = new System.Drawing.Size(243, 30);
             this.unidadIdCodigoBarraText.TabIndex = 53;
@@ -840,7 +852,7 @@ namespace IrisContabilidad.modulo_inventario
             this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Location = new System.Drawing.Point(1112, 28);
-            this.button11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button11.Margin = new System.Windows.Forms.Padding(4);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(85, 71);
             this.button11.TabIndex = 26;
@@ -853,7 +865,7 @@ namespace IrisContabilidad.modulo_inventario
             this.button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.Location = new System.Drawing.Point(1017, 28);
-            this.button16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button16.Margin = new System.Windows.Forms.Padding(4);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(87, 71);
             this.button16.TabIndex = 25;
@@ -873,7 +885,7 @@ namespace IrisContabilidad.modulo_inventario
             this.dataGridViewTextBoxColumn2,
             this.barraColumn});
             this.dataGridView2.Location = new System.Drawing.Point(21, 146);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
@@ -882,15 +894,34 @@ namespace IrisContabilidad.modulo_inventario
             this.dataGridView2.Size = new System.Drawing.Size(1205, 496);
             this.dataGridView2.TabIndex = 66;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.FillWeight = 20F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Unit";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // barraColumn
+            // 
+            this.barraColumn.HeaderText = "Barcode";
+            this.barraColumn.Name = "barraColumn";
+            this.barraColumn.ReadOnly = true;
+            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.label9);
             this.tabPage4.Controls.Add(this.groupBox4);
             this.tabPage4.Controls.Add(this.dataGridView3);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage4.Size = new System.Drawing.Size(1241, 668);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Units";
@@ -923,9 +954,9 @@ namespace IrisContabilidad.modulo_inventario
             this.groupBox4.Controls.Add(this.button19);
             this.groupBox4.Controls.Add(this.button20);
             this.groupBox4.Location = new System.Drawing.Point(16, 25);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(1205, 112);
             this.groupBox4.TabIndex = 69;
             this.groupBox4.TabStop = false;
@@ -935,7 +966,7 @@ namespace IrisContabilidad.modulo_inventario
             this.cantidadText.BackColor = System.Drawing.Color.White;
             this.cantidadText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cantidadText.Location = new System.Drawing.Point(451, 68);
-            this.cantidadText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cantidadText.Margin = new System.Windows.Forms.Padding(4);
             this.cantidadText.MaxLength = 30;
             this.cantidadText.Name = "cantidadText";
             this.cantidadText.Size = new System.Drawing.Size(137, 30);
@@ -959,7 +990,7 @@ namespace IrisContabilidad.modulo_inventario
             this.precioCostoText.BackColor = System.Drawing.Color.White;
             this.precioCostoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.precioCostoText.Location = new System.Drawing.Point(613, 68);
-            this.precioCostoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.precioCostoText.Margin = new System.Windows.Forms.Padding(4);
             this.precioCostoText.MaxLength = 30;
             this.precioCostoText.Name = "precioCostoText";
             this.precioCostoText.Size = new System.Drawing.Size(137, 30);
@@ -983,7 +1014,7 @@ namespace IrisContabilidad.modulo_inventario
             this.precioVentaText.BackColor = System.Drawing.Color.White;
             this.precioVentaText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.precioVentaText.Location = new System.Drawing.Point(773, 68);
-            this.precioVentaText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.precioVentaText.Margin = new System.Windows.Forms.Padding(4);
             this.precioVentaText.MaxLength = 30;
             this.precioVentaText.Name = "precioVentaText";
             this.precioVentaText.Size = new System.Drawing.Size(137, 30);
@@ -1007,7 +1038,7 @@ namespace IrisContabilidad.modulo_inventario
             this.unidadPrecioVentaText.BackColor = System.Drawing.Color.White;
             this.unidadPrecioVentaText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unidadPrecioVentaText.Location = new System.Drawing.Point(101, 68);
-            this.unidadPrecioVentaText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.unidadPrecioVentaText.Margin = new System.Windows.Forms.Padding(4);
             this.unidadPrecioVentaText.MaxLength = 200;
             this.unidadPrecioVentaText.Name = "unidadPrecioVentaText";
             this.unidadPrecioVentaText.ReadOnly = true;
@@ -1020,7 +1051,7 @@ namespace IrisContabilidad.modulo_inventario
             this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button18.Location = new System.Drawing.Point(353, 18);
-            this.button18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button18.Margin = new System.Windows.Forms.Padding(4);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(63, 46);
             this.button18.TabIndex = 55;
@@ -1043,7 +1074,7 @@ namespace IrisContabilidad.modulo_inventario
             this.unidadIdPrecioVentaText.BackColor = System.Drawing.Color.SkyBlue;
             this.unidadIdPrecioVentaText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unidadIdPrecioVentaText.Location = new System.Drawing.Point(101, 23);
-            this.unidadIdPrecioVentaText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.unidadIdPrecioVentaText.Margin = new System.Windows.Forms.Padding(4);
             this.unidadIdPrecioVentaText.Name = "unidadIdPrecioVentaText";
             this.unidadIdPrecioVentaText.Size = new System.Drawing.Size(243, 30);
             this.unidadIdPrecioVentaText.TabIndex = 53;
@@ -1056,7 +1087,7 @@ namespace IrisContabilidad.modulo_inventario
             this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button19.Location = new System.Drawing.Point(1112, 28);
-            this.button19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button19.Margin = new System.Windows.Forms.Padding(4);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(85, 71);
             this.button19.TabIndex = 26;
@@ -1069,7 +1100,7 @@ namespace IrisContabilidad.modulo_inventario
             this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button20.Location = new System.Drawing.Point(1017, 28);
-            this.button20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button20.Margin = new System.Windows.Forms.Padding(4);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(87, 71);
             this.button20.TabIndex = 25;
@@ -1091,7 +1122,7 @@ namespace IrisContabilidad.modulo_inventario
             this.dataGridViewTextBoxColumn5,
             this.precioVentaColumn});
             this.dataGridView3.Location = new System.Drawing.Point(16, 144);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView3.MultiSelect = false;
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
@@ -1121,8 +1152,8 @@ namespace IrisContabilidad.modulo_inventario
             // 
             // dataGridViewTextBoxColumn5
             // 
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewTextBoxColumn5.FillWeight = 70F;
             this.dataGridViewTextBoxColumn5.HeaderText = "Precio costo";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
@@ -1130,8 +1161,8 @@ namespace IrisContabilidad.modulo_inventario
             // 
             // precioVentaColumn
             // 
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.precioVentaColumn.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.precioVentaColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.precioVentaColumn.FillWeight = 70F;
             this.precioVentaColumn.HeaderText = "Precio venta";
             this.precioVentaColumn.Name = "precioVentaColumn";
@@ -1142,9 +1173,9 @@ namespace IrisContabilidad.modulo_inventario
             this.tabPage5.Controls.Add(this.groupBox5);
             this.tabPage5.Controls.Add(this.dataGridView4);
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage5.Size = new System.Drawing.Size(1241, 668);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Production";
@@ -1165,9 +1196,9 @@ namespace IrisContabilidad.modulo_inventario
             this.groupBox5.Controls.Add(this.button22);
             this.groupBox5.Controls.Add(this.button23);
             this.groupBox5.Location = new System.Drawing.Point(16, 25);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox5.Size = new System.Drawing.Size(1205, 112);
             this.groupBox5.TabIndex = 71;
             this.groupBox5.TabStop = false;
@@ -1177,7 +1208,7 @@ namespace IrisContabilidad.modulo_inventario
             this.unidadProduccionText.BackColor = System.Drawing.Color.White;
             this.unidadProduccionText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unidadProduccionText.Location = new System.Drawing.Point(536, 63);
-            this.unidadProduccionText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.unidadProduccionText.Margin = new System.Windows.Forms.Padding(4);
             this.unidadProduccionText.MaxLength = 200;
             this.unidadProduccionText.Name = "unidadProduccionText";
             this.unidadProduccionText.ReadOnly = true;
@@ -1190,7 +1221,7 @@ namespace IrisContabilidad.modulo_inventario
             this.button24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button24.Location = new System.Drawing.Point(788, 14);
-            this.button24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button24.Margin = new System.Windows.Forms.Padding(4);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(63, 46);
             this.button24.TabIndex = 65;
@@ -1213,7 +1244,7 @@ namespace IrisContabilidad.modulo_inventario
             this.unidadProduccionIdText.BackColor = System.Drawing.Color.SkyBlue;
             this.unidadProduccionIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unidadProduccionIdText.Location = new System.Drawing.Point(536, 18);
-            this.unidadProduccionIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.unidadProduccionIdText.Margin = new System.Windows.Forms.Padding(4);
             this.unidadProduccionIdText.Name = "unidadProduccionIdText";
             this.unidadProduccionIdText.Size = new System.Drawing.Size(243, 30);
             this.unidadProduccionIdText.TabIndex = 63;
@@ -1223,7 +1254,7 @@ namespace IrisContabilidad.modulo_inventario
             this.cantidadProduccionText.BackColor = System.Drawing.Color.White;
             this.cantidadProduccionText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cantidadProduccionText.Location = new System.Drawing.Point(860, 65);
-            this.cantidadProduccionText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cantidadProduccionText.Margin = new System.Windows.Forms.Padding(4);
             this.cantidadProduccionText.MaxLength = 30;
             this.cantidadProduccionText.Name = "cantidadProduccionText";
             this.cantidadProduccionText.Size = new System.Drawing.Size(137, 30);
@@ -1246,7 +1277,7 @@ namespace IrisContabilidad.modulo_inventario
             this.productoProduccionText.BackColor = System.Drawing.Color.White;
             this.productoProduccionText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productoProduccionText.Location = new System.Drawing.Point(121, 68);
-            this.productoProduccionText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productoProduccionText.Margin = new System.Windows.Forms.Padding(4);
             this.productoProduccionText.MaxLength = 200;
             this.productoProduccionText.Name = "productoProduccionText";
             this.productoProduccionText.ReadOnly = true;
@@ -1259,7 +1290,7 @@ namespace IrisContabilidad.modulo_inventario
             this.button21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button21.Location = new System.Drawing.Point(373, 18);
-            this.button21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button21.Margin = new System.Windows.Forms.Padding(4);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(63, 46);
             this.button21.TabIndex = 55;
@@ -1282,7 +1313,7 @@ namespace IrisContabilidad.modulo_inventario
             this.productoProduccionIdText.BackColor = System.Drawing.Color.SkyBlue;
             this.productoProduccionIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productoProduccionIdText.Location = new System.Drawing.Point(121, 23);
-            this.productoProduccionIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productoProduccionIdText.Margin = new System.Windows.Forms.Padding(4);
             this.productoProduccionIdText.Name = "productoProduccionIdText";
             this.productoProduccionIdText.Size = new System.Drawing.Size(243, 30);
             this.productoProduccionIdText.TabIndex = 53;
@@ -1293,7 +1324,7 @@ namespace IrisContabilidad.modulo_inventario
             this.button22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button22.Location = new System.Drawing.Point(1112, 28);
-            this.button22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button22.Margin = new System.Windows.Forms.Padding(4);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(85, 71);
             this.button22.TabIndex = 26;
@@ -1306,7 +1337,7 @@ namespace IrisContabilidad.modulo_inventario
             this.button23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button23.Location = new System.Drawing.Point(1017, 28);
-            this.button23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button23.Margin = new System.Windows.Forms.Padding(4);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(87, 71);
             this.button23.TabIndex = 25;
@@ -1328,7 +1359,7 @@ namespace IrisContabilidad.modulo_inventario
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.dataGridView4.Location = new System.Drawing.Point(16, 144);
-            this.dataGridView4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView4.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView4.MultiSelect = false;
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
@@ -1336,25 +1367,6 @@ namespace IrisContabilidad.modulo_inventario
             this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView4.Size = new System.Drawing.Size(1205, 496);
             this.dataGridView4.TabIndex = 70;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.FillWeight = 20F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Unit";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // barraColumn
-            // 
-            this.barraColumn.HeaderText = "Barcode";
-            this.barraColumn.Name = "barraColumn";
-            this.barraColumn.ReadOnly = true;
             // 
             // idProductoREquisitoColumn
             // 
@@ -1385,24 +1397,12 @@ namespace IrisContabilidad.modulo_inventario
             // 
             // dataGridViewTextBoxColumn8
             // 
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewTextBoxColumn8.FillWeight = 30F;
             this.dataGridViewTextBoxColumn8.HeaderText = "Quantity";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(27, 48);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(118, 24);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // ventana_producto
             // 
@@ -1410,7 +1410,7 @@ namespace IrisContabilidad.modulo_inventario
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1287, 818);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "ventana_producto";
             this.Text = "ventana_producto";
             this.Load += new System.EventHandler(this.ventana_producto_Load);

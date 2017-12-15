@@ -48,7 +48,7 @@ namespace IrisContabilidad.modulo_inventario
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(16, 444);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Size = new System.Drawing.Size(897, 66);
             // 
             // button2
@@ -60,19 +60,19 @@ namespace IrisContabilidad.modulo_inventario
             // 
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Location = new System.Drawing.Point(709, 6);
-            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Size = new System.Drawing.Size(929, 25);
             // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.Location = new System.Drawing.Point(355, 6);
-            this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button3.Margin = new System.Windows.Forms.Padding(5);
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // groupBox1
@@ -80,9 +80,9 @@ namespace IrisContabilidad.modulo_inventario
             this.groupBox1.Controls.Add(this.nombreText);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(21, 33);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(888, 82);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
@@ -91,7 +91,7 @@ namespace IrisContabilidad.modulo_inventario
             // 
             this.nombreText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombreText.Location = new System.Drawing.Point(108, 23);
-            this.nombreText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nombreText.Margin = new System.Windows.Forms.Padding(4);
             this.nombreText.Name = "nombreText";
             this.nombreText.Size = new System.Drawing.Size(527, 30);
             this.nombreText.TabIndex = 20;
@@ -122,7 +122,7 @@ namespace IrisContabilidad.modulo_inventario
             this.Sucursalcolumn,
             this.activoColumn});
             this.dataGridView1.Location = new System.Drawing.Point(21, 123);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -130,7 +130,6 @@ namespace IrisContabilidad.modulo_inventario
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(888, 314);
             this.dataGridView1.TabIndex = 26;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // codigoColumn
             // 
@@ -166,7 +165,7 @@ namespace IrisContabilidad.modulo_inventario
             this.ClientSize = new System.Drawing.Size(929, 526);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "ventana_busqueda_almacen";
             this.Text = "ventana_busqueda_almacen";
             this.Load += new System.EventHandler(this.ventana_busqueda_almacen_Load);

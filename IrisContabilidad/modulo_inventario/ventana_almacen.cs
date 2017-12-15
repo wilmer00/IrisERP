@@ -145,6 +145,7 @@ namespace IrisContabilidad.modulo_inventario
                 MessageBox.Show("Error GetAction.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         public void salir()
         {
             if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -195,5 +196,6 @@ namespace IrisContabilidad.modulo_inventario
         {
 
         }
+
     }
 }
