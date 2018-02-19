@@ -574,7 +574,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Taxes:</Value>
+                              <Value>Tax:</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -812,7 +812,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Checked by</Value>
+                              <Value>Customer signature</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -993,6 +993,7 @@
                   <Value>=First(Fields!telefonos.Value, "reporte_encabezado")</Value>
                   <Style>
                     <FontSize>9pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -1090,7 +1091,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>order num:</Value>
+                  <Value>invoice:</Value>
                   <Style>
                     <FontSize>8pt</FontSize>
                     <FontWeight>Bold</FontWeight>
