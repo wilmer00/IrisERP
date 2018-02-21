@@ -155,6 +155,7 @@ namespace IrisContabilidad.modulo_nomina
         {
             salir();
         }
+
         public void salir()
         {
             if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

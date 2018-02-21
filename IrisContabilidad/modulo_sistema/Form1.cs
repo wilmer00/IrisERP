@@ -73,7 +73,7 @@ namespace IrisContabilidad
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error imprimiendo.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error printing/Error imprimiendo.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -113,7 +113,7 @@ namespace IrisContabilidad
                         }
                         else
                         {
-                            if (MessageBox.Show("La version de prueba se ha terminado, por favor contacte con el encargado, si desea mandar un correo automatico solicitando la version full pulse el boton de 'YES'","", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                            if (MessageBox.Show("The trial version has been completed, please contact the manager, if you want to send an automatic email requesting the full version press the 'YES' button/La version de prueba se ha terminado, por favor contacte con el encargado, si desea mandar un correo automatico solicitando la version full pulse el boton de 'YES'", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                             {
                                 //se manda el correo automatico solitando que instalen la version full y se cierra la aplicacion
                                 
@@ -152,7 +152,7 @@ namespace IrisContabilidad
             {
                 if (usuarioText.Text == "")
                 {
-                    MessageBox.Show("Falta el usuario", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The user is missing/Falta el usuario", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     usuarioText.Focus();
                     usuarioText.SelectAll();
                     return false;
@@ -160,7 +160,7 @@ namespace IrisContabilidad
 
                 if (claveText.Text == "")
                 {
-                    MessageBox.Show("Falta el clave", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The password is missing/Falta el clave", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     claveText.Focus();
                     claveText.SelectAll();
                     return false;
@@ -247,7 +247,7 @@ namespace IrisContabilidad
                 {
                     inicioSesion = false;
                     empleado = null;
-                    MessageBox.Show("Datos incorrectos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Wrong data/Datos incorrectos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     limpiar();
                 }
             }
@@ -274,7 +274,7 @@ namespace IrisContabilidad
         
         public  void Salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
             }

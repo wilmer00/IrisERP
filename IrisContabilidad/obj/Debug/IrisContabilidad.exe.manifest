@@ -94,14 +94,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IrisContabilidad.exe" size="11275264">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IrisContabilidad.exe" size="11337728">
       <assemblyIdentity name="IrisContabilidad" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7bhw82ZGk1HkVm89Mbhi8Qn0x1dDrPlSzQrh50DONdo=</dsig:DigestValue>
+        <dsig:DigestValue>h53dl7blZTjY4ngsirlWY3gxYsYPs2N1+6YNCwfyz+Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -166,18 +166,6 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\Microsoft.SqlServer.Types.resources.dll" size="48752">
-      <assemblyIdentity name="Microsoft.SqlServer.Types.resources" version="11.0.0.0" publicKeyToken="89845DCD8080CC91" language="es" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZyQXIAIhW62/lY5xIonvlhfc6jCoBx8LjuTEWtXsBLU=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MySql.Data.dll" size="424448">
       <assemblyIdentity name="MySql.Data" version="6.9.9.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -186,6 +174,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>z1JCyodj5/UiC37FF0m11VPrQRt8tszqKfa8jk+yNYc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Reports.dll" size="788480">
+      <assemblyIdentity name="Reports" version="0.9.5821.33853" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>6oAnr1S9wWeq7dyr3k2RxhIMgYOddIn0IIy1/lyZH/c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -648,13 +648,13 @@
       <dsig:DigestValue>tk7gT5AiwcIbFpmc9F6ufalmbLDK/jGfZOhNvVuVpJ0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Release\Resources\imagenes_empleados\default1.png" size="25887">
+  <file name="bin\Release\Resources\imagenes_empleados\default1.png" size="14467">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>JFpl/yr3O4DiHwIoEtfZ1ngMLVXe7MNEVKbT2YAXCbc=</dsig:DigestValue>
+      <dsig:DigestValue>V0lYBCJLGPDOn7B9jo9BiZijNErOsrcuBGcp2sc4SLs=</dsig:DigestValue>
     </hash>
   </file>
   <file name="bin\Release\Resources\logo\logo.png" size="4389">
@@ -6723,13 +6723,13 @@
       <dsig:DigestValue>FYIbk9Tbp3EvzKNX9m803Xyfnxbzet+9UxcxllPkQf8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Release\Resources\ventanas\nomina1.png" size="10100">
+  <file name="bin\Release\Resources\ventanas\nomina1.png" size="35123">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>C/1Wlkm8DQpFO61BSvTjApwAckM7BHdHNqvP/CHkVXU=</dsig:DigestValue>
+      <dsig:DigestValue>ZEw+vcp8AxD5g13mDG0n27EqPF3lBRxqpdreZQaW/FM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="bin\Release\Resources\ventanas\nota_credito_debito_concepto1.png" size="54132">

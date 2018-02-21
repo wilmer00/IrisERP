@@ -27,7 +27,7 @@ namespace IrisContabilidad.modulo_empresa
         {
             InitializeComponent();
             empleadoSingleton = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleadoSingleton, "ventana ciudad");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleadoSingleton, "City window/ventana ciudad");
             this.Text = tituloLabel.Text;
             loadVentana();
         }
@@ -54,7 +54,7 @@ namespace IrisContabilidad.modulo_empresa
         }
         public void salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -66,7 +66,7 @@ namespace IrisContabilidad.modulo_empresa
                 //validar nombre
                 if (nombreText.Text == "")
                 {
-                    MessageBox.Show("Falta el nombre de la ciudad ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The city's name is missing/Falta el nombre de la ciudad ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     nombreText.Focus();
                     nombreText.SelectAll();
                     return false;
@@ -90,7 +90,7 @@ namespace IrisContabilidad.modulo_empresa
                     return;
                 }
 
-                if (MessageBox.Show("Desea guardar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                if (MessageBox.Show("Do you want to save?/Desea guardar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 {
                     return;
                 }
@@ -113,12 +113,12 @@ namespace IrisContabilidad.modulo_empresa
                     {
                         ciudad = null;
                         loadVentana();
-                        MessageBox.Show("Se agregó ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Was added/Se agregó ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         
                     }
                     else
                     {
-                        MessageBox.Show("No se agregó ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Was not added/No se agregó ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -128,12 +128,12 @@ namespace IrisContabilidad.modulo_empresa
                     {
                         ciudad = null;
                         loadVentana();
-                        MessageBox.Show("Se actualizó ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Updated successfully/sea ctualizó correctamente", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         
                     }
                     else
                     {
-                        MessageBox.Show("No se actualizó ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("it is not updated correctly/no se acuatlizó coreectamente", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 

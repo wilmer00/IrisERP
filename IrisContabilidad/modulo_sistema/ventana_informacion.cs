@@ -8,7 +8,7 @@ namespace IrisContabilidad.modulo_sistema
         public ventana_informacion()
         {
             InitializeComponent();
-            this.Text = "Ventana información";
+            this.Text = "information side/Ventana información";
             this.tituloLabel.Text = this.Text;
         }
 
@@ -18,7 +18,7 @@ namespace IrisContabilidad.modulo_sistema
         }
         public void Salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }

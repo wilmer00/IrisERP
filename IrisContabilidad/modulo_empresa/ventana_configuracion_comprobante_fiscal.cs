@@ -33,7 +33,7 @@ namespace IrisContabilidad.modulo_empresa
         {
             InitializeComponent();
             empleado = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "ventana comprobantes fiscales");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "window tax receipts/ventana comprobantes fiscales");
             this.Text = tituloLabel.Text;
             loadVentana();
         }
@@ -75,7 +75,7 @@ namespace IrisContabilidad.modulo_empresa
         }
         public void salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -87,7 +87,7 @@ namespace IrisContabilidad.modulo_empresa
                 //validar caja
                 if (caja == null)
                 {
-                    MessageBox.Show("Falta la caja", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The cash machine is missing/Falta la caja", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     cajaIdText.Focus();
                     cajaIdText.SelectAll();
                     return false;
@@ -95,7 +95,7 @@ namespace IrisContabilidad.modulo_empresa
                 //validar tipo de comprobante
                 if (tipoComprobanteFiscal == null)
                 {
-                    MessageBox.Show("Falta el tipo de comprobante fiscal", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("the tupe of tax receips is missing/Falta el tipo de comprobante fiscal", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     comprobanteTipoIdText.Focus();
                     comprobanteTipoIdText.SelectAll();
                     return false;
@@ -103,7 +103,7 @@ namespace IrisContabilidad.modulo_empresa
                 //validar que numero inicial
                 if (numeroInicialText.Text == "")
                 {
-                    MessageBox.Show("Falta el número inicial", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The initial number is missing/Falta el número inicial", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     numeroInicialText.Focus();
                     numeroInicialText.SelectAll();
                     return false;
@@ -111,7 +111,7 @@ namespace IrisContabilidad.modulo_empresa
                 //validar que numero final
                 if (numeroFinalText.Text == "")
                 {
-                    MessageBox.Show("Falta el número final", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The final number is missing/Falta el número final", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     numeroFinalText.Focus();
                     numeroFinalText.SelectAll();
                     return false;
@@ -119,7 +119,7 @@ namespace IrisContabilidad.modulo_empresa
                 //validar que el numero inicial sea menor que el numero final
                 if(Convert.ToDecimal(numeroInicialText.Text)> (Convert.ToDecimal(numeroFinalText.Text)))
                 {
-                    MessageBox.Show("El núumero inicial es mayor que el número final", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The initial number is bigger than the final number/El número inicial es mayor que el número final", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     numeroInicialText.Focus();
                     numeroInicialText.SelectAll();
                     return false;
@@ -127,7 +127,7 @@ namespace IrisContabilidad.modulo_empresa
                 //validar el ultimo usaro
                 if (ultimoUsadoText.Text == "")
                 {
-                    MessageBox.Show("Falta el ultimo número usado de este tipo de comprobante", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Missing the last used number of this type of voucher/Falta el ultimo número usado de este tipo de comprobante", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ultimoUsadoText.Focus();
                     ultimoUsadoText.SelectAll();
                     return false;
@@ -153,7 +153,7 @@ namespace IrisContabilidad.modulo_empresa
                     return;
                 }
 
-                if (MessageBox.Show("Desea guardar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                if (MessageBox.Show("Do you want to save?/Desea guardar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 {
                     return;
                 }
@@ -180,12 +180,12 @@ namespace IrisContabilidad.modulo_empresa
                     {
                         comprobanteFiscal = null;
                         loadVentana();
-                        MessageBox.Show("Se agregó ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Was added/ se agregó", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
                         comprobanteFiscal = null;
-                        MessageBox.Show("No se agregó ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Was not added/no se agregó", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -195,12 +195,12 @@ namespace IrisContabilidad.modulo_empresa
                     {
                         comprobanteFiscal = null;
                         loadVentana();
-                        MessageBox.Show("Se actualizó ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Updated successfully/ sea ctualizó correctamente", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
                     else
                     {
-                        MessageBox.Show("No se actualizó ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("it is not updated correctly/no se acuatlizó correctamente ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 

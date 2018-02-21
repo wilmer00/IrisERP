@@ -26,7 +26,7 @@ namespace IrisContabilidad.modulo_empresa
         {
             InitializeComponent();
             this.empleado = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "ventana sucursal");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "Branch window/ventana sucursal");
             this.Text = tituloLabel.Text;
         }
 
@@ -88,7 +88,7 @@ namespace IrisContabilidad.modulo_empresa
 
         public void salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -110,14 +110,14 @@ namespace IrisContabilidad.modulo_empresa
             {
                 if (secuenciaText.Text == "")
                 {
-                    MessageBox.Show("Falta la secuencia", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The sequence is missing/Falta la secuencia", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     secuenciaText.Focus();
                     secuenciaText.SelectAll();
                     return false;
                 }
                 if (direccionText.Text == "")
                 {
-                    MessageBox.Show("Falta la dirección", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The address is missing/Falta la dirección", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     direccionText.Focus();
                     direccionText.SelectAll();
                     return false;
@@ -136,7 +136,7 @@ namespace IrisContabilidad.modulo_empresa
         {
             try
             {
-                if (MessageBox.Show("Desea guardar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                if (MessageBox.Show("Do you want to save?/Desea guardar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 {
                     return;
                 }
@@ -167,12 +167,12 @@ namespace IrisContabilidad.modulo_empresa
                     {
                         sucursal = null;
                         loadVentana();
-                        MessageBox.Show("Se agregó la sucursal.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("The brach was added/Se agregó la sucursal.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
                         sucursal = null;
-                        MessageBox.Show("No se agregó la sucursal.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("The brach was not added/No se agregó la sucursal.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -181,11 +181,11 @@ namespace IrisContabilidad.modulo_empresa
                     {
                         sucursal = null;
                         loadVentana();
-                        MessageBox.Show("Se modificó la sucursal.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("The brach was modified/Se modificó la sucursal.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("No se modificó la sucursal.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("The brach was not modified/No se modificó la sucursal.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

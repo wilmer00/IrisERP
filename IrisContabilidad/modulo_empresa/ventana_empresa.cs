@@ -22,7 +22,7 @@ namespace IrisContabilidad.modulo_empresa
         {
             InitializeComponent();
             empleado = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "ventana empresa");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "Company window/ventana empresa");
             this.Text = tituloLabel.Text;
             loadVentana();
         }
@@ -97,7 +97,7 @@ namespace IrisContabilidad.modulo_empresa
 
         public void Salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -109,7 +109,7 @@ namespace IrisContabilidad.modulo_empresa
             {
                 if (empresaText.Text == "")
                 {
-                    MessageBox.Show("Falta el nombre.:","",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    MessageBox.Show("The name is missing/Falta el nombre.:","",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                     empresaText.Focus();
                     empresaText.SelectAll();
                     return false;
@@ -117,7 +117,7 @@ namespace IrisContabilidad.modulo_empresa
 
                 if (RncText.Text == "")
                 {
-                    MessageBox.Show("Falta el RNC.:", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The (RNC,TIN,SSN) is missing/Falta el RNC.:", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     RncText.Focus();
                     RncText.SelectAll();
                     return false;
@@ -141,7 +141,7 @@ namespace IrisContabilidad.modulo_empresa
 
         public  void GetAction()
         {
-            if (MessageBox.Show("Desea guardar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            if (MessageBox.Show("Do you want to save?/Desea guardar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 return;
             }
@@ -163,12 +163,12 @@ namespace IrisContabilidad.modulo_empresa
 
             if ((modeloEmpresa.agregarEmpresa(empresa)) == true)
             {
-                MessageBox.Show("Se agregó la empresa", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("the company was added/Se agregó la empresa", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 loadVentana();
             }
             else
             {
-                MessageBox.Show("No se agregó la empresa", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("The company was not added/No se agregó la empresa", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

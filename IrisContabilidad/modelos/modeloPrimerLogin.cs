@@ -1134,6 +1134,15 @@ namespace IrisContabilidad.modelos
                 ventana.codigo_modulo = 7;
                 ventana.imagen = "grupo_usuario1.png";
                 listaVentana.Add(ventana);
+                //nueva ventana
+                ventana = new ventana();
+                ventana.nombre_ventana = "nomina";
+                ventana.nombre_logico = "IrisContabilidad.modulo_nomina.ventana_nomina";
+                ventana.activo = true;
+                ventana.programador = false;
+                ventana.codigo_modulo = 7;
+                ventana.imagen = "nomina1.png";
+                listaVentana.Add(ventana);
 
 
                 #endregion
@@ -1144,7 +1153,7 @@ namespace IrisContabilidad.modelos
 
                 //modulo sistema
                 #region
-                
+
                 #endregion
 
                 //modulo contabilidad

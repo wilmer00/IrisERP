@@ -94,14 +94,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IrisContabilidad.exe" size="5672960">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IrisContabilidad.exe" size="5697024">
       <assemblyIdentity name="IrisContabilidad" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>5oZ2s63rGCkfuUEexfoynY/9dtkw4JFa5U1eweIOCTM=</dsig:DigestValue>
+        <dsig:DigestValue>h2sWPIj9wefuq0rpCSKfN5Oe41qPsQY5D5LUn6x7Ra4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -6711,13 +6711,13 @@
       <dsig:DigestValue>FYIbk9Tbp3EvzKNX9m803Xyfnxbzet+9UxcxllPkQf8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Release\Resources\ventanas\nomina1.png" size="10100">
+  <file name="bin\Release\Resources\ventanas\nomina1.png" size="35123">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>C/1Wlkm8DQpFO61BSvTjApwAckM7BHdHNqvP/CHkVXU=</dsig:DigestValue>
+      <dsig:DigestValue>ZEw+vcp8AxD5g13mDG0n27EqPF3lBRxqpdreZQaW/FM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="bin\Release\Resources\ventanas\nota_credito_debito_concepto1.png" size="54132">

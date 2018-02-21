@@ -551,10 +551,10 @@ namespace IrisContabilidad.modelos
                 sql = "CREATETABLE`iris`.`ingredientes_variacion`( `codigo`INTEGER, `nombre`VARCHAR(100)NOTNULLDEFAULT'', `activo`BOOLEANNOTNULLDEFAULT1, `descripcion`VARCHAR(500), PRIMARYKEY(`codigo`) ) ENGINE=In";
                 utilidades.ejecutarcomando_mysql(sql);
                 //nuevo query
-                sql = "";
+                sql = "ALTER TABLE `iris`.`nomina` CHANGE COLUMN `abierta_cerrada` `nomina_cerrada` TINYINT(1) COMMENT '0-abierta y 1-cerrada';";
                 utilidades.ejecutarcomando_mysql(sql);
                 //nuevo query
-                sql = "";
+                sql = "ALTER TABLE `iris`.`nomina` MODIFY COLUMN `activo` TINYINT(1) NOT NULL DEFAULT 0, MODIFY COLUMN `nomina_cerrada` TINYINT(1) NOT NULL DEFAULT 0 COMMENT '0-abierta y 1-cerrada';";
                 utilidades.ejecutarcomando_mysql(sql);
                 //nuevo query
                 sql = "";

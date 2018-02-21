@@ -522,3 +522,4 @@ C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Release\IrisContabi
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Release\IrisContabilidad.application
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Release\IrisContabilidad.exe
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Release\IrisContabilidad.pdb
+C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Release\IrisContabilidad.modulo_nomina.ventana_nomina.resources

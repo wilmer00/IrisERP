@@ -171,6 +171,7 @@
     <Compile Include="clases\mes.cs" />
     <Compile Include="clases\metodo_pago.cs" />
     <Compile Include="clases\modulo.cs" />
+    <Compile Include="clases\nomina.cs" />
     <Compile Include="clases\nomina_tipo.cs" />
     <Compile Include="clases\nota_credito_debito_concepto.cs" />
     <Compile Include="clases\parametrizacion_contable.cs" />
@@ -277,6 +278,7 @@
     <Compile Include="modelos\modeloMes.cs" />
     <Compile Include="modelos\modeloMetodoPago.cs" />
     <Compile Include="modelos\modeloModulo.cs" />
+    <Compile Include="modelos\modeloNomina.cs" />
     <Compile Include="modelos\modeloNominaTipo.cs" />
     <Compile Include="modelos\modeloNotaCreditoDebitoConcepto.cs" />
     <Compile Include="modelos\modeloPago.cs" />
@@ -910,6 +912,12 @@
     <Compile Include="modulo_nomina\ventana_grupo_usuarios.Designer.cs">
       <DependentUpon>ventana_grupo_usuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="modulo_nomina\ventana_nomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modulo_nomina\ventana_nomina.Designer.cs">
+      <DependentUpon>ventana_nomina.cs</DependentUpon>
+    </Compile>
     <Compile Include="modulo_nomina\ventana_situacion_empleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1332,6 +1340,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modulo_nomina\ventana_grupo_usuarios.resx">
       <DependentUpon>ventana_grupo_usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modulo_nomina\ventana_nomina.resx">
+      <DependentUpon>ventana_nomina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modulo_nomina\ventana_situacion_empleado.resx">
       <DependentUpon>ventana_situacion_empleado.cs</DependentUpon>
