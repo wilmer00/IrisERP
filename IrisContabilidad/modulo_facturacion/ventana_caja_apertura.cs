@@ -29,7 +29,7 @@ namespace IrisContabilidad.modulo_facturacion
         {
             InitializeComponent();
             empleado = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "apertura caja");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "cash machine opening/apertura caja");
             this.Text = tituloLabel.Text;
             loadVentana();
         }
@@ -61,14 +61,14 @@ namespace IrisContabilidad.modulo_facturacion
                 cajero = modeloCajero.getCajeroByIdEmpleado(empleado.codigo);
                 if (cajero == null)
                 {
-                    MessageBox.Show("Su usuario no es un cajero, debe ser cajero para realizar apertura de caja", "",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Your user is not a cashier, you must be a cashier to do a cash machine opening/Su usuario no es un cajero, debe ser cajero para realizar apertura de caja", "",MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     this.Close();
                 }
                 loadCajero();
             }
             catch (Exception)
             {
-                System.Windows.MessageBox.Show("Error validando si su usuario es un cajero", "", MessageBoxButton.OK,
+                System.Windows.MessageBox.Show("Error validating if your user is a cashier/Error validando si su usuario es un cajero", "", MessageBoxButton.OK,
                     MessageBoxImage.Error);
             }
         }
@@ -95,7 +95,7 @@ namespace IrisContabilidad.modulo_facturacion
 
         public void salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -110,13 +110,13 @@ namespace IrisContabilidad.modulo_facturacion
                 {
                     cajeroIdText.Focus();
                     cajeroIdText.SelectAll();
-                    MessageBox.Show("Falta el cajero", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Cashier is missing/Falta el cajero", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
                 //validar si este cajero tiene caja abierta
                 if ((modeloCajero.getValidarCajaAbiertaByCajero(cajero.codigo)) == true)
                 {
-                    MessageBox.Show("Este cajero ya tiene una caja abierta, no puede realizar apertura sobre una ya existente", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("This cashier has an open cash machine, you can not do a cash opening/Este cajero ya tiene una caja abierta, no puede realizar apertura sobre una ya existente", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
                 //validar que tenga monto de apertura
@@ -124,7 +124,7 @@ namespace IrisContabilidad.modulo_facturacion
                 {
                     montoAperturaText.Focus();
                     montoAperturaText.SelectAll();
-                    MessageBox.Show("Falta el monto efectivo", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The cash amount is missing/Falta el monto efectivo", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
                 //validar monto sea cero o mayor
@@ -132,7 +132,7 @@ namespace IrisContabilidad.modulo_facturacion
                 {
                     montoAperturaText.Focus();
                     montoAperturaText.SelectAll();
-                    MessageBox.Show("El monto debe ser un número mayor o igual a cero", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The cash amount must be 0 or more/El monto debe ser un número mayor o igual a cero", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
                
@@ -156,7 +156,7 @@ namespace IrisContabilidad.modulo_facturacion
                     return;
                 }
 
-                if (MessageBox.Show("Desea guardar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                if (MessageBox.Show("Do you want to save?/Desea guardar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 {
                     return;
                 }
@@ -187,12 +187,12 @@ namespace IrisContabilidad.modulo_facturacion
                     if ((modeloCuadreCaja.agregarCuadreCaja(cuadreCaja)) == true)
                     {
                         loadVentana();
-                        MessageBox.Show("Se agregó ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Was added/ se agregó", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
                         cuadreCaja = null;
-                        MessageBox.Show("No se agregó ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Was not added/no se agregó", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

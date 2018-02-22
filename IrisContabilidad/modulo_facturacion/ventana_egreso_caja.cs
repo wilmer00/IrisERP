@@ -30,7 +30,7 @@ namespace IrisContabilidad.modulo_facturacion
         {
             InitializeComponent();
             empleado = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "ventana egreso de caja");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "Cash out/Egreso de caja");
             this.Text = tituloLabel.Text;
             loadVentana();
         }
@@ -76,7 +76,7 @@ namespace IrisContabilidad.modulo_facturacion
         }
         public void salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -88,7 +88,7 @@ namespace IrisContabilidad.modulo_facturacion
                 //validar nombre
                 if (concepto==null)
                 {
-                    MessageBox.Show("Falta el concepto del egreso", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The egress concept is missing/Falta el concepto del egreso", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     conceptoIdText.Focus();
                     conceptoIdText.SelectAll();
                     return false;
@@ -96,7 +96,7 @@ namespace IrisContabilidad.modulo_facturacion
                 //validar numero itebis
                 if (montoText.Text == "")
                 {
-                    MessageBox.Show("Falta el monto del egreso", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The amount egress is missing/Falta el monto del egreso", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     montoText.Focus();
                     montoText.SelectAll();
                     return false;
@@ -106,7 +106,7 @@ namespace IrisContabilidad.modulo_facturacion
                 cajero = modeloCajero.getCajeroByIdEmpleado(empleado.codigo);
                 if (cajero == null)
                 {
-                    MessageBox.Show("para poder realizar esta operación debe de ser cajero", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("To perform this operation, you must be a cashier/para poder realizar esta operación debe de ser cajero", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
                 return true;
@@ -128,7 +128,7 @@ namespace IrisContabilidad.modulo_facturacion
                     return;
                 }
 
-                if (MessageBox.Show("Desea guardar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                if (MessageBox.Show("Do you want to save?/Desea guardar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 {
                     return;
                 }
@@ -156,11 +156,11 @@ namespace IrisContabilidad.modulo_facturacion
                     {
                         egresoCaja = null;
                         loadVentana();
-                        MessageBox.Show("Se agregó ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Was added/ se agregó", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("No se agregó ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Was not added/no se agregó", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -170,11 +170,11 @@ namespace IrisContabilidad.modulo_facturacion
                     {
                         egresoCaja = null;
                         loadVentana();
-                        MessageBox.Show("Se actualizó ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Updated successfully/ sea ctualizó correctamente", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("No se actualizó ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("it is not updated correctly/no se acuatlizó correctamente ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

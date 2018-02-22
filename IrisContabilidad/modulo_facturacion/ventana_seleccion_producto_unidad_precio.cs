@@ -38,7 +38,7 @@ namespace IrisContabilidad.modulo_facturacion
         {
             InitializeComponent();
             empleado = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "selección precio de venta");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "selection sale price/selección precio de venta");
             this.Text = tituloLabel.Text;
             this.producto = modeloProducto.getProductoById(codigoProducto);
             this.unidad = modeloUnidad.getUnidadById(codigoUnidad);
@@ -63,7 +63,7 @@ namespace IrisContabilidad.modulo_facturacion
             {
                 if (listaPrecioProducto == null)
                 {
-                    MessageBox.Show("Este producto no tiene precio de venta", "", MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    MessageBox.Show("This product has no sale price/Este producto no tiene precio de venta", "", MessageBoxButtons.OK,MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -90,7 +90,7 @@ namespace IrisContabilidad.modulo_facturacion
 
         public void salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -104,7 +104,7 @@ namespace IrisContabilidad.modulo_facturacion
                 fila = dataGridView1.CurrentRow.Index;
                 if (fila < 0)
                 {
-                    MessageBox.Show("No ha seleccionado ningun precio", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("You have not selected any price/No ha seleccionado ningun precio", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
 

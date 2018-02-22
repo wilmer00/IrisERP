@@ -87,7 +87,7 @@ namespace IrisContabilidad.modulo_facturacion
         {
             InitializeComponent();
             empleado = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "ventana facturación");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "billing window/ventana facturación");
             this.Text = tituloLabel.Text;
             loadVentana();
         }
@@ -202,7 +202,7 @@ namespace IrisContabilidad.modulo_facturacion
                 cajero = modeloCajero.getCajeroByIdEmpleado(empleado.codigo);
                 if (cajero == null)
                 {
-                    MessageBox.Show("Su usuario no es cajero, no puede realizar ventas", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Your user is not a cashier, you can not make sales/Su usuario no es cajero, no puede realizar ventas", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
                 //si tiene una compra existente abierta
@@ -210,7 +210,7 @@ namespace IrisContabilidad.modulo_facturacion
                 {
                     clienteIdText.Focus();
                     clienteIdText.SelectAll();
-                    MessageBox.Show("Tiene una venta existente abierta debe limpiar antes de continuar", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Have an existing open sale must clean before continuing/Tiene una venta existente abierta debe limpiar antes de continuar", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
 
@@ -219,7 +219,7 @@ namespace IrisContabilidad.modulo_facturacion
                 {
                     clienteIdText.Focus();
                     clienteIdText.SelectAll();
-                    MessageBox.Show("Falta el cliente", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The customer is missing/Falta el cliente", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
                 //si tiene productos en el grid
@@ -227,7 +227,7 @@ namespace IrisContabilidad.modulo_facturacion
                 {
                     productoIdText.Focus();
                     productoIdText.SelectAll();
-                    MessageBox.Show("No hay productos para realizar la venta", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("There are no products to make the sale/No hay productos para realizar la venta", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
 
@@ -236,7 +236,7 @@ namespace IrisContabilidad.modulo_facturacion
                 {
                     tipoVentaComboBox.Focus();
                     tipoVentaComboBox.SelectAll();
-                    MessageBox.Show("Falta el tipo de compra", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The type of purchase is missing/Falta el tipo de compra", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
 
@@ -321,7 +321,7 @@ namespace IrisContabilidad.modulo_facturacion
                         //la venta no es al contado entonces solo se guarda pero no hay desglose de pago
                         if (modeloVenta.agregarVenta(venta, listaVentaDetalleLista) == true)
                         {
-                            if (MessageBox.Show("Se agregó, desea Imprimir la venta?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            if (MessageBox.Show("Added, want to print the sale?/Se agregó, desea Imprimir la venta?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                             {
                                 modeloReporte.imprimirVenta(venta.codigo);
                             }
@@ -331,7 +331,7 @@ namespace IrisContabilidad.modulo_facturacion
                         else
                         {
                             venta = null;
-                            MessageBox.Show("No se agregó", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Was not added/no se agregó", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                 }
@@ -400,7 +400,7 @@ namespace IrisContabilidad.modulo_facturacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error eliminarProducto.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error removing Product/Error eliminarProducto.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -419,14 +419,14 @@ namespace IrisContabilidad.modulo_facturacion
                 {
                     productoIdText.Focus();
                     productoIdText.SelectAll();
-                    MessageBox.Show("Debe seleccionar un producto", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("You must select a product/Debe seleccionar un producto", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 //validar que tiene unidad seleccionada
                 if (unidad == null)
                 {
                     unidadComboText.Focus();
-                    MessageBox.Show("Debe seleccionar una unidad", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("You must select a unit/Debe seleccionar una unidad", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -435,14 +435,14 @@ namespace IrisContabilidad.modulo_facturacion
                 {
                     cantidadText.Focus();
                     cantidadText.SelectAll();
-                    MessageBox.Show("Falta la cantidad", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The amount is missing/Falta la cantidad", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 if (Convert.ToDecimal(cantidadText.Text) <= 0)
                 {
                     cantidadText.Focus();
                     cantidadText.SelectAll();
-                    MessageBox.Show("Falta la cantidad", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The amount is missingFalta la cantidad", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -452,7 +452,7 @@ namespace IrisContabilidad.modulo_facturacion
                     precioText.Focus();
                     precioText.SelectAll();
                     
-                    MessageBox.Show("Falta el precio del producto", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The price of the product is missing/Falta el precio del producto", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 //validar que tenga descuento o que sea 0
@@ -465,7 +465,7 @@ namespace IrisContabilidad.modulo_facturacion
                 {
                     importeText.Focus();
                     importeText.SelectAll();
-                    MessageBox.Show("Falta el importe", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The amount is missing/Falta el importe", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
                 //validar que si existe el producto y unidad se sume la cantidad
@@ -556,7 +556,7 @@ namespace IrisContabilidad.modulo_facturacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error agregarProducto.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error adding product/Error agregarProducto.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -601,7 +601,7 @@ namespace IrisContabilidad.modulo_facturacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loadProducto.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Error loading product/Error loadProducto.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -725,7 +725,7 @@ namespace IrisContabilidad.modulo_facturacion
                 {
                     productoIdText.Focus();
                     productoIdText.SelectAll();
-                    MessageBox.Show("Debe seleccionar un producto", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("You must select a product/Debe seleccionar un producto", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -775,7 +775,7 @@ namespace IrisContabilidad.modulo_facturacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error calularImporte.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Calculation error Amount/Error calularImporte.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -953,7 +953,7 @@ namespace IrisContabilidad.modulo_facturacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error calcularTotal.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Total calculation error/Error calcularTotal.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
       
@@ -985,7 +985,7 @@ namespace IrisContabilidad.modulo_facturacion
 
         public void salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }

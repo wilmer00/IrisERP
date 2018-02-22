@@ -40,7 +40,7 @@ namespace IrisContabilidad.modulo_facturacion
         {
             InitializeComponent();
             empleadoSingleton = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleadoSingleton, "reiprimir cuadre caja");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleadoSingleton, "reprint box square/reiprimir cuadre caja");
             this.Text = tituloLabel.Text;
             loadVentana();
 
@@ -62,7 +62,7 @@ namespace IrisContabilidad.modulo_facturacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error imprimiendo.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error printing/Error imprimiendo.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -81,7 +81,7 @@ namespace IrisContabilidad.modulo_facturacion
             procesando = null;
             if (cuadreCaja == null)
             {
-                MessageBox.Show("No hay cierre de caja registrado para la fecha y el cajero seleccionado", "",
+                MessageBox.Show("There is no cash register registered for the date and the selected cashier/No hay cierre de caja registrado para la fecha y el cajero seleccionado", "",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -104,7 +104,7 @@ namespace IrisContabilidad.modulo_facturacion
                 
                 loadCajero();
                 
-                fechaCierreDateTime.Text = utilidades.getFechaddMMyyyy(DateTime.Today);
+                fechaCierreDateTime.Value = DateTime.Today;
                 
                 radioButtonGeneral.Checked = true;
                 radioButtonDetallado.Checked = false;
@@ -123,7 +123,7 @@ namespace IrisContabilidad.modulo_facturacion
         
         public void salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -136,7 +136,7 @@ namespace IrisContabilidad.modulo_facturacion
                 //validar cajero
                 if (cajero == null)
                 {
-                    MessageBox.Show("Falta el cajero", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The cashier is missing/Falta el cajero", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     cajeroIdText.Focus();
                     cajeroIdText.SelectAll();
                     return false;
@@ -144,7 +144,7 @@ namespace IrisContabilidad.modulo_facturacion
                 DateTime f;
                 if (DateTime.TryParse(fechaCierreDateTime.Text, out f) == false)
                 {
-                    MessageBox.Show("Fecha cierre cuadre, formato incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Closing date, incorrect format/Fecha cierre cuadre, formato incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     fechaCierreDateTime.Focus();
                     fechaCierreDateTime.Select();
                     return false;
@@ -180,7 +180,7 @@ namespace IrisContabilidad.modulo_facturacion
                     return;
                 }
 
-                if (MessageBox.Show("Desea guardar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                if (MessageBox.Show("Do you want to save?/Desea guardar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 {
                     return;
                 }
@@ -189,7 +189,7 @@ namespace IrisContabilidad.modulo_facturacion
 
                 if (cuadreCaja == null)
                 {
-                    MessageBox.Show("No se encuentra cuadre de caja con el cajero seleccionado y la fecha establecida.","", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("No cash register is found with the selected cashier and the established date/No se encuentra cuadre de caja con el cajero seleccionado y la fecha establecida.", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 

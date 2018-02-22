@@ -83,11 +83,11 @@ namespace IrisContabilidad.modulo_inventario
                     suplidorIdText.Text = compra.codigo_sucursal.ToString();
                     suplidorText.Text = modeloSuplidor.getSuplidorById(compra.cod_suplidor).nombre;
                     numeroFacturaText.Text = compra.numero_factura;
-                    numerocComprobanteFiscalText.Text = compra.ncf;
+                    //numerocComprobanteFiscalText.Text = compra.ncf;
                     tipoCompraComboBox.Enabled = false;
                     tipoCompraComboBox.Text = compra.tipo_compra;
-                    fechaInicialText.Text = compra.fecha.ToString("d");
-                    fechaFinalText.Text = compra.fecha_limite.ToString("d");
+                    fechaInicialText.Value = compra.fecha;
+                    fechaFinalText.Value = compra.fecha_limite;
                     detalleText.Text = compra.detalle;
                     suplidorInformalCheck.Checked = Convert.ToBoolean(compra.suplidor_informal);
                     //llenar el detalle de la compra
@@ -104,11 +104,11 @@ namespace IrisContabilidad.modulo_inventario
                     suplidorIdText.Text = "";
                     suplidorText.Text = "";
                     numeroFacturaText.Text = "";
-                    numerocComprobanteFiscalText.Text = "";
+                    //numerocComprobanteFiscalText.Text = "";
                     tipoCompraComboBox.Enabled = true;
                     tipoCompraComboBox.Text = "";
-                    fechaInicialText.Text = DateTime.Today.ToString("d");
-                    fechaFinalText.Text = DateTime.Today.ToString("d");
+                    fechaInicialText.Value = DateTime.Today;
+                    fechaFinalText.Value = DateTime.Today;
                     detalleText.Text = "";
                     suplidorInformalCheck.Checked = false;
                     suplidorInformalCheck.Checked = false;
@@ -118,8 +118,8 @@ namespace IrisContabilidad.modulo_inventario
                     {
                         dataGridView1.Rows.Clear();
                     }
-                    fechaInicialText.Text = DateTime.Today.ToString("dd-MM-yyyy");
-                    fechaFinalText.Text = DateTime.Today.ToString("dd-MM-yyyy");
+                    fechaInicialText.Value = DateTime.Today;
+                    fechaFinalText.Value = DateTime.Today;
                     botonImprimir.Visible = false;
                 }
             }
@@ -170,22 +170,22 @@ namespace IrisContabilidad.modulo_inventario
                 }
                 
                 //numero comprobante fiscal que no lo tenga ese mismo suplidor
-                if (numerocComprobanteFiscalText.Text.Trim() == "")
-                {
-                    numerocComprobanteFiscalText.Focus();
-                    numerocComprobanteFiscalText.SelectAll();
-                    MessageBox.Show("Falta el número de comprobante fiscal", "", MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                    return false;
-                }
-                else
-                {
-                    //vlaidar que ese comprobante no se repita con el suplidor
-                    if (listaCompra.FindAll(x => x.ncf.ToLower() == numerocComprobanteFiscalText.Text.ToLower()).Count > 0)
-                    {
-                        MessageBox.Show("Existe una compra con ese mismo número de comprobante fiscal", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return false;
-                    }
-                }
+                //if (numerocComprobanteFiscalText.Text.Trim() == "")
+                //{
+                //    numerocComprobanteFiscalText.Focus();
+                //    numerocComprobanteFiscalText.SelectAll();
+                //    MessageBox.Show("Falta el número de comprobante fiscal", "", MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                //    return false;
+                //}
+                //else
+                //{
+                //    //vlaidar que ese comprobante no se repita con el suplidor
+                //    if (listaCompra.FindAll(x => x.ncf.ToLower() == numerocComprobanteFiscalText.Text.ToLower()).Count > 0)
+                //    {
+                //        MessageBox.Show("Existe una compra con ese mismo número de comprobante fiscal", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //        return false;
+                //    }
+                //}
                 
                 //tipo de compra
                 if (tipoCompraComboBox.Text.Trim() == "")
@@ -201,7 +201,7 @@ namespace IrisContabilidad.modulo_inventario
                 if (DateTime.TryParse(fechaInicialText.Text,out fecha1)==false)
                 {
                     fechaInicialText.Focus();
-                    fechaInicialText.SelectAll();
+                    //fechaInicialText.SelectAll();
                     MessageBox.Show("Formato de fecha no es valido", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
@@ -211,7 +211,7 @@ namespace IrisContabilidad.modulo_inventario
                 if (DateTime.TryParse(fechaFinalText.Text, out fecha2) == false)
                 {
                     fechaFinalText.Focus();
-                    fechaFinalText.SelectAll();
+                    //fechaFinalText.SelectAll();
                     MessageBox.Show("Formato de fecha no es valido", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
@@ -259,7 +259,7 @@ namespace IrisContabilidad.modulo_inventario
                 compra.cod_suplidor = suplidor.codigo;
                 compra.fecha = Convert.ToDateTime(fechaInicialText.Text);
                 compra.fecha_limite = Convert.ToDateTime(fechaFinalText.Text);
-                compra.ncf = numerocComprobanteFiscalText.Text;
+                //compra.ncf = numerocComprobanteFiscalText.Text;
                 compra.tipo_compra = tipoCompraComboBox.Text;
                 compra.codigo_tipo_compra = Convert.ToInt16(tipoCompraComboBox.SelectedValue);
                 compra.activo = true;
@@ -702,8 +702,8 @@ namespace IrisContabilidad.modulo_inventario
             {
                 if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
                 {
-                    numerocComprobanteFiscalText.Focus();
-                    numerocComprobanteFiscalText.SelectAll();
+                    //numerocComprobanteFiscalText.Focus();
+                    //numerocComprobanteFiscalText.SelectAll();
 
                     compra = modeloCompra.getCompraBySuplidorNumeroCompra(suplidor, numeroFacturaText.Text);
                     //validar si el suplidor tiene una compra con ese mismo numero que la traiga.
@@ -737,7 +737,7 @@ namespace IrisContabilidad.modulo_inventario
             if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
             {
                 fechaInicialText.Focus();
-                fechaInicialText.SelectAll();
+                //fechaInicialText.SelectAll();
             }
         }
 
@@ -978,7 +978,7 @@ namespace IrisContabilidad.modulo_inventario
             if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
             {
                 fechaFinalText.Focus();
-                fechaFinalText.SelectAll();
+                //fechaFinalText.SelectAll();
             }
         }
 

@@ -32,7 +32,7 @@ namespace IrisContabilidad.modulo_facturacion
         {
             InitializeComponent();
             empleado = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "ventana cajero");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "cashier/cajero");
             this.Text = tituloLabel.Text;
             loadVentana();
         }
@@ -76,7 +76,7 @@ namespace IrisContabilidad.modulo_facturacion
         }
         public void salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -89,7 +89,7 @@ namespace IrisContabilidad.modulo_facturacion
                 //validar caja
                 if (caja== null)
                 {
-                    MessageBox.Show("Falta la caja", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The cash machine is missing/Falta la caja", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     cajaIdText.Focus();
                     cajaIdText.SelectAll();
                     return false;
@@ -97,7 +97,7 @@ namespace IrisContabilidad.modulo_facturacion
                 //validar empleado
                 if (empleado==null)
                 {
-                    MessageBox.Show("Falta el empelado", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("the employe is missing/Falta el empelado", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     empleadoIdText.Focus();
                     empleadoIdText.SelectAll();
                     return false;
@@ -121,7 +121,7 @@ namespace IrisContabilidad.modulo_facturacion
                     return;
                 }
 
-                if (MessageBox.Show("Desea guardar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                if (MessageBox.Show("Do you want to save?/Desea guardar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 {
                     return;
                 }
@@ -154,12 +154,12 @@ namespace IrisContabilidad.modulo_facturacion
                     {
                         cajero = null;
                         loadVentana();
-                        MessageBox.Show("Se agregó ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Was added/ se agregó", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
                     else
                     {
-                        MessageBox.Show("No se agregó ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Was not added/no se agregó", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -169,12 +169,12 @@ namespace IrisContabilidad.modulo_facturacion
                     {
                         cajero = null;
                         loadVentana();
-                        MessageBox.Show("Se actualizó ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Updated successfully/ sea ctualizó correctamente", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
                     else
                     {
-                        MessageBox.Show("No se actualizó ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("it is not updated correctly/no se acuatlizó correctamente", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 

@@ -40,7 +40,7 @@ namespace IrisContabilidad.modulo_facturacion
         {
             InitializeComponent();
             empleado = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "ventana venta devolución");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "sale return/venta devolución");
             this.Text = tituloLabel.Text;
             loadVentana();
         }
@@ -101,12 +101,12 @@ namespace IrisContabilidad.modulo_facturacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loadDetalleVenta.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error loading sell detail/Error loadDetalleVenta.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public void salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -118,7 +118,7 @@ namespace IrisContabilidad.modulo_facturacion
                 //validar venta
                 if (venta==null)
                 {
-                    MessageBox.Show("Falta la venta", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The sell is missing/Falta la venta", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ventaIdText.Focus();
                     ventaIdText.SelectAll();
                     return false;
@@ -126,7 +126,7 @@ namespace IrisContabilidad.modulo_facturacion
                 //validar que datagrid tenga datos
                 if (dataGridView1.Rows.Count<0)
                 {
-                    MessageBox.Show("Esta venta no tiene articulos disponibles para realizar devolución", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("This sale has no items available for return/Esta venta no tiene articulos disponibles para realizar devolución", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ventaIdText.Focus();
                     ventaIdText.SelectAll();
                     return false;
@@ -134,7 +134,7 @@ namespace IrisContabilidad.modulo_facturacion
                 //validar que exista un concepto de devolucion
                 if (detalleText.Text == "")
                 {
-                    MessageBox.Show("Debe especificar una descripción o razón de la devolución", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("You must specify a description or reason for the return/Debe especificar una descripción o razón de la devolución", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     detalleText.Focus();
                     detalleText.SelectAll();
                     return false;
@@ -152,7 +152,7 @@ namespace IrisContabilidad.modulo_facturacion
                     }
                     if (existe == false)
                     {
-                        MessageBox.Show("No ha puesto algun producto a devolver", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("You have not put any product to return/No ha puesto algun producto a devolver", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -177,7 +177,7 @@ namespace IrisContabilidad.modulo_facturacion
                     return;
                 }
 
-                if (MessageBox.Show("Desea guardar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                if (MessageBox.Show("Do you want to save?/Desea guardar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 {
                     return;
                 }
@@ -225,7 +225,7 @@ namespace IrisContabilidad.modulo_facturacion
                     egresoCaja.cuadrado = false;
                     egresoCaja.fecha=DateTime.Today;
                     egresoCaja.activo = true;
-                    egresoCaja.detalle = "Por concepto de devolución";
+                    egresoCaja.detalle = "For refund concept/por concepto de devolucion";
                     egresoCaja.codigo_cajero = empleado.codigo;
                     egresoCaja.codigo_concepto = 1;
                     egresoCaja.monto = montoTotalDevolucion;
@@ -239,13 +239,13 @@ namespace IrisContabilidad.modulo_facturacion
                     {
                         ventaDevolucion = null;
                         loadVentana();
-                        MessageBox.Show("Se agregó ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Was added/ se agregó", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
                     else
                     {
                         ventaDevolucion = null;
-                        MessageBox.Show("No se agregó ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Was not added/no se agregó", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -306,7 +306,7 @@ namespace IrisContabilidad.modulo_facturacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error eliminar.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error removing/Error eliminar.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public void agregar()
@@ -318,7 +318,7 @@ namespace IrisContabilidad.modulo_facturacion
                 {
                     cantidadDevolverText.Focus();
                     cantidadDevolverText.SelectAll();
-                    MessageBox.Show("Falta la cantidad", "", MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    MessageBox.Show("The amount to return is missing/Falta la cantidad a devolver", "", MessageBoxButtons.OK,MessageBoxIcon.Warning);
                     return;
                 }
                 decimal canti;
@@ -326,7 +326,7 @@ namespace IrisContabilidad.modulo_facturacion
                 {
                     cantidadDevolverText.Focus();
                     cantidadDevolverText.SelectAll();
-                    MessageBox.Show("Cantidad a devolder no tiene formato de número", "", MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    MessageBox.Show("Amount to be returned does not have a number format/Cantidad a devolder no tiene formato de número", "", MessageBoxButtons.OK,MessageBoxIcon.Warning);
                     return;
                 }
                 canti = Convert.ToDecimal(cantidadDevolverText.Text);
@@ -340,7 +340,7 @@ namespace IrisContabilidad.modulo_facturacion
                 {
                     cantidadDevolverText.Focus();
                     cantidadDevolverText.SelectAll();
-                    MessageBox.Show("La cantidad que esta insertando es mas alta que la facturada", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The amount you are inserting is higher than the invoiced one/La cantidad que esta insertando es mas alta que la facturada", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 if (fila >= 0)
@@ -350,7 +350,7 @@ namespace IrisContabilidad.modulo_facturacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error agregar.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error adding/Error agregar.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void button20_Click(object sender, EventArgs e)

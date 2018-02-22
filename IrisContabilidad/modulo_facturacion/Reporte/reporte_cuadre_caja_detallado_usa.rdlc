@@ -2252,7 +2252,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>#.:</Value>
+                  <Value>#Closing.:</Value>
                   <Style>
                     <FontSize>9pt</FontSize>
                     <FontWeight>Bold</FontWeight>

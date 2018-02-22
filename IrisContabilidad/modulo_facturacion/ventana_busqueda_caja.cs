@@ -85,7 +85,7 @@ namespace IrisContabilidad.modulo_facturacion
         
         public void Salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -114,7 +114,7 @@ namespace IrisContabilidad.modulo_facturacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error buscando.: " + ex.ToString());
+                MessageBox.Show("Error searching/Error buscando.: " + ex.ToString());
             }
         }
 

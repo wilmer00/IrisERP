@@ -96,7 +96,7 @@ namespace IrisContabilidad.modulo_facturacion
         }
         public void Salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -127,7 +127,7 @@ namespace IrisContabilidad.modulo_facturacion
                     DateTime fecha;
                     if (DateTime.TryParse(nombreText.Text, out fecha) == false)
                     {
-                        MessageBox.Show("Error, formato fecha incorrecto");
+                        MessageBox.Show("Error, wrong date format/Error, formato fecha incorrecto");
                         nombreText.Focus();
                         nombreText.SelectAll();
                         return;
@@ -154,7 +154,7 @@ namespace IrisContabilidad.modulo_facturacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error buscando.: " + ex.ToString());
+                MessageBox.Show("Error searching/Error buscando.: " + ex.ToString());
             }
         }
         private void ventana_busqueda_venta_devolucion_Load(object sender, EventArgs e)

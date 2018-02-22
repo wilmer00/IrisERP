@@ -394,7 +394,6 @@ C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\bin\Release\IrisContabi
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\bin\Release\IrisContabilidad.exe
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\bin\Release\IrisContabilidad.pdb
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\bin\Release\Reports.dll
-C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Release\IrisContabilidad.csprojResolveAssemblyReference.cache
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Release\IrisContabilidad.idiomas.En-us.resources
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Release\IrisContabilidad.idiomas.Es-do.resources
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Release\IrisContabilidad.modulo_contabilidad.ventana_banco.resources
@@ -523,3 +522,4 @@ C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Release\IrisContabi
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Release\IrisContabilidad.exe
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Release\IrisContabilidad.pdb
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Release\IrisContabilidad.modulo_nomina.ventana_nomina.resources
+C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Release\IrisContabilidad.csprojResolveAssemblyReference.cache

@@ -53,7 +53,7 @@ namespace IrisContabilidad.modulo_facturacion
         {
             InitializeComponent();
             empleado = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "ventana venta cobros");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "sale charges/venta cobros");
             this.Text = tituloLabel.Text;
             loadVentana();
         }
@@ -146,7 +146,7 @@ namespace IrisContabilidad.modulo_facturacion
                 if ((modeloVenta.setVentaCobro(ventaCobro, listaVentaCobroDetalle) == true))
                 {
                     loadCliente();
-                    if (MessageBox.Show("Se agregó el cobro, desea imprimir el cobro?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("The charge was added, do you want to print the bill?/Se agregó el cobro, desea imprimir el cobro?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         modeloReporte.imprimirVentaCobro(ventaCobro.codigo);
                     }
@@ -154,7 +154,7 @@ namespace IrisContabilidad.modulo_facturacion
                 else
                 {
                     loadCliente();
-                    MessageBox.Show("No se agregó el cobro", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("No charge was added/No se agregó el cobro", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -184,7 +184,7 @@ namespace IrisContabilidad.modulo_facturacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error eliminarProducto.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error removing/Error eliminar.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public void agregar()
@@ -199,7 +199,7 @@ namespace IrisContabilidad.modulo_facturacion
                 {
                     montoAbonoText.Focus();
                     montoAbonoText.SelectAll();
-                    MessageBox.Show("Falta el abono", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The amount receivable is missing/Falta el abono a cobrar", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 //el monto es mayor que cero
@@ -207,7 +207,7 @@ namespace IrisContabilidad.modulo_facturacion
                 {
                     montoAbonoText.Focus();
                     montoAbonoText.SelectAll();
-                    MessageBox.Show("El abono debe ser mayor que cero", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The amount to be charged must be greater than zero/El monto a cobrar debe ser mayor que cero", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 //monto abonar no sobrepase el monto pendiente
@@ -215,7 +215,7 @@ namespace IrisContabilidad.modulo_facturacion
                 {
                     montoAbonoText.Focus();
                     montoAbonoText.SelectAll();
-                    MessageBox.Show("El abono debe ser menor que el monto pendiente", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The amount to be charged must be less than the outstanding amount/El monto a cobrar debe ser menor que el monto pendiente", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 getMetodoPago();
@@ -228,7 +228,7 @@ namespace IrisContabilidad.modulo_facturacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error agregar.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error adding/Error agregar.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void calcularTotal()
@@ -262,7 +262,7 @@ namespace IrisContabilidad.modulo_facturacion
         }
         public void salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -291,7 +291,7 @@ namespace IrisContabilidad.modulo_facturacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loadVentas.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error loading sells/Error loadVentas.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public void loadCliente()
@@ -309,7 +309,7 @@ namespace IrisContabilidad.modulo_facturacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loadCliente.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error loading customer/Error loadCliente.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public void getMetodoPago()
@@ -320,22 +320,22 @@ namespace IrisContabilidad.modulo_facturacion
                 {
                     return;
                 }
-                if (metodoPagoComboBox.Text.ToLower() == "efectivo")
+                if (metodoPagoComboBox.Text.ToLower() == "cash")
                 {
                     metodoPago = "EFE";
                 }
-                else if (metodoPagoComboBox.Text.ToLower() == "deposito")
+                else if (metodoPagoComboBox.Text.ToLower() == "deposit")
                 {
                     metodoPago = "DEP";
                 }
-                else if (metodoPagoComboBox.Text.ToLower() == "cheque")
+                else if (metodoPagoComboBox.Text.ToLower() == "check")
                 {
                     metodoPago = "CHE";
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error getMetodoPago.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error getting payment method/Error getMetodoPago.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void ventana_venta_cobros_Load(object sender, EventArgs e)
@@ -344,6 +344,11 @@ namespace IrisContabilidad.modulo_facturacion
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

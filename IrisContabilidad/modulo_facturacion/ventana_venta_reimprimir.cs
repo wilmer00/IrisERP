@@ -37,7 +37,7 @@ namespace IrisContabilidad.modulo_facturacion
         public ventana_venta_reimprimir()
         {
             InitializeComponent();
-            this.Text = "Reimprimir ventas";
+            this.Text = "reprint sales/Reimprimir ventas";
             this.tituloLabel.Text = this.Text;
             this.mantenimiento = mantenimiento;
             loadLista();
@@ -106,7 +106,7 @@ namespace IrisContabilidad.modulo_facturacion
         }
         public void Salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -182,7 +182,7 @@ namespace IrisContabilidad.modulo_facturacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error buscando.: " + ex.ToString());
+                MessageBox.Show("Error searching/Error buscando.: " + ex.ToString());
             }
         }
 
@@ -194,7 +194,7 @@ namespace IrisContabilidad.modulo_facturacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error Reimprimiendo.: " + ex.ToString(),"",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Error reprinting/Error Reimprimiendo.: " + ex.ToString(),"",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
           
         }

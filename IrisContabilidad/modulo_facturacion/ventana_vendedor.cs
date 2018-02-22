@@ -31,7 +31,7 @@ namespace IrisContabilidad.modulo_facturacion
         {
             InitializeComponent();
             empleadoSingleton = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "ventana vendedor");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "seller/vendedor");
             this.Text = tituloLabel.Text;
             loadVentana();
         }
@@ -89,12 +89,12 @@ namespace IrisContabilidad.modulo_facturacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loadEmpleado.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error loading employe/Error loadEmpleado.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public void salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -108,7 +108,7 @@ namespace IrisContabilidad.modulo_facturacion
                 {
                     empleadoIdText.Focus();
                     empleadoIdText.SelectAll();
-                    MessageBox.Show("Falta el empleado", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The employ is missing/Falta el empleado", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
                 //validar porciento
@@ -116,7 +116,7 @@ namespace IrisContabilidad.modulo_facturacion
                 {
                     porcientoText.Focus();
                     porcientoText.SelectAll();
-                    MessageBox.Show("Falta el porciento", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The percent is missing/Falta el porciento", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
                 //validar porciento numerico
@@ -125,7 +125,7 @@ namespace IrisContabilidad.modulo_facturacion
                 {
                     porcientoText.Focus();
                     porcientoText.SelectAll();
-                    MessageBox.Show("El porciento debe ser numerico", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The percent must be numerical/El porciento debe ser numerico", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
                 
@@ -148,7 +148,7 @@ namespace IrisContabilidad.modulo_facturacion
                     return;
                 }
 
-                if (MessageBox.Show("Desea guardar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                if (MessageBox.Show("Do you want to save?/Desea guardar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 {
                     return;
                 }
@@ -172,12 +172,12 @@ namespace IrisContabilidad.modulo_facturacion
                     {
                         vendedor = null;
                         loadVentana();
-                        MessageBox.Show("Se agregó ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Was added/ se agregó", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
                         vendedor = null;
-                        MessageBox.Show("No se agregó ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Was not added/no se agregó", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -187,11 +187,11 @@ namespace IrisContabilidad.modulo_facturacion
                     {
                         vendedor = null;
                         loadVentana();
-                        MessageBox.Show("Se actualizó ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Updated successfully/ sea ctualizó correctamente", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("No se actualizó ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("it is not updated correctly/no se acuatlizó correctamente", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

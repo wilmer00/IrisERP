@@ -93,7 +93,7 @@ namespace IrisContabilidad.modulo_facturacion
             {
                 if (dataGridView1.Rows.Count < 0)
                 {
-                    MessageBox.Show("Debe seleccionar una devolución para poder anular", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("You must select a return to be able to cancel/Debe seleccionar una devolución para poder anular", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
                 return true;
@@ -112,7 +112,7 @@ namespace IrisContabilidad.modulo_facturacion
                 return;
             }
 
-            if (MessageBox.Show("Desea anular la devolución?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            if (MessageBox.Show("Do you want to cancel the return?/Desea anular la devolución?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 return;
             }
@@ -123,7 +123,7 @@ namespace IrisContabilidad.modulo_facturacion
             {
                 listaVentaDevolucion = null;
                 loadLista();
-                MessageBox.Show("Se anuló la devolució de venta", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("The return of sale was canceled/Se anuló la devolució de venta", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -133,7 +133,7 @@ namespace IrisContabilidad.modulo_facturacion
         }
         public void Salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -151,7 +151,7 @@ namespace IrisContabilidad.modulo_facturacion
                     int id;
                     if (int.TryParse(nombreText.Text, out id) == false)
                     {
-                        MessageBox.Show("Formato de número no es correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Number format is not correct/Formato de número no es correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         nombreText.Focus();
                         nombreText.SelectAll();
                         return;
@@ -165,7 +165,7 @@ namespace IrisContabilidad.modulo_facturacion
                     DateTime fecha;
                     if (DateTime.TryParse(nombreText.Text, out fecha) == false)
                     {
-                        MessageBox.Show("Formato de fecha no es correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Date format is not correct/Formato de fecha no es correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         nombreText.Focus();
                         nombreText.SelectAll();
                         return;
@@ -179,7 +179,7 @@ namespace IrisContabilidad.modulo_facturacion
                     int id;
                     if (int.TryParse(nombreText.Text, out id) == false)
                     {
-                        MessageBox.Show("Formato de número no es correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Number format is not correct/Formato de número no es correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         nombreText.Focus();
                         nombreText.SelectAll();
                         return;
@@ -208,7 +208,7 @@ namespace IrisContabilidad.modulo_facturacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error filtrar.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error filtering/Error filtrar.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void ventana_venta_devolucion_anular_Load(object sender, EventArgs e)

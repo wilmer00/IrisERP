@@ -74,7 +74,7 @@ namespace IrisContabilidad.modelos
                 modeloCajero modeloCajero = new modeloCajero();
                 if ((modeloCajero.getValidarCajaAbiertaByCajero(cuadreCaja.codigo_cajero)) == false)
                 {
-                    MessageBox.Show("El cajero no tiene una caja abierta, primero debe realizar una apertura de caja", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The cashier does not have an open box, first he must make a cashier opening/El cajero no tiene una caja abierta, primero debe realizar una apertura de caja", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
                 string sql = "";
@@ -106,7 +106,7 @@ namespace IrisContabilidad.modelos
                     utilidades.ejecutarcomando_mysql(sql);
                 
                     //cerrando el cuadre de caja
-                    sql = "update cuadre_caja set cod_cajero='" + cuadreCaja.codigo_cajero + "',activo='" + activo + "', caja_cuadrada='" + cajaCuadrada + "',caja_abierta='" + cajaAbierta + "',fecha_cierre_cuadre=" + utilidades.getFechayyyyMMdd(cuadreCaja.fecha_cierre_cuadre) + " where codigo='"+cuadreCaja.codigo+"'";
+                    sql = "update cuadre_caja set cod_cajero='" + cuadreCaja.codigo_cajero + "',activo='" + activo + "', caja_cuadrada='" + cajaCuadrada + "',caja_abierta='" + cajaAbierta + "',fecha_cierre_cuadre='" + utilidades.getFechayyyyMMdd(cuadreCaja.fecha_cierre_cuadre) + "' where codigo='"+cuadreCaja.codigo+"'";
                     utilidades.ejecutarcomando_mysql(sql);
 
                 }

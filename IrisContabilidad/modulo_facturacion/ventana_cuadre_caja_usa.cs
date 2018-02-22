@@ -59,7 +59,7 @@ namespace IrisContabilidad.modulo_facturacion
         {
             InitializeComponent();
             empleadoSesion = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleadoSesion, "cashbox closing");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleadoSesion, "cashbox closing/cierre de caja");
             this.Text = tituloLabel.Text;
             loadVentana();
         }
@@ -78,7 +78,7 @@ namespace IrisContabilidad.modulo_facturacion
                     
                     if (cajero == null)
                     {
-                        MessageBox.Show("Este usuario no es un cajero para poder realizar cierre de caja", "",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("This user is not a cashier to be able to close the cash machine/Este usuario no es un cajero para poder realizar cierre de caja", "",MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         this.Close();
                     }
                     
@@ -87,7 +87,7 @@ namespace IrisContabilidad.modulo_facturacion
                     //validando que el cajero tenga caja abierta
                     if (modeloCajero.getValidarCajaAbiertaByCajero(cajero.codigo) == false)
                     {
-                        MessageBox.Show("No se puede realizar un cierre de caja si no tiene una caja abierta activa", "",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("You can not perform a cash closure if you do not have an active open box/No se puede realizar un cierre de caja si no tiene una caja abierta activa", "",MessageBoxButtons.OK, MessageBoxIcon.Error);
                         this.Close();
                     }
 
@@ -162,7 +162,7 @@ namespace IrisContabilidad.modulo_facturacion
                 cienDolaresText.SelectAll();
                 montoTotalEfectivo = 0;
                 montoTotalEfectivoText.Text = "0.00";
-                MessageBox.Show("Error calculando el total de efectivo.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error calculating the total cash/Error calculando el total de efectivo.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -173,7 +173,7 @@ namespace IrisContabilidad.modulo_facturacion
                 //cajero
                 if (cajero == null)
                 {
-                    MessageBox.Show("Falta el cajero", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The cashier is missing/Falta el cajero", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     this.Close();
                 }
 
@@ -244,7 +244,7 @@ namespace IrisContabilidad.modulo_facturacion
 
         public void salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }

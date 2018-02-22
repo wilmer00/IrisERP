@@ -54,7 +54,7 @@ namespace IrisContabilidad.modulo_facturacion
         {
             InitializeComponent();
             empleado = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "ventana desglose dinero");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "breakdown money/desglose dinero");
             this.Text = tituloLabel.Text;
             this.compra = compra;
             this.listaCompraDetalles = listaDetalle;
@@ -66,7 +66,7 @@ namespace IrisContabilidad.modulo_facturacion
         {
             InitializeComponent();
             empleado = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "ventana desglose dinero");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "breakdown money/desglose dinero");
             this.Text = tituloLabel.Text;
             this.venta = venta;
             this.listaVentaDetalles = listaDetalle;
@@ -78,7 +78,7 @@ namespace IrisContabilidad.modulo_facturacion
         {
             InitializeComponent();
             empleado = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "ventana desglose dinero");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "breakdown money/desglose dinero");
             this.Text = tituloLabel.Text;
             this.venta = venta;
             this.listaVentaDetalleLista = listaDetalle;
@@ -166,7 +166,7 @@ namespace IrisContabilidad.modulo_facturacion
         
         public void salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -558,7 +558,7 @@ namespace IrisContabilidad.modulo_facturacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Desea procesar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to save?/Desea guardar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 getAction();
             }
@@ -747,7 +747,7 @@ namespace IrisContabilidad.modulo_facturacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error imprimircompra.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error printing purchase/Error imprimirCompra.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -759,7 +759,7 @@ namespace IrisContabilidad.modulo_facturacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error imprimircompra.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error printing purchase/Error imprimircompra.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
