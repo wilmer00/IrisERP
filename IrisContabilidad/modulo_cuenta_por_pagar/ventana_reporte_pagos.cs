@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Windows.Forms;
 using IrisContabilidad.clases;
 using IrisContabilidad.modelos;
@@ -30,13 +31,25 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
         modeloCompra modeloCompra=new modeloCompra();
         ModeloReporte modeloReporte=new ModeloReporte();
 
+        //listas
+
+
+        //Proceso
+        private ventana_procesando procesando;
+        private BackgroundWorker SincronizarProceso = new BackgroundWorker();
+
         public ventana_reporte_pagos()
         {
             InitializeComponent();
             empleadoSingleton = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleadoSingleton, "ventana suplidor");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleadoSingleton, "payment purchase report/reporte de compra pagos");
             this.Text = tituloLabel.Text;
             loadVentana();
+
+            SincronizarProceso.WorkerReportsProgress = true;
+            SincronizarProceso.DoWork += LoadReporte;
+            SincronizarProceso.ProgressChanged += ProcesoRun;
+            SincronizarProceso.RunWorkerCompleted += ProcesoCompleto;
         }
         public void loadVentana()
         {
@@ -50,10 +63,10 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
 
                 checkBoxSoloComprasPagadas.Checked = false;
                 checkBoxIncluirRangoFechaVenta.Checked = false;
-                fechaInicialText.Enabled = !(bool)checkBoxIncluirRangoFechaVenta.Checked;
-                fechaFinalText.Enabled = !(bool)checkBoxIncluirRangoFechaVenta.Checked;
-                fechaInicialText.Text = DateTime.Today.ToString("dd/MM/yyyy");
-                fechaFinalText.Text = DateTime.Today.ToString("dd/MM/yyyy");
+                fechaInicialText.Enabled = false;
+                fechaFinalText.Enabled = false;
+                fechaInicialText.Value = DateTime.Today;
+                fechaFinalText.Value = DateTime.Today;
                 
             }
             catch (Exception ex)
@@ -62,13 +75,43 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             }
         }
 
+        private void LoadReporte(object sender, DoWorkEventArgs e)
+        {
+            SincronizarProceso.ReportProgress(10);
+            try
+            {
+                modeloReporte.imprimirCompraPagosAgrupadoByCompra(compra, suplidor, tipoCompra, fechaInicial, fechaFinal, incluirRangoFechas, incluirSoloCompraPagadas);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error LoadReporte.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ProcesoRun(object sender, ProgressChangedEventArgs e)
+        {
+            if (procesando == null)
+            {
+                procesando = new ventana_procesando();
+                procesando.ShowDialog();
+            }
+        }
+
+        private void ProcesoCompleto(object sender, RunWorkerCompletedEventArgs e)
+        {
+            procesando.Close();
+            procesando = null;
+        }
+
         public void salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
         }
+
         public bool validarGetAction()
         {
             try
@@ -83,36 +126,27 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
                 return false;
             }
         }
+
         private void ventana_reporte_pagos_Load(object sender, EventArgs e)
         {
 
-        }
+        }       
 
-        public void getActionImprimir()
-        {
-            try
-            {
-                if (validarImpresion() == false)
-                {
-                    return;
-                }
-                modeloReporte.imprimirCompraPagosAgrupadoByCompra(compra, suplidor, tipoCompra,fechaInicial, fechaFinal,incluirRangoFechas, incluirSoloCompraPagadas);
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error getAction.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            SincronizarProceso.RunWorkerAsync();
         }
-
+        
         public bool validarImpresion()
         {
             try
             {
+                //validr que tenga suplidor
+                if(suplidor==null)
+                {
+                    MessageBox.Show("You must select a supplier/Debe seleccionar un suplidor", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
                 if (tipoCompraComboBox.Text != "")
                 {
                     tipoCompra = tipoCompraComboBox.Text;
@@ -135,40 +169,40 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
                 }
                 DateTime f1;
                 DateTime f2;
-                if (DateTime.TryParse(fechaInicialText.Text, out f1) == false)
-                {
-                    MessageBox.Show("Error formato fecha incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    fechaInicialText.Focus();
-                    fechaInicialText.SelectAll();
-                    return false;
-                }
-                if (DateTime.TryParse(fechaFinalText.Text, out f1) == false)
-                {
-                    MessageBox.Show("Error formato fecha incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    fechaFinalText.Focus();
-                    fechaFinalText.SelectAll();
-                    return false;
-                }
-                fechaInicial = Convert.ToDateTime(fechaInicialText.Text);
-                fechaFinal = Convert.ToDateTime(fechaFinalText.Text);
+                //if (DateTime.TryParse(fechaInicialText.Value, out f1) == false)
+                //{
+                //    MessageBox.Show("Error formato fecha incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    fechaInicialText.Focus();
+                //    return false;
+                //}
+                //if (DateTime.TryParse(fechaFinalText.Value, out f1) == false)
+                //{
+                //    MessageBox.Show("Error formato fecha incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    fechaFinalText.Focus();
+                //    return false;
+                //}
+                fechaInicial = Convert.ToDateTime(fechaInicialText.Value);
+                fechaFinal = Convert.ToDateTime(fechaFinalText.Value);
 
-
+                fechaInicial =Convert.ToDateTime(utilidades.getFechaEstadosUnidos(fechaInicial));
+                fechaFinal = Convert.ToDateTime(utilidades.getFechaEstadosUnidos(fechaFinal));
+                
                 return true;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error validarImpresion.: " + ex.ToString(), "", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show("Error validarImpresion.: " + ex.ToString(), "", MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return false;
             }
         }
+
         private void button6_Click(object sender, EventArgs e)
         {
-            if(validarImpresion()==false)
+            if (validarImpresion() == false)
             {
                 return;
             }
-            getActionImprimir();
+            SincronizarProceso.RunWorkerAsync();            
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -204,6 +238,7 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
                 MessageBox.Show("Error loadSuplidor.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         public void loadCompra()
         {
             try
@@ -214,7 +249,7 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
                 if (compra != null)
                 {
                     compraIdText.Text = compra.codigo.ToString();
-                    compraLabel.Text = compra.numero_factura + "-" + suplidor.rnc;
+                    compraLabel.Text = compra.numero_factura + "---" + suplidor.rnc;
                 }
             }
             catch (Exception ex)
@@ -222,6 +257,7 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
                 MessageBox.Show("Error loadCompra.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void button5_Click(object sender, EventArgs e)
         {
             ventana_busqueda_suplidor ventana=new ventana_busqueda_suplidor();
@@ -250,8 +286,9 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
 
         private void checkBoxIncluirRangoFechaVenta_Click(object sender, EventArgs e)
         {
-            fechaInicialText.Enabled = !(bool) checkBoxIncluirRangoFechaVenta.Checked;
-            fechaFinalText.Enabled = !(bool)checkBoxIncluirRangoFechaVenta.Checked;
+            fechaInicialText.Enabled = (bool) checkBoxIncluirRangoFechaVenta.Checked;
+            fechaFinalText.Enabled = (bool)checkBoxIncluirRangoFechaVenta.Checked;
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -264,6 +301,11 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
         {
             compra = null;
             loadCompra();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

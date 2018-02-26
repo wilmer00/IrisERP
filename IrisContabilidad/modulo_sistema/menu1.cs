@@ -46,6 +46,7 @@ namespace IrisContabilidad.modulo_sistema
         modeloModulo modeloModulo=new modeloModulo();
         modeloTipoVentana modeloTipoVentana=new modeloTipoVentana();
         modeloSistemaConfiguracion modeloSistemaConfiguracion=new modeloSistemaConfiguracion();
+        
 
         //listas
         private List<string> listaTemp;
@@ -59,6 +60,7 @@ namespace IrisContabilidad.modulo_sistema
         {
             InitializeComponent();
             this.empleado = singleton.getEmpleado();
+            this.sistemaConfiguracion = singleton.getSistemaconfiguracion();
             //this.empleado = empleadoApp;
             this.sistemaConfiguracion = modeloSistemaConfiguracion.getSistemaConfiguracion();
             this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "menú");
@@ -338,7 +340,15 @@ namespace IrisContabilidad.modulo_sistema
                     Padding espacio=new Padding(25,25,25,25);
                     botonVentana.Margin= espacio;
                     botonVentana.TextAlign = ContentAlignment.BottomCenter;
-                    botonVentana.Text = ventana.nombre_ventana;
+                    //si el idioma sistema es 1 se queda en espanol y si es 2 entonces en ingles
+                    if(sistemaConfiguracion.codigoIdiomaSistema==1)
+                    {
+                        botonVentana.Text = ventana.nombre_ventana;
+                    }
+                    else if(sistemaConfiguracion.codigoIdiomaSistema == 2)
+                    {
+                        botonVentana.Text = ventana.nombre_ventana2;
+                    }                    
                     botonVentana.ForeColor = Color.White;
                     botonVentana.Font = new Font(botonVentana.Font.FontFamily.Name, tipoVentana.tamanoModuloLetra);
                     botonVentana.MouseHover+= BotonVentanaOnMouseHover;

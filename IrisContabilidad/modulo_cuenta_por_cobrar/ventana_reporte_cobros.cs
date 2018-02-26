@@ -137,10 +137,10 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                 
                 checkBoxIncluirRangoFechaVenta.Checked = false;
                 //fecha ventas
-                fechaInicialVentaText.Text = DateTime.Today.ToString("dd/MM/yyyy");
-                fechaFinalVentaText.Text = DateTime.Today.ToString("dd/MM/yyyy");
-                fechaInicialVentaText.Enabled = (bool)checkBoxIncluirRangoFechaVenta.Checked;
-                fechaFinalVentaText.Enabled = (bool)checkBoxIncluirRangoFechaVenta.Checked;
+                fechaInicialVentaText.Value = DateTime.Today;
+                fechaFinalVentaText.Value = DateTime.Today;
+                fechaInicialVentaText.Enabled =false;
+                fechaFinalVentaText.Enabled = false;
 
 
 
@@ -188,8 +188,8 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                 }
 
                 //fechas ventas
-                fechaInicialVentaDateTime = Convert.ToDateTime(fechaInicialVentaText.Text);
-                fechaFinalVentaDateTime = Convert.ToDateTime(fechaFinalVentaText.Text);
+                fechaInicialVentaDateTime = Convert.ToDateTime(fechaInicialVentaText.Value);
+                fechaFinalVentaDateTime = Convert.ToDateTime(fechaFinalVentaText.Value);
                 
                 //tipo venta
                 if (tipoVentaComboBox.Text != "")
@@ -227,7 +227,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                 {
                     return;
                 }
-                if (MessageBox.Show("Desea procesar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                if (MessageBox.Show("Do you want to process?/Desea procesar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 {
                     return;
                 }
@@ -240,9 +240,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
             {
                 MessageBox.Show("Error getAction.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        
+        }        
 
         private void ventana_reporte_cobros_Load(object sender, EventArgs e)
         {
@@ -269,7 +267,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
 
         public void salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -345,6 +343,10 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
 
         private void button6_Click(object sender, EventArgs e)
         {
+            if(validarGetAcion()!=true)
+            {
+                return;
+            }
             SincronizarProceso.RunWorkerAsync();
         }
 

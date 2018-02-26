@@ -68,7 +68,7 @@ namespace IrisContabilidad.modulo_facturacion
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(16, 652);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Size = new System.Drawing.Size(1346, 66);
             // 
             // button2
@@ -80,19 +80,19 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Location = new System.Drawing.Point(1158, 6);
-            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Size = new System.Drawing.Size(1378, 25);
             // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.Location = new System.Drawing.Point(580, 6);
-            this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button3.Margin = new System.Windows.Forms.Padding(5);
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label2
@@ -143,7 +143,7 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(97, 29);
+            this.label5.Location = new System.Drawing.Point(732, 33);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(172, 25);
@@ -156,7 +156,7 @@ namespace IrisContabilidad.modulo_facturacion
             this.montoEfectivoText.BackColor = System.Drawing.Color.SkyBlue;
             this.montoEfectivoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.montoEfectivoText.Location = new System.Drawing.Point(255, 52);
-            this.montoEfectivoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.montoEfectivoText.Margin = new System.Windows.Forms.Padding(4);
             this.montoEfectivoText.Name = "montoEfectivoText";
             this.montoEfectivoText.Size = new System.Drawing.Size(415, 45);
             this.montoEfectivoText.TabIndex = 79;
@@ -171,7 +171,7 @@ namespace IrisContabilidad.modulo_facturacion
             this.montoTarjetaText.BackColor = System.Drawing.Color.SkyBlue;
             this.montoTarjetaText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.montoTarjetaText.Location = new System.Drawing.Point(927, 52);
-            this.montoTarjetaText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.montoTarjetaText.Margin = new System.Windows.Forms.Padding(4);
             this.montoTarjetaText.Name = "montoTarjetaText";
             this.montoTarjetaText.Size = new System.Drawing.Size(415, 45);
             this.montoTarjetaText.TabIndex = 80;
@@ -186,7 +186,7 @@ namespace IrisContabilidad.modulo_facturacion
             this.montoChequeText.BackColor = System.Drawing.Color.SkyBlue;
             this.montoChequeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.montoChequeText.Location = new System.Drawing.Point(241, 23);
-            this.montoChequeText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.montoChequeText.Margin = new System.Windows.Forms.Padding(4);
             this.montoChequeText.Name = "montoChequeText";
             this.montoChequeText.Size = new System.Drawing.Size(415, 45);
             this.montoChequeText.TabIndex = 81;
@@ -201,7 +201,7 @@ namespace IrisContabilidad.modulo_facturacion
             this.montoDepositoText.BackColor = System.Drawing.Color.SkyBlue;
             this.montoDepositoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.montoDepositoText.Location = new System.Drawing.Point(191, 23);
-            this.montoDepositoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.montoDepositoText.Margin = new System.Windows.Forms.Padding(4);
             this.montoDepositoText.Name = "montoDepositoText";
             this.montoDepositoText.Size = new System.Drawing.Size(415, 45);
             this.montoDepositoText.TabIndex = 82;
@@ -213,10 +213,10 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             // montoDevueltoText
             // 
-            this.montoDevueltoText.BackColor = System.Drawing.Color.Red;
+            this.montoDevueltoText.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.montoDevueltoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.montoDevueltoText.Location = new System.Drawing.Point(293, 20);
-            this.montoDevueltoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.montoDevueltoText.Location = new System.Drawing.Point(912, 23);
+            this.montoDevueltoText.Margin = new System.Windows.Forms.Padding(4);
             this.montoDevueltoText.Name = "montoDevueltoText";
             this.montoDevueltoText.ReadOnly = true;
             this.montoDevueltoText.Size = new System.Drawing.Size(408, 45);
@@ -230,9 +230,9 @@ namespace IrisContabilidad.modulo_facturacion
             this.groupBox1.Controls.Add(this.montoDescuentoText);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Location = new System.Drawing.Point(20, 327);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1344, 92);
             this.groupBox1.TabIndex = 84;
             this.groupBox1.TabStop = false;
@@ -242,7 +242,7 @@ namespace IrisContabilidad.modulo_facturacion
             this.montoDescuentoText.BackColor = System.Drawing.Color.Tomato;
             this.montoDescuentoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.montoDescuentoText.Location = new System.Drawing.Point(287, 23);
-            this.montoDescuentoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.montoDescuentoText.Margin = new System.Windows.Forms.Padding(4);
             this.montoDescuentoText.Name = "montoDescuentoText";
             this.montoDescuentoText.Size = new System.Drawing.Size(415, 45);
             this.montoDescuentoText.TabIndex = 86;
@@ -269,7 +269,7 @@ namespace IrisContabilidad.modulo_facturacion
             this.MontoTotalText.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.MontoTotalText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MontoTotalText.Location = new System.Drawing.Point(913, 157);
-            this.MontoTotalText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MontoTotalText.Margin = new System.Windows.Forms.Padding(4);
             this.MontoTotalText.Name = "MontoTotalText";
             this.MontoTotalText.ReadOnly = true;
             this.MontoTotalText.Size = new System.Drawing.Size(408, 45);
@@ -294,7 +294,7 @@ namespace IrisContabilidad.modulo_facturacion
             this.numeroChequeText.BackColor = System.Drawing.Color.SkyBlue;
             this.numeroChequeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numeroChequeText.Location = new System.Drawing.Point(241, 78);
-            this.numeroChequeText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numeroChequeText.Margin = new System.Windows.Forms.Padding(4);
             this.numeroChequeText.Name = "numeroChequeText";
             this.numeroChequeText.Size = new System.Drawing.Size(415, 45);
             this.numeroChequeText.TabIndex = 87;
@@ -306,7 +306,7 @@ namespace IrisContabilidad.modulo_facturacion
             this.chequeBancoText.BackColor = System.Drawing.Color.SkyBlue;
             this.chequeBancoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chequeBancoText.Location = new System.Drawing.Point(241, 128);
-            this.chequeBancoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chequeBancoText.Margin = new System.Windows.Forms.Padding(4);
             this.chequeBancoText.MaxLength = 50;
             this.chequeBancoText.Name = "chequeBancoText";
             this.chequeBancoText.Size = new System.Drawing.Size(415, 45);
@@ -318,7 +318,7 @@ namespace IrisContabilidad.modulo_facturacion
             this.depositoBancoText.BackColor = System.Drawing.Color.SkyBlue;
             this.depositoBancoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.depositoBancoText.Location = new System.Drawing.Point(191, 78);
-            this.depositoBancoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.depositoBancoText.Margin = new System.Windows.Forms.Padding(4);
             this.depositoBancoText.MaxLength = 50;
             this.depositoBancoText.Name = "depositoBancoText";
             this.depositoBancoText.Size = new System.Drawing.Size(415, 45);
@@ -334,9 +334,9 @@ namespace IrisContabilidad.modulo_facturacion
             this.groupBox2.Controls.Add(this.chequeBancoText);
             this.groupBox2.Controls.Add(this.numeroChequeText);
             this.groupBox2.Location = new System.Drawing.Point(20, 121);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(691, 199);
             this.groupBox2.TabIndex = 91;
             this.groupBox2.TabStop = false;
@@ -371,9 +371,9 @@ namespace IrisContabilidad.modulo_facturacion
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.depositoBancoText);
             this.groupBox3.Location = new System.Drawing.Point(736, 121);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(628, 199);
             this.groupBox3.TabIndex = 92;
             this.groupBox3.TabStop = false;
@@ -399,9 +399,9 @@ namespace IrisContabilidad.modulo_facturacion
             this.groupBox4.Controls.Add(this.montoDevueltoText);
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Location = new System.Drawing.Point(21, 427);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(1343, 215);
             this.groupBox4.TabIndex = 93;
             this.groupBox4.TabStop = false;
@@ -410,7 +410,7 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(220, 95);
+            this.label11.Location = new System.Drawing.Point(13, 33);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(49, 25);
@@ -421,8 +421,8 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             this.MontoItebisText.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.MontoItebisText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MontoItebisText.Location = new System.Drawing.Point(293, 86);
-            this.MontoItebisText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MontoItebisText.Location = new System.Drawing.Point(70, 23);
+            this.MontoItebisText.Margin = new System.Windows.Forms.Padding(4);
             this.MontoItebisText.Name = "MontoItebisText";
             this.MontoItebisText.ReadOnly = true;
             this.MontoItebisText.Size = new System.Drawing.Size(408, 45);
@@ -443,7 +443,7 @@ namespace IrisContabilidad.modulo_facturacion
             this.Controls.Add(this.montoEfectivoText);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "ventana_desglose_dinero";
             this.Text = "ventana_desglose_dinero";
             this.Load += new System.EventHandler(this.ventana_desglose_dinero_Load);

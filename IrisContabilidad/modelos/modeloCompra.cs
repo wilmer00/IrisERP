@@ -720,7 +720,7 @@ namespace IrisContabilidad.modelos
             try
             {
                 compra_vs_pagos pagoDetalle = new compra_vs_pagos();
-                string sql = "select codigo,fecha,detalle,cod_empleado,activo,cod_empleado_anular,motivo_anulado,cuadrado from compra_vs_pagos where codigo='" + id + "'";
+                string sql ="select codigo,fecha,detalle,cod_empleado,activo,cod_empleado_anular,motivo_anulado,cuadrado from compra_vs_pagos where codigo='" + id + "'";
                 DataSet ds = utilidades.ejecutarcomando_mysql(sql);
                 if (ds.Tables[0].Rows.Count > 0)
                 {

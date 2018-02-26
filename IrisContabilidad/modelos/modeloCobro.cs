@@ -162,13 +162,13 @@ namespace IrisContabilidad.modelos
             }
         }
 
-        //get venta pago by id
-        public venta_vs_cobros getVentaCobroById(int codigoVentaPago)
+        //get venta cobro by id
+        public venta_vs_cobros getVentaCobroById(int codigoVentaCobro)
         {
             try
             {
                 venta_vs_cobros CobroDetalle = new venta_vs_cobros();
-                string sql = "select codigo,fecha,detalle,cod_empleado,activo,cod_empleado_anular,motivo_anulado,cuadrado from venta_vs_cobros where codigo='" + codigoVentaPago + "'";
+                string sql = "select codigo,fecha,detalle,cod_empleado,activo,cod_empleado_anular,motivo_anulado,cuadrado from venta_vs_cobros where codigo='" + codigoVentaCobro + "'";
                 DataSet ds = utilidades.ejecutarcomando_mysql(sql);
                 if (ds.Tables[0].Rows.Count > 0)
                 {
@@ -191,7 +191,36 @@ namespace IrisContabilidad.modelos
             }
         }
 
-        //get lista al completa de venta detalle by cuadre caja
+        //get venta cobros by venta id
+        public venta_vs_cobros getVentaCobroByVentaId(int codigoVenta)
+        {
+            try
+            {
+                venta_vs_cobros CobroDetalle = new venta_vs_cobros();
+                string sql = "select vc.codigo,vc.fecha,vc.detalle,vc.cod_empleado,vc.activo,vc.cod_empleado_anular,vc.motivo_anulado,vc.cuadrado from venta_vs_cobros vc join venta_vs_cobros_detalles vd on vc.activo = '1' where vd.cod_venta = '"+codigoVenta+"'";
+                DataSet ds = utilidades.ejecutarcomando_mysql(sql);
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    CobroDetalle = new venta_vs_cobros();
+                    CobroDetalle.codigo = Convert.ToInt16(ds.Tables[0].Rows[0][0].ToString());
+                    CobroDetalle.fecha = Convert.ToDateTime(ds.Tables[0].Rows[0][1].ToString());
+                    CobroDetalle.detalle = ds.Tables[0].Rows[0][2].ToString();
+                    CobroDetalle.cod_empleado = Convert.ToInt16(ds.Tables[0].Rows[0][3].ToString());
+                    CobroDetalle.activo = Convert.ToBoolean(ds.Tables[0].Rows[0][4]);
+                    CobroDetalle.cod_empleado_anular = Convert.ToInt16(ds.Tables[0].Rows[0][5].ToString());
+                    CobroDetalle.motivo_anulado = ds.Tables[0].Rows[0][6].ToString();
+                    CobroDetalle.cuadrado = Convert.ToBoolean(ds.Tables[0].Rows[0][7]);
+                }
+                return CobroDetalle;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error getVentaCobroById.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        //get lista al completa de venta cobros detalle by cuadre caja
         public List<venta_vs_cobros_detalles> getListaCobrosDetallesCompletaSinCuadradaBycuadreCaja(cuadre_caja cuadre)
         {
             try
@@ -226,8 +255,47 @@ namespace IrisContabilidad.modelos
                 return null;
             }
         }
-    
-    
-    
+
+        //get lista lista completa de venta cobros detalle completa
+        public List<venta_vs_cobros_detalles> getListaVentaCobrosDetalleCompleta(bool SoloActivo = true)
+        {
+            try
+            {
+                List<venta_vs_cobros_detalles> lista = new List<venta_vs_cobros_detalles>();
+                string sql = "";
+                sql = "select codigo,cod_cobro,cod_venta,cod_metodo_cobro,monto_cobrado,monto_descontado,activo from venta_vs_cobros_detalles where codigo>'0' ";
+                if (SoloActivo == true)
+                {
+                    //se traen solo los activo
+                    sql += " and activo='1'";
+                }
+                DataSet ds = utilidades.ejecutarcomando_mysql(sql);
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    foreach (DataRow row in ds.Tables[0].Rows)
+                    {
+                        venta_vs_cobros_detalles ventaCobro = new venta_vs_cobros_detalles();
+                        ventaCobro.codigo = Convert.ToInt16(row[0].ToString());
+                        ventaCobro.codigo_cobro = Convert.ToInt16(row[1].ToString());
+                        ventaCobro.codigo_venta = Convert.ToInt16(row[2].ToString());
+                        ventaCobro.codigo_metodo_cobro = Convert.ToInt16(row[3].ToString());
+                        ventaCobro.monto_cobrado = Convert.ToDecimal(row[4].ToString());
+                        ventaCobro.monto_descontado = Convert.ToDecimal(row[5].ToString());
+                        ventaCobro.activo = Convert.ToBoolean(row[6]);
+                        lista.Add(ventaCobro);
+                    }
+                }
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error venta_vs_cobros_detalles.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+
+
+
     }
 }

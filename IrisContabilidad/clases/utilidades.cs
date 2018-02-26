@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
@@ -596,6 +597,7 @@ namespace IrisContabilidad.clases
         //        return false;
         //    }
         //}
+
         public void CopiarArchivosRecursivo(DirectoryInfo Origen, DirectoryInfo Destino)
         {
             foreach (DirectoryInfo dir in Origen.GetDirectories())
@@ -1289,6 +1291,20 @@ namespace IrisContabilidad.clases
             catch (Exception ex)
             {
                 MessageBox.Show("Error getRellenar.:" + ex.ToString(),"",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public string getFechaEstadosUnidos(DateTime fecha)
+        {
+            try
+            {
+                string fechaConvertida = fecha.ToString("yyyy-MM-dd");
+                return fechaConvertida;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error getFechaEstadosUnidos.:" + ex.ToString());
                 return null;
             }
         }

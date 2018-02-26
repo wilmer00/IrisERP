@@ -33,6 +33,12 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ventana_consulta_compra_pagos));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idPagoCOlumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpleadoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.meotodopagodetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoCompraColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.montoPagagoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.suplidorText = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
@@ -48,12 +54,6 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             this.numeroCompraText = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.CompraIdText = new System.Windows.Forms.TextBox();
-            this.idPagoCOlumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmpleadoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.meotodopagodetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoCompraColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.montoPagagoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -63,7 +63,7 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(16, 650);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Size = new System.Drawing.Size(1224, 66);
             // 
             // button2
@@ -75,19 +75,19 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             // 
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Location = new System.Drawing.Point(1036, 6);
-            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Size = new System.Drawing.Size(1256, 25);
             // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.Location = new System.Drawing.Point(519, 6);
-            this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button3.Margin = new System.Windows.Forms.Padding(5);
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dataGridView1
@@ -106,7 +106,7 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             this.codigoCompraColumn,
             this.montoPagagoColumn});
             this.dataGridView1.Location = new System.Drawing.Point(21, 286);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -114,196 +114,6 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1219, 350);
             this.dataGridView1.TabIndex = 110;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(91, 17);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 25);
-            this.label2.TabIndex = 114;
-            this.label2.Text = "Supplier";
-            // 
-            // suplidorText
-            // 
-            this.suplidorText.BackColor = System.Drawing.Color.White;
-            this.suplidorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.suplidorText.Location = new System.Drawing.Point(191, 62);
-            this.suplidorText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.suplidorText.MaxLength = 200;
-            this.suplidorText.Name = "suplidorText";
-            this.suplidorText.ReadOnly = true;
-            this.suplidorText.Size = new System.Drawing.Size(313, 30);
-            this.suplidorText.TabIndex = 113;
-            // 
-            // button5
-            // 
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(443, 11);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(63, 46);
-            this.button5.TabIndex = 112;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // suplidorIdText
-            // 
-            this.suplidorIdText.BackColor = System.Drawing.Color.SkyBlue;
-            this.suplidorIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.suplidorIdText.Location = new System.Drawing.Point(191, 16);
-            this.suplidorIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.suplidorIdText.Name = "suplidorIdText";
-            this.suplidorIdText.Size = new System.Drawing.Size(243, 30);
-            this.suplidorIdText.TabIndex = 111;
-            this.suplidorIdText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.suplidorIdText_KeyDown);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.metodoPagoComboBox);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.empleadoText);
-            this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Controls.Add(this.empleadoIdText);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.numeroCompraText);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.CompraIdText);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.suplidorText);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.suplidorIdText);
-            this.groupBox1.Location = new System.Drawing.Point(21, 34);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(1219, 244);
-            this.groupBox1.TabIndex = 119;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // metodoPagoComboBox
-            // 
-            this.metodoPagoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.metodoPagoComboBox.FormattingEnabled = true;
-            this.metodoPagoComboBox.Items.AddRange(new object[] {
-            "Efectivo",
-            "Deposito",
-            "Cheque"});
-            this.metodoPagoComboBox.Location = new System.Drawing.Point(191, 204);
-            this.metodoPagoComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.metodoPagoComboBox.Name = "metodoPagoComboBox";
-            this.metodoPagoComboBox.Size = new System.Drawing.Size(313, 24);
-            this.metodoPagoComboBox.TabIndex = 131;
-            this.metodoPagoComboBox.Tag = "";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(560, 17);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 25);
-            this.label6.TabIndex = 130;
-            this.label6.Text = "Employee";
-            // 
-            // empleadoText
-            // 
-            this.empleadoText.BackColor = System.Drawing.Color.White;
-            this.empleadoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empleadoText.Location = new System.Drawing.Point(687, 62);
-            this.empleadoText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.empleadoText.MaxLength = 200;
-            this.empleadoText.Name = "empleadoText";
-            this.empleadoText.ReadOnly = true;
-            this.empleadoText.Size = new System.Drawing.Size(313, 30);
-            this.empleadoText.TabIndex = 129;
-            // 
-            // button7
-            // 
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(939, 11);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(63, 46);
-            this.button7.TabIndex = 128;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // empleadoIdText
-            // 
-            this.empleadoIdText.BackColor = System.Drawing.Color.SkyBlue;
-            this.empleadoIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empleadoIdText.Location = new System.Drawing.Point(687, 16);
-            this.empleadoIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.empleadoIdText.Name = "empleadoIdText";
-            this.empleadoIdText.Size = new System.Drawing.Size(243, 30);
-            this.empleadoIdText.TabIndex = 127;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(10, 202);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 25);
-            this.label5.TabIndex = 126;
-            this.label5.Text = "Payment method";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(80, 108);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 25);
-            this.label4.TabIndex = 122;
-            this.label4.Text = "Purchase";
-            // 
-            // numeroCompraText
-            // 
-            this.numeroCompraText.BackColor = System.Drawing.Color.White;
-            this.numeroCompraText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numeroCompraText.Location = new System.Drawing.Point(191, 154);
-            this.numeroCompraText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.numeroCompraText.MaxLength = 200;
-            this.numeroCompraText.Name = "numeroCompraText";
-            this.numeroCompraText.ReadOnly = true;
-            this.numeroCompraText.Size = new System.Drawing.Size(313, 30);
-            this.numeroCompraText.TabIndex = 121;
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(443, 103);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(63, 46);
-            this.button4.TabIndex = 120;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // CompraIdText
-            // 
-            this.CompraIdText.BackColor = System.Drawing.Color.SkyBlue;
-            this.CompraIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CompraIdText.Location = new System.Drawing.Point(191, 108);
-            this.CompraIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.CompraIdText.Name = "CompraIdText";
-            this.CompraIdText.Size = new System.Drawing.Size(243, 30);
-            this.CompraIdText.TabIndex = 119;
             // 
             // idPagoCOlumn
             // 
@@ -347,6 +157,235 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             this.montoPagagoColumn.Name = "montoPagagoColumn";
             this.montoPagagoColumn.ReadOnly = true;
             // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(89, 17);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 25);
+            this.label2.TabIndex = 114;
+            this.label2.Text = "Supplier";
+            // 
+            // suplidorText
+            // 
+            this.suplidorText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.suplidorText.BackColor = System.Drawing.Color.White;
+            this.suplidorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.suplidorText.Location = new System.Drawing.Point(194, 62);
+            this.suplidorText.Margin = new System.Windows.Forms.Padding(4);
+            this.suplidorText.MaxLength = 200;
+            this.suplidorText.Name = "suplidorText";
+            this.suplidorText.ReadOnly = true;
+            this.suplidorText.Size = new System.Drawing.Size(313, 30);
+            this.suplidorText.TabIndex = 113;
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(446, 11);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(63, 46);
+            this.button5.TabIndex = 112;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // suplidorIdText
+            // 
+            this.suplidorIdText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.suplidorIdText.BackColor = System.Drawing.Color.SkyBlue;
+            this.suplidorIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.suplidorIdText.Location = new System.Drawing.Point(194, 16);
+            this.suplidorIdText.Margin = new System.Windows.Forms.Padding(4);
+            this.suplidorIdText.Name = "suplidorIdText";
+            this.suplidorIdText.Size = new System.Drawing.Size(243, 30);
+            this.suplidorIdText.TabIndex = 111;
+            this.suplidorIdText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.suplidorIdText_KeyDown);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.metodoPagoComboBox);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.empleadoText);
+            this.groupBox1.Controls.Add(this.button7);
+            this.groupBox1.Controls.Add(this.empleadoIdText);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.numeroCompraText);
+            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.CompraIdText);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.suplidorText);
+            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.suplidorIdText);
+            this.groupBox1.Location = new System.Drawing.Point(21, 34);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(1219, 244);
+            this.groupBox1.TabIndex = 119;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // metodoPagoComboBox
+            // 
+            this.metodoPagoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.metodoPagoComboBox.FormattingEnabled = true;
+            this.metodoPagoComboBox.Items.AddRange(new object[] {
+            "Efectivo",
+            "Deposito",
+            "Cheque"});
+            this.metodoPagoComboBox.Location = new System.Drawing.Point(194, 204);
+            this.metodoPagoComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.metodoPagoComboBox.Name = "metodoPagoComboBox";
+            this.metodoPagoComboBox.Size = new System.Drawing.Size(313, 24);
+            this.metodoPagoComboBox.TabIndex = 131;
+            this.metodoPagoComboBox.Tag = "";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(560, 17);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(107, 25);
+            this.label6.TabIndex = 130;
+            this.label6.Text = "Employee";
+            // 
+            // empleadoText
+            // 
+            this.empleadoText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.empleadoText.BackColor = System.Drawing.Color.White;
+            this.empleadoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empleadoText.Location = new System.Drawing.Point(687, 62);
+            this.empleadoText.Margin = new System.Windows.Forms.Padding(4);
+            this.empleadoText.MaxLength = 200;
+            this.empleadoText.Name = "empleadoText";
+            this.empleadoText.ReadOnly = true;
+            this.empleadoText.Size = new System.Drawing.Size(313, 30);
+            this.empleadoText.TabIndex = 129;
+            // 
+            // button7
+            // 
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(939, 11);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(63, 46);
+            this.button7.TabIndex = 128;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // empleadoIdText
+            // 
+            this.empleadoIdText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.empleadoIdText.BackColor = System.Drawing.Color.SkyBlue;
+            this.empleadoIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empleadoIdText.Location = new System.Drawing.Point(687, 16);
+            this.empleadoIdText.Margin = new System.Windows.Forms.Padding(4);
+            this.empleadoIdText.Name = "empleadoIdText";
+            this.empleadoIdText.Size = new System.Drawing.Size(243, 30);
+            this.empleadoIdText.TabIndex = 127;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(8, 202);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(173, 25);
+            this.label5.TabIndex = 126;
+            this.label5.Text = "Payment method";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(78, 108);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 25);
+            this.label4.TabIndex = 122;
+            this.label4.Text = "Purchase";
+            // 
+            // numeroCompraText
+            // 
+            this.numeroCompraText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.numeroCompraText.BackColor = System.Drawing.Color.White;
+            this.numeroCompraText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numeroCompraText.Location = new System.Drawing.Point(194, 154);
+            this.numeroCompraText.Margin = new System.Windows.Forms.Padding(4);
+            this.numeroCompraText.MaxLength = 200;
+            this.numeroCompraText.Name = "numeroCompraText";
+            this.numeroCompraText.ReadOnly = true;
+            this.numeroCompraText.Size = new System.Drawing.Size(313, 30);
+            this.numeroCompraText.TabIndex = 121;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(446, 103);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(63, 46);
+            this.button4.TabIndex = 120;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // CompraIdText
+            // 
+            this.CompraIdText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CompraIdText.BackColor = System.Drawing.Color.SkyBlue;
+            this.CompraIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CompraIdText.Location = new System.Drawing.Point(194, 108);
+            this.CompraIdText.Margin = new System.Windows.Forms.Padding(4);
+            this.CompraIdText.Name = "CompraIdText";
+            this.CompraIdText.Size = new System.Drawing.Size(243, 30);
+            this.CompraIdText.TabIndex = 119;
+            // 
             // ventana_consulta_compra_pagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -354,7 +393,7 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             this.ClientSize = new System.Drawing.Size(1256, 731);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "ventana_consulta_compra_pagos";
             this.Text = "ventana_consulta_compra_pagos";
             this.Load += new System.EventHandler(this.ventana_consulta_compra_pagos_Load);

@@ -14,9 +14,14 @@ namespace IrisContabilidad.clases_reportes_modelos
         {
             try
             {
+                venta_vs_cobros ventaCobro = new venta_vs_cobros();
                 reporte_cobros_encabezado reporteEncabezado = new reporte_cobros_encabezado();
                 reporte_cobros_detalle reporteDetalle;
-                
+                List<venta_vs_cobros_detalles> listaVentaCobros = new List<venta_vs_cobros_detalles>();
+                listaVentaCobros = new modeloCobro().getListaVentaCobrosDetalleCompleta();
+                venta venta2 = new venta();//par comprar dentro de ciclos
+                cliente cliente2 = new cliente();//para comprara dentro de ciclos
+
                 reporteEncabezado.listaDetalle = new List<reporte_cobros_detalle>();
 
                 empresa empresa=new empresa();
@@ -33,7 +38,8 @@ namespace IrisContabilidad.clases_reportes_modelos
 
                 //llenando el encabezado
                 reporteEncabezado.empleadoImpresion = empleado.nombre;
-                reporteEncabezado.fecha_impresion = DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt");
+                //reporteEncabezado.fecha_impresion = DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt");
+                reporteEncabezado.fecha_impresion = DateTime.Now.ToString();
                 reporteEncabezado.empresa = empresa.nombre;
                 reporteEncabezado.direccion = sucursal.direccion;
                 reporteEncabezado.rnc = empresa.rnc;
@@ -42,42 +48,42 @@ namespace IrisContabilidad.clases_reportes_modelos
                 //filtrando por cliente
                 if (cliente != null)
                 {
-                    listaVenta = listaVenta.FindAll(x => x.codigo_cliente==cliente.codigo);    
+                    listaVentaCobros = listaVentaCobros.FindAll(x => (venta2 = new modeloVenta().getVentaById(x.codigo_venta)).codigo_cliente == cliente.codigo).ToList();
+                    //listaVenta = listaVenta.FindAll(x => x.codigo_cliente == cliente.codigo);
                 }
                 //filtrando por venta
                 if (venta != null)
                 {
-                    listaVenta = listaVenta.FindAll(x => x.codigo == venta.codigo);
+                    listaVentaCobros = listaVentaCobros.FindAll(x => x.codigo == venta.codigo);
+                    //listaVenta = listaVenta.FindAll(x => x.codigo == venta.codigo);
                 }
                 //filtrando por tipo venta
                 if (tipoVenta != "")
                 {
-                    listaVenta = listaVenta.FindAll(x => tipoVenta.ToLower().Contains(x.tipo_venta.ToLower()));
+                    listaVentaCobros = listaVentaCobros.FindAll(x => (venta2 = new modeloVenta().getVentaById(x.codigo_venta)).tipo_venta.ToLower().Contains(tipoVenta.ToLower())).ToList();
+                    //listaVenta = listaVenta.FindAll(x => tipoVenta.ToLower().Contains(x.tipo_venta.ToLower()));
                 }
-                
+
                 //rango fechas ventas
                 if (incluirRangoFechaVenta == true)
                 {
-                    listaVenta = listaVenta.FindAll(x => x.fecha>=fechaInicialVenta.Date && x.fecha<=fechaFinalVenta.Date);
+                    listaVentaCobros = listaVentaCobros.FindAll(x => ((ventaCobro = new modeloCobro().getVentaCobroById(x.codigo_cobro)).fecha.Date >= fechaInicialVenta.Date) && ((ventaCobro = new modeloCobro().getVentaCobroById(x.codigo_cobro)).fecha.Date <= fechaFinalVenta.Date)).ToList();
+                    //listaVenta = listaVenta.FindAll(x => (ventaCobro = new modeloCobro().getVentaCobroByVentaId(x.codigo)).fecha.Date >= fechaInicialVenta.Date && (ventaCobro = new modeloCobro().getVentaCobroByVentaId(x.codigo)).fecha.Date <= fechaFinalVenta.Date).ToList();
+                    //listaVenta = listaVenta.FindAll(x => x.fecha >= fechaInicialVenta.Date && x.fecha <= fechaFinalVenta.Date);
                 }
 
                 //si solo son ventas pagadas
                 if (soloVentasPagadas == true)
                 {
-                    listaVenta = listaVenta.FindAll(x => x.pagada == true);
+                    listaVentaCobros = listaVentaCobros.FindAll(x => (venta2 = new modeloVenta().getVentaById(x.codigo_venta)).pagada == true).ToList();
+                    //listaVenta = listaVenta.FindAll(x => x.pagada == true);
                 }
 
-                foreach(var clienteActual in listaCliente)
-                {
-                    foreach (var ventaActual in listaVenta)
-                    {
-                        if (clienteActual.codigo == ventaActual.codigo_cliente)
-                        {
-                            reporteDetalle = new reporte_cobros_detalle(ventaActual.codigo);
-                            reporteEncabezado.listaDetalle.Add(reporteDetalle);
-                        }
-                    }
-                }
+
+                listaVentaCobros.ToList().ForEach(x => {
+                    reporteDetalle = new reporte_cobros_detalle(x.codigo_venta);
+                    reporteEncabezado.listaDetalle.Add(reporteDetalle);
+                });
 
                 reporteEncabezado.listaDetalle = reporteEncabezado.listaDetalle.OrderByDescending(x => x.idVenta).ToList();
 

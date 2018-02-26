@@ -605,6 +605,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana=new ventana();
                 ventana.nombre_ventana = "Empresa";
+                ventana.nombre_ventana2 = "Company";
                 ventana.nombre_logico = "IrisContabilidad.modulo_empresa.ventana_empresa";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -614,6 +615,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Ciudad";
+                ventana.nombre_ventana2 = "City";
                 ventana.nombre_logico = "IrisContabilidad.modulo_empresa.ventana_ciudad";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -623,6 +625,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Sucursal";
+                ventana.nombre_ventana2 = "Branch";
                 ventana.nombre_logico = "IrisContabilidad.modulo_empresa.ventana_sucursal";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -632,6 +635,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "comprobante fiscal(NCF)";
+                ventana.nombre_ventana2 = "Text receip(NCF)";
                 ventana.nombre_logico = "IrisContabilidad.modulo_empresa.ventana_configuracion_comprobante_fiscal";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -645,7 +649,8 @@ namespace IrisContabilidad.modelos
                 #region
                 //nueva ventana
                 ventana = new ventana();
-                ventana.nombre_ventana = "Itbis";
+                ventana.nombre_ventana = "impuesto/itbis";
+                ventana.nombre_ventana2 = "Tax";
                 ventana.nombre_logico = "IrisContabilidad.modulo_facturacion.ventana_itebis";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -655,6 +660,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Caja";
+                ventana.nombre_ventana2 = "Cash box";
                 ventana.nombre_logico = "IrisContabilidad.modulo_facturacion.ventana_caja";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -664,6 +670,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Cajero";
+                ventana.nombre_ventana2 = "Cashier";
                 ventana.nombre_logico = "IrisContabilidad.modulo_facturacion.ventana_cajero";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -673,6 +680,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Tipo comprobante fiscal";
+                ventana.nombre_ventana2 = "Type of tax receipt";
                 ventana.nombre_logico = "IrisContabilidad.modulo_facturacion.ventana_tipo_comprobante_fiscal";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -682,6 +690,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Egreso de caja";
+                ventana.nombre_ventana2 = "Cash egress";
                 ventana.nombre_logico = "IrisContabilidad.modulo_facturacion.ventana_egreso_caja";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -690,7 +699,8 @@ namespace IrisContabilidad.modelos
                 listaVentana.Add(ventana);
                 //nueva ventana
                 ventana = new ventana();
-                ventana.nombre_ventana = "caja egresos/ingresos";
+                ventana.nombre_ventana = "Caja egresos/ingresos";
+                ventana.nombre_ventana2 = "Cash machine egress/income";
                 ventana.nombre_logico = "IrisContabilidad.modulo_facturacion.ventana_caja_ingresos_egresos_conceptos";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -700,6 +710,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Vendedor";
+                ventana.nombre_ventana2 = "Seller";
                 ventana.nombre_logico = "IrisContabilidad.modulo_facturacion.ventana_vendedor";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -708,7 +719,8 @@ namespace IrisContabilidad.modelos
                 listaVentana.Add(ventana);
                 //nueva ventana
                 ventana = new ventana();
-                ventana.nombre_ventana = "facturacion";
+                ventana.nombre_ventana = "Facturacion";
+                ventana.nombre_ventana2 = "Billing";
                 ventana.nombre_logico = "IrisContabilidad.modulo_facturacion.ventana_facturacion_normal";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -717,7 +729,8 @@ namespace IrisContabilidad.modelos
                 listaVentana.Add(ventana);
                 //nueva ventana
                 ventana = new ventana();
-                ventana.nombre_ventana = "cuadre caja";
+                ventana.nombre_ventana = "Cuadre caja";
+                ventana.nombre_ventana2 = "Cash flow";
                 ventana.nombre_logico = "IrisContabilidad.modulo_facturacion.ventana_cuadre_caja_rd";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -726,7 +739,8 @@ namespace IrisContabilidad.modelos
                 listaVentana.Add(ventana);
                 //nueva ventana
                 ventana = new ventana();
-                ventana.nombre_ventana = "apertura caja";
+                ventana.nombre_ventana = "Apertura caja";
+                ventana.nombre_ventana2 = "Cash machine opening";
                 ventana.nombre_logico = "IrisContabilidad.modulo_facturacion.ventana_caja_apertura";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -736,6 +750,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Reimprimir ventas";
+                ventana.nombre_ventana2 = "Reprint sells";
                 ventana.nombre_logico = "IrisContabilidad.modulo_facturacion.ventana_venta_reimprimir";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -745,6 +760,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Devolución venta";
+                ventana.nombre_ventana2 = "Retunr of sale";
                 ventana.nombre_logico = "IrisContabilidad.modulo_facturacion.ventana_venta_devolucion";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -754,6 +770,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Anular devolución";
+                ventana.nombre_ventana2 = "Return cancel";
                 ventana.nombre_logico = "IrisContabilidad.modulo_facturacion.ventana_venta_devolucion_anular";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -763,6 +780,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Notas Credito cxc";
+                ventana.nombre_ventana2 = "Credit note account receivable";
                 ventana.nombre_logico = "IrisContabilidad.modulo_facturacion.ventana_nota_credito_cxc";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -772,6 +790,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Notas Debito cxc";
+                ventana.nombre_ventana2 = "Debit note account receivable";
                 ventana.nombre_logico = "IrisContabilidad.modulo_facturacion.ventana_nota_debito_cxc";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -781,6 +800,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Reimprimir cuadre caja";
+                ventana.nombre_ventana2 = "Reprint cash flow";
                 ventana.nombre_logico = "IrisContabilidad.modulo_facturacion.ventana_imprimir_cuadre_caja_rd";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -790,6 +810,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "facturación";
+                ventana.nombre_ventana2 = "Billing";
                 ventana.nombre_logico = "IrisContabilidad.modulo_facturacion.ventana_facturacion_tienda_v1";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -799,6 +820,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "cuadre caja";
+                ventana.nombre_ventana2 = "Cash flow";
                 ventana.nombre_logico = "IrisContabilidad.modulo_facturacion.ventana_cuadre_caja_usa";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -808,6 +830,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "facturacion touch";
+                ventana.nombre_ventana2 = "Touch billing";
                 ventana.nombre_logico = "IrisContabilidad.modulo_facturacion.ventana_facturacion_touch1";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -823,6 +846,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Cliente";
+                ventana.nombre_ventana2 = "Customer";
                 ventana.nombre_logico = "IrisContabilidad.modulo_cuenta_por_cobrar.ventana_cliente";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -832,6 +856,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Categoria cliente";
+                ventana.nombre_ventana2 = "Customer category";
                 ventana.nombre_logico = "IrisContabilidad.modulo_cuenta_por_cobrar.ventana_categoria_cliente";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -841,6 +866,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Venta cobros";
+                ventana.nombre_ventana2 = "Sales charges";
                 ventana.nombre_logico = "IrisContabilidad.modulo_cuenta_por_cobrar.ventana_venta_cobro";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -850,6 +876,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Anular cobros";
+                ventana.nombre_ventana2 = "Cancel sales charges";
                 ventana.nombre_logico = "IrisContabilidad.modulo_cuenta_por_cobrar.ventana_anular_cobros";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -859,6 +886,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Reporte Cobros";
+                ventana.nombre_ventana2 = "Sales charges report";
                 ventana.nombre_logico = "IrisContabilidad.modulo_cuenta_por_cobrar.ventana_reporte_cobros";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -868,6 +896,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Estado Cuenta";
+                ventana.nombre_ventana2 = "Account status";
                 ventana.nombre_logico = "IrisContabilidad.modulo_cuenta_por_cobrar.ventana_estado_cuenta_cliente";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -881,6 +910,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Suplidor";
+                ventana.nombre_ventana2 = "Supplier";
                 ventana.nombre_logico = "IrisContabilidad.modulo_cuenta_por_pagar.ventana_suplidor";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -890,6 +920,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "compra pagos";
+                ventana.nombre_ventana2 = "Purchase payments";
                 ventana.nombre_logico = "IrisContabilidad.modulo_cuenta_por_pagar.ventana_compra_pagos";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -899,6 +930,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Anular pagos";
+                ventana.nombre_ventana2 = "Cancel purchase payments";
                 ventana.nombre_logico = "IrisContabilidad.modulo_cuenta_por_pagar.ventana_anular_pagos";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -908,6 +940,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "consultar pagos";
+                ventana.nombre_ventana2 = "Search purchase payments";
                 ventana.nombre_logico = "IrisContabilidad.modulo_cuenta_por_pagar.ventana_consulta_compra_pagos";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -917,6 +950,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "pagos por compra";
+                ventana.nombre_ventana2 = "payments by purchase";
                 ventana.nombre_logico = "IrisContabilidad.modulo_cuenta_por_pagar.ventana_reporte_pagos";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -926,6 +960,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Notas Credito cxp";
+                ventana.nombre_ventana2 = "Credit notes account payable";
                 ventana.nombre_logico = "IrisContabilidad.modulo_cuenta_por_pagar.ventana_nota_credito_cxp";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -935,6 +970,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Notas Debito cxp";
+                ventana.nombre_ventana2 = "Debit notes account payable";
                 ventana.nombre_logico = "IrisContabilidad.modulo_cuenta_por_pagar.ventana_nota_debito_cxp";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -944,6 +980,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Estado Cuenta Suplidor";
+                ventana.nombre_ventana2 = "Supplier account status";
                 ventana.nombre_logico = "IrisContabilidad.modulo_cuenta_por_pagar.ventana_estado_cuenta_suplidor";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -958,6 +995,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Producto";
+                ventana.nombre_ventana2 = "Product";
                 ventana.nombre_logico = "IrisContabilidad.modulo_inventario.ventana_producto";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -967,6 +1005,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Unidad";
+                ventana.nombre_ventana2 = "Unit";
                 ventana.nombre_logico = "IrisContabilidad.modulo_inventario.ventana_unidad";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -976,6 +1015,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Almacen";
+                ventana.nombre_ventana2 = "warehouse";
                 ventana.nombre_logico = "IrisContabilidad.modulo_inventario.ventana_almacen";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -985,6 +1025,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Categoria producto";
+                ventana.nombre_ventana2 = "Producto category";
                 ventana.nombre_logico = "IrisContabilidad.modulo_inventario.ventana_categoria_producto";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -994,6 +1035,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Subcategoria producto";
+                ventana.nombre_ventana2 = "Producto sub-category";
                 ventana.nombre_logico = "IrisContabilidad.modulo_inventario.ventana_subcategoria_producto";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -1003,6 +1045,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Compra";
+                ventana.nombre_ventana2 = "Purchase";
                 ventana.nombre_logico = "IrisContabilidad.modulo_inventario.ventana_compra";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -1012,6 +1055,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Reporte productos";
+                ventana.nombre_ventana2 = "Products report";
                 ventana.nombre_logico = "IrisContabilidad.modulo_inventario.ventana_reporte_producto";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -1021,6 +1065,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Producto lista precio";
+                ventana.nombre_ventana2 = "Product list prices";
                 ventana.nombre_logico = "IrisContabilidad.modulo_inventario.ventana_producto_lista_precio";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -1030,6 +1075,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Ingredientes variacion";
+                ventana.nombre_ventana2 = "Variation ingredients";
                 ventana.nombre_logico = "IrisContabilidad.modulo_inventario.ventana_ingredientes_variacion";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -1043,6 +1089,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Cambio de clave";
+                ventana.nombre_ventana2 = "Password change";
                 ventana.nombre_logico = "IrisContabilidad.modulo_opciones.ventana_cambio_clave";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -1052,6 +1099,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Permisos empleado";
+                ventana.nombre_ventana2 = "Employee access";
                 ventana.nombre_logico = "IrisContabilidad.modulo_opciones.ventana_permisos_empleado";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -1061,6 +1109,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Tipo icono menú";
+                ventana.nombre_ventana2 = "Type of menu icon";
                 ventana.nombre_logico = "IrisContabilidad.modulo_opciones.ventana_tipo_ventana";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -1070,6 +1119,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Actualización sistema";
+                ventana.nombre_ventana2 = "System update";
                 ventana.nombre_logico = "IrisContabilidad.modulo_opciones.ventana_actualizacion_sistema";
                 ventana.activo = true;
                 ventana.programador = true;
@@ -1083,6 +1133,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "tipo nomina";
+                ventana.nombre_ventana2 = "Type of payroll";
                 ventana.nombre_logico = "IrisContabilidad.modulo_nomina.ventana_tipo_nomina";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -1092,6 +1143,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "situacion empleado";
+                ventana.nombre_ventana2 = "Employee situation";
                 ventana.nombre_logico = "IrisContabilidad.modulo_nomina.ventana_situacion_empleado";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -1101,6 +1153,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "cargo empleado";
+                ventana.nombre_ventana2 = "Employee position";
                 ventana.nombre_logico = "IrisContabilidad.modulo_nomina.ventana_cargo";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -1110,6 +1163,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = " departamento";
+                ventana.nombre_ventana2 = "Department";
                 ventana.nombre_logico = "IrisContabilidad.modulo_nomina.ventana_departamento";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -1119,6 +1173,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "empleado";
+                ventana.nombre_ventana2 = "Employee";
                 ventana.nombre_logico = "IrisContabilidad.modulo_nomina.ventana_empleado";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -1128,6 +1183,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "grupo de usuarios";
+                ventana.nombre_ventana2 = "User group";
                 ventana.nombre_logico = "IrisContabilidad.modulo_nomina.ventana_grupo_usuarios";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -1137,6 +1193,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "nomina";
+                ventana.nombre_ventana2 = "Payroll";
                 ventana.nombre_logico = "IrisContabilidad.modulo_nomina.ventana_nomina";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -1161,6 +1218,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "tipo gastos";
+                ventana.nombre_ventana2 = "Type of expenses";
                 ventana.nombre_logico = "IrisContabilidad.modulo_contabilidad.ventana_tipo_gastos";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -1170,6 +1228,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Gastos";
+                ventana.nombre_ventana2 = "Expenses";
                 ventana.nombre_logico = "IrisContabilidad.modulo_contabilidad.ventana_gastos";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -1179,6 +1238,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Cuentas contables";
+                ventana.nombre_ventana2 = "Accounting accounts";
                 ventana.nombre_logico = "IrisContabilidad.modulo_contabilidad.ventana_cuentas_contables";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -1188,6 +1248,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "conceptos notas cre-deb";
+                ventana.nombre_ventana2 = "Credit / debit concept note";
                 ventana.nombre_logico = "IrisContabilidad.modulo_contabilidad.ventana_nota_credito_debito_concepto";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -1197,6 +1258,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "parametrización contable";
+                ventana.nombre_ventana2 = "Acconting parametrization";
                 ventana.nombre_logico = "IrisContabilidad.modulo_contabilidad.ventana_parametrizacion_contable";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -1206,6 +1268,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Banco";
+                ventana.nombre_ventana2 = "Bank";
                 ventana.nombre_logico = "IrisContabilidad.modulo_contabilidad.ventana_banco";
                 ventana.activo = true;
                 ventana.programador = false;
@@ -1219,6 +1282,7 @@ namespace IrisContabilidad.modelos
                 //nueva ventana
                 ventana = new ventana();
                 ventana.nombre_ventana = "Ventas Mensuales";
+                ventana.nombre_ventana2 = "Monthly sales";
                 ventana.nombre_logico = "IrisContabilidad.modulo_gerencia.ventana_reporte_ventas_mensuales_grafico";
                 ventana.activo = true;
                 ventana.programador = false;

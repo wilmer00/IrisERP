@@ -66,6 +66,7 @@ namespace IrisContabilidad.modelos
                 return false;
             }
         } 
+
         //agregar ventana
         public bool agregarPoolVentana(ventana ventana)
         {
@@ -121,6 +122,7 @@ namespace IrisContabilidad.modelos
                 return false;
             }
         }
+
         //agregar permiso ventana a empleado
         public bool agregarPermisoVentanaEmpleado(int codigoEmpleado,int codigoVentana)
         {
@@ -137,6 +139,7 @@ namespace IrisContabilidad.modelos
                 return false;
             }
         }
+
         //agregar ventana
         public bool agregarModulo(modulo modulo)
         {
@@ -176,6 +179,7 @@ namespace IrisContabilidad.modelos
                 return false;
             }
         }
+
         //agregar ventana
         public bool agregarModulo(List<modulo> listaModulo)
         {
@@ -253,6 +257,7 @@ namespace IrisContabilidad.modelos
                 return false;
             }
         }
+
         public modulo getModuloByid(int id)
         {
             try
@@ -276,6 +281,7 @@ namespace IrisContabilidad.modelos
                 return null;
             }
         }
+
         public List<string> getListaVentanaByModuloId(int id)
         {
             try
@@ -307,7 +313,7 @@ namespace IrisContabilidad.modelos
             try
             {
                 ventana ventana = new ventana();
-                string sql = "SELECT codigo,nombre_ventana,nombre_logico,imagen,activo,programador FROM sistema_ventanas where codigo ='" + id.ToString() + "'";
+                string sql = "SELECT codigo,nombre_ventana,nombre_logico,imagen,activo,programador,nombre_ventana_2 FROM sistema_ventanas where codigo ='" + id.ToString() + "'";
                 DataSet ds = utilidades.ejecutarcomando_mysql(sql);
                 if (ds.Tables[0].Rows.Count > 0)
                 {
@@ -317,6 +323,7 @@ namespace IrisContabilidad.modelos
                     ventana.imagen = ds.Tables[0].Rows[0][3].ToString();
                     ventana.activo = (bool) ds.Tables[0].Rows[0][4];
                     ventana.programador = (bool)ds.Tables[0].Rows[0][5];
+                    ventana.nombre_ventana2 = ds.Tables[0].Rows[0][6].ToString();
                 }
 
                 return ventana;
@@ -327,6 +334,7 @@ namespace IrisContabilidad.modelos
                 return null;
             }
         }
+
         public int getNextModulo()
         {
             try
@@ -378,6 +386,7 @@ namespace IrisContabilidad.modelos
                 return 0;
             }
         }
+
         //get lista ventanas completa no programador
         public List<ventana> getListaVentanasProgramadorNo()
         {

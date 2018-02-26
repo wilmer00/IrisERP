@@ -190,7 +190,7 @@ namespace IrisContabilidad.modulo_facturacion
         {
             try
             {
-                modeloReporte.imprimirVenta(Convert.ToInt16(dataGridView1.Rows[fila].Cells[0].Value.ToString()));
+                modeloReporte.imprimirVenta(Convert.ToInt16(dataGridView1.Rows[fila].Cells[0].Value.ToString()),true);
             }
             catch (Exception ex)
             {

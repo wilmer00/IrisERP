@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using IrisContabilidad.clases;
 using IrisContabilidad.modelos;
@@ -181,6 +182,8 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
             {
                 dataGridView1.Rows.Clear();
                 listaVentacobroDetalle = modeloPago.getListaPagosDetallesActivosBySuplidorId(suplidor.codigo);
+                //ordenar la lista al reves para ver el ultimo pago de primero
+                listaVentacobroDetalle = listaVentacobroDetalle.OrderByDescending(x=> x.codigo).ToList();
                 listaVentacobroDetalle.ForEach(x =>
                 {
                     compra = new compra();
@@ -190,7 +193,7 @@ namespace IrisContabilidad.modulo_cuenta_por_pagar
                     empleado = new empleado();
                     empleado = modeloEmpleado.getEmpleadoById(compraPago.cod_empleado);
                     metodoPago = modeloMetodoPago.getMetodoPagoById(x.codigo_metodo_pago);
-                    dataGridView1.Rows.Add(x.codigo, utilidades.getFechaddMMyyyy(compraPago.fecha), empleado.nombre, metodoPago.metodo, compra.numero_factura);
+                    dataGridView1.Rows.Add(x.codigo, utilidades.getFechaEstadosUnidos(compraPago.fecha), empleado.nombre, metodoPago.metodo, compra.numero_factura);
                 });
             }
             catch (Exception ex)

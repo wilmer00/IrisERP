@@ -151,8 +151,6 @@ C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\bin\Debug\Microsoft.Rep
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\bin\Debug\MySql.Data.dll
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\bin\Debug\Reports.dll
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\bin\Debug\Translator.dll
-C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\bin\Debug\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
-C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Debug\IrisContabilidad.csprojResolveAssemblyReference.cache
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Debug\IrisContabilidad.idiomas.En-us.resources
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Debug\IrisContabilidad.idiomas.Es-do.resources
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Debug\IrisContabilidad.modulo_contabilidad.ventana_banco.resources
@@ -281,3 +279,4 @@ C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Debug\IrisContabili
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Debug\IrisContabilidad.application
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Debug\IrisContabilidad.exe
 C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Debug\IrisContabilidad.pdb
+C:\Users\wilme\Documents\GitHub\IrisERP\IrisContabilidad\obj\Debug\IrisContabilidad.csprojResolveAssemblyReference.cache

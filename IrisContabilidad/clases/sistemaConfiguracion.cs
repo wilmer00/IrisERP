@@ -23,6 +23,8 @@ namespace IrisContabilidad.clases
         public int tipoVentanaCuadreCaja { get; set; }
         public bool sistemaFull { get; set; }
         public string mensajePiePaginaFactura { get; set; }
+        public string nombreImpresoraRolloDefecto { get; set; }
+        public string nombreImpresoraHojaCompleta { get; set; }
 
     }
 }

@@ -34,10 +34,10 @@
             this.fechaInicialText = new System.Windows.Forms.DateTimePicker();
             this.fechaFinalText = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TipoNominaText = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.tipoNominaIdText = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.TipoNominaText = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -93,14 +93,14 @@
             // 
             // fechaInicialText
             // 
-            this.fechaInicialText.Location = new System.Drawing.Point(171, 166);
+            this.fechaInicialText.Location = new System.Drawing.Point(182, 166);
             this.fechaInicialText.Name = "fechaInicialText";
             this.fechaInicialText.Size = new System.Drawing.Size(200, 22);
             this.fechaInicialText.TabIndex = 148;
             // 
             // fechaFinalText
             // 
-            this.fechaFinalText.Location = new System.Drawing.Point(171, 230);
+            this.fechaFinalText.Location = new System.Drawing.Point(182, 230);
             this.fechaFinalText.Name = "fechaFinalText";
             this.fechaFinalText.Size = new System.Drawing.Size(200, 22);
             this.fechaFinalText.TabIndex = 149;
@@ -122,12 +122,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // TipoNominaText
+            // 
+            this.TipoNominaText.BackColor = System.Drawing.Color.SkyBlue;
+            this.TipoNominaText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TipoNominaText.Location = new System.Drawing.Point(182, 100);
+            this.TipoNominaText.Margin = new System.Windows.Forms.Padding(4);
+            this.TipoNominaText.Name = "TipoNominaText";
+            this.TipoNominaText.ReadOnly = true;
+            this.TipoNominaText.Size = new System.Drawing.Size(243, 30);
+            this.TipoNominaText.TabIndex = 153;
+            // 
             // button4
             // 
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(351, 51);
+            this.button4.Location = new System.Drawing.Point(362, 51);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(63, 46);
@@ -139,7 +150,7 @@
             // 
             this.tipoNominaIdText.BackColor = System.Drawing.Color.SkyBlue;
             this.tipoNominaIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tipoNominaIdText.Location = new System.Drawing.Point(171, 58);
+            this.tipoNominaIdText.Location = new System.Drawing.Point(182, 58);
             this.tipoNominaIdText.Margin = new System.Windows.Forms.Padding(4);
             this.tipoNominaIdText.Name = "tipoNominaIdText";
             this.tipoNominaIdText.ReadOnly = true;
@@ -156,17 +167,6 @@
             this.label3.Size = new System.Drawing.Size(155, 25);
             this.label3.TabIndex = 150;
             this.label3.Text = "Type of payroll";
-            // 
-            // TipoNominaText
-            // 
-            this.TipoNominaText.BackColor = System.Drawing.Color.SkyBlue;
-            this.TipoNominaText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TipoNominaText.Location = new System.Drawing.Point(171, 100);
-            this.TipoNominaText.Margin = new System.Windows.Forms.Padding(4);
-            this.TipoNominaText.Name = "TipoNominaText";
-            this.TipoNominaText.ReadOnly = true;
-            this.TipoNominaText.Size = new System.Drawing.Size(243, 30);
-            this.TipoNominaText.TabIndex = 153;
             // 
             // ventana_nomina
             // 

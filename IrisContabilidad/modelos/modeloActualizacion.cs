@@ -557,13 +557,13 @@ namespace IrisContabilidad.modelos
                 sql = "ALTER TABLE `iris`.`nomina` MODIFY COLUMN `activo` TINYINT(1) NOT NULL DEFAULT 0, MODIFY COLUMN `nomina_cerrada` TINYINT(1) NOT NULL DEFAULT 0 COMMENT '0-abierta y 1-cerrada';";
                 utilidades.ejecutarcomando_mysql(sql);
                 //nuevo query
-                sql = "";
+                sql = "ALTER TABLE `iris`.`sistema_ventanas` ADD COLUMN `nombre_ventana_2` VARCHAR(200) NOT NULL DEFAULT '' AFTER `programador`;";
                 utilidades.ejecutarcomando_mysql(sql);
                 //nuevo query
-                sql = "";
+                sql = "ALTER TABLE `iris`.`sistema` ADD COLUMN `nombre_impresora_rollo_defecto` VARCHAR(200) NOT NULL DEFAULT 'rollprinter' AFTER `mensaje_pie_pagina_factura`;";
                 utilidades.ejecutarcomando_mysql(sql);
                 //nuevo query
-                sql = "";
+                sql = "ALTER TABLE `iris`.`sistema` ADD COLUMN `nombre_impresora_hoja_completa` VARCHAR(20) NOT NULL DEFAULT 'normalprinter' AFTER `nombre_impresora_rollo_defecto`;";
                 utilidades.ejecutarcomando_mysql(sql);
                 //nuevo query
                 sql = "";

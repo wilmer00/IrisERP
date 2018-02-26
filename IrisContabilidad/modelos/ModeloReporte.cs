@@ -11,6 +11,8 @@ namespace IrisContabilidad.modelos
 {
     public class ModeloReporte
     {
+        //variables
+        private bool imprimirDirectamente = false;
 
         private empleado empleado;
         utilidades utilidades=new utilidades();
@@ -114,10 +116,13 @@ namespace IrisContabilidad.modelos
         }
 
         //imprimir venta
-        public bool imprimirVenta(int idVenta)
+        public bool imprimirVenta(int idVenta,bool imprimirDirecto=false)
         {
             try
             {
+                //pasando el valor de imprimirDirecto a lavariable global imprimirDirectamente
+                imprimirDirectamente = imprimirDirecto;
+
                 sistemaConfiguracion=new sistemaConfiguracion();
                 sistemaConfiguracion = modeloSistema.getSistemaConfiguracion();
 
@@ -134,32 +139,32 @@ namespace IrisContabilidad.modelos
                 {
                     //hoja normal
                     //reporte = "IrisContabilidad.modulo_facturacion.Reporte.reporte_venta_hoja_completa_rd.rdlc";
-                    if (sistemaConfiguracion.codigoIdiomaSistema == 1)
-                    {
-                        //rd
-                        reporte = "IrisContabilidad.modulo_facturacion.Reporte.reporte_venta_hoja_completa_rd.rdlc";
+                    //if (sistemaConfiguracion.codigoIdiomaSistema == 1)
+                    //{
+                    //    //rd
+                    //    reporte = "IrisContabilidad.modulo_facturacion.Reporte.reporte_venta_hoja_completa_rd.rdlc";
                     
-                    }
-                    else if (sistemaConfiguracion.codigoIdiomaSistema == 2)
-                    {
+                    //}
+                    //else if (sistemaConfiguracion.codigoIdiomaSistema == 2)
+                    //{
                         //usa
                         reporte = "IrisContabilidad.modulo_facturacion.Reporte.reporte_venta_hoja_completa_usa.rdlc";
                     
-                    }
+                    //}
                 }
                 else if (cajero.tipoImpresionVenta == 2)
                 {
                     //hoja rollo de 3 pulgadas"
-                    if (sistemaConfiguracion.codigoIdiomaSistema == 1)
-                    {
+                    //if (sistemaConfiguracion.codigoIdiomaSistema == 1)
+                    //{
                         //rd
-                        reporte = "IrisContabilidad.modulo_facturacion.Reporte.reporte_venta_hoja_rollo_rd.rdlc";
-                    }
-                    else if (sistemaConfiguracion.codigoIdiomaSistema == 2)
-                    {
+                       // reporte = "IrisContabilidad.modulo_facturacion.Reporte.reporte_venta_hoja_rollo_rd.rdlc";
+                    //}
+                    //else if (sistemaConfiguracion.codigoIdiomaSistema == 2)
+                    //{
                         //usa
                         reporte = "IrisContabilidad.modulo_facturacion.Reporte.reporte_venta_hoja_rollo_usa.rdlc";
-                    }
+                    //}
                 }
 
                 if (venta == null)
@@ -181,13 +186,13 @@ namespace IrisContabilidad.modelos
 
                 List<ReportParameter> ListaReportParameter = new List<ReportParameter>();
 
-                VisorReporteComun ventana = new VisorReporteComun(reporte, listaReportDataSource, ListaReportParameter);
+                VisorReporteComun ventana = new VisorReporteComun(reporte, listaReportDataSource, ListaReportParameter,false,imprimirDirectamente);
                 ventana.ShowDialog();
                 return true;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error imprimirVenta.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error printing sale/Error imprimirVenta.:" + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
@@ -364,12 +369,14 @@ namespace IrisContabilidad.modelos
                 List<compra_vs_pagos_detalles> listaCompraPagos=new List<compra_vs_pagos_detalles>(); 
                 listaCompra = new modeloCompra().getListaCompra();
                 listaCompraPagos = new modeloCompra().getListaCompraPagoDetalleCompleta();
+                compra_vs_pagos compraPago = new compra_vs_pagos();
 
                 //filtros
                 //fecha
                 if (incluirRangoFecha == true)
                 {
-                    listaCompraPagos = listaCompraPagos.FindAll(x => (compra = new modeloCompra().getCompraById(x.codigo_compra)).fecha >= fechaInicial.Date && (compra = new modeloCompra().getCompraById(x.codigo_compra)).fecha <= fechaFinal.Date).ToList();
+                    listaCompraPagos = listaCompraPagos.FindAll(x => ((compraPago = new modeloPago().getCompraPagoById(x.codigo_pago)).fecha.Date >= fechaInicial.Date) && ((compraPago = new modeloPago().getCompraPagoById(x.codigo_pago)).fecha.Date <= fechaFinal.Date)).ToList();
+                    //listaCompraPagos = listaCompraPagos.FindAll(x => ((compra = new modeloCompra().getCompraById(x.codigo_compra)).fecha.Date >= fechaInicial.Date) && ((compra = new modeloCompra().getCompraById(x.codigo_compra))..Date <= fechaFinal.Date)).ToList();
                     //listaCompra = listaCompra.FindAll(x => x.fecha>= fechaInicial.Date && x.fecha<=fechaFinal.Date);
                 }
                 //pagadas
@@ -381,7 +388,8 @@ namespace IrisContabilidad.modelos
                 //compra
                 if (compra != null)
                 {
-                    listaCompraPagos = listaCompraPagos.FindAll(x => (compra = new modeloCompra().getCompraById(x.codigo_compra)).codigo == compra.codigo).ToList();
+                    listaCompraPagos = listaCompraPagos.FindAll(x => x.codigo_compra == compra.codigo).ToList();
+                    //listaCompraPagos = listaCompraPagos.FindAll(x => (compra = new modeloCompra().getCompraById(x.codigo_compra)).codigo == compra.codigo).ToList();
                     //listaCompra = listaCompra.FindAll(x => x.codigo == compra.codigo);
                 }
                 //suplidor 
@@ -821,10 +829,15 @@ namespace IrisContabilidad.modelos
         {
             try
             {
+                venta_vs_cobros ventaCobro = new venta_vs_cobros();
                 reporte_cobros_encabezado reporteEncabezado = new reporte_cobros_encabezado();
                 reporte_cobros_detalle reporteDetalle=new reporte_cobros_detalle();
                 sistemaConfiguracion sistemaConfiguracion=new sistemaConfiguracion();
                 sistemaConfiguracion = new modeloSistemaConfiguracion().getSistemaConfiguracion();
+                List<venta_vs_cobros_detalles> listaVentaCobros = new List<venta_vs_cobros_detalles>();
+                listaVentaCobros = new modeloCobro().getListaVentaCobrosDetalleCompleta();
+                venta venta2 = new venta();//par comprar dentro de ciclos
+                cliente cliente2 = new cliente();//para comprara dentro de ciclos
 
                 reporteEncabezado.listaDetalle = new List<reporte_cobros_detalle>();
 
@@ -861,42 +874,59 @@ namespace IrisContabilidad.modelos
                 //filtrando por cliente
                 if (cliente != null)
                 {
-                    listaVenta = listaVenta.FindAll(x => x.codigo_cliente == cliente.codigo);
+                    listaVentaCobros = listaVentaCobros.FindAll(x => (venta2=new modeloVenta().getVentaById(x.codigo_venta)).codigo_cliente==cliente.codigo).ToList();
+                    //listaVenta = listaVenta.FindAll(x => x.codigo_cliente == cliente.codigo);
                 }
                 //filtrando por venta
                 if (venta != null)
                 {
-                    listaVenta = listaVenta.FindAll(x => x.codigo == venta.codigo);
+                    listaVentaCobros = listaVentaCobros.FindAll(x => x.codigo == venta.codigo);
+                    //listaVenta = listaVenta.FindAll(x => x.codigo == venta.codigo);
                 }
                 //filtrando por tipo venta
                 if (tipoVenta != "")
                 {
-                    listaVenta = listaVenta.FindAll(x => tipoVenta.ToLower().Contains(x.tipo_venta.ToLower()));
+                    listaVentaCobros = listaVentaCobros.FindAll(x => (venta2 = new modeloVenta().getVentaById(x.codigo_venta)).tipo_venta.ToLower().Contains(tipoVenta.ToLower())).ToList();
+                    //listaVenta = listaVenta.FindAll(x => tipoVenta.ToLower().Contains(x.tipo_venta.ToLower()));
                 }
 
                 //rango fechas ventas
                 if (incluirRangoFechaVenta == true)
                 {
-                    listaVenta = listaVenta.FindAll(x => x.fecha >= fechaInicialVenta.Date && x.fecha <= fechaFinalVenta.Date);
+                    listaVentaCobros = listaVentaCobros.FindAll(x => ((ventaCobro = new modeloCobro().getVentaCobroById(x.codigo_cobro)).fecha.Date >= fechaInicialVenta.Date) && ((ventaCobro = new modeloCobro().getVentaCobroById(x.codigo_cobro)).fecha.Date <= fechaFinalVenta.Date)).ToList();
+                    //listaVenta = listaVenta.FindAll(x => (ventaCobro = new modeloCobro().getVentaCobroByVentaId(x.codigo)).fecha.Date >= fechaInicialVenta.Date && (ventaCobro = new modeloCobro().getVentaCobroByVentaId(x.codigo)).fecha.Date <= fechaFinalVenta.Date).ToList();
+                    //listaVenta = listaVenta.FindAll(x => x.fecha >= fechaInicialVenta.Date && x.fecha <= fechaFinalVenta.Date);
                 }
 
                 //si solo son ventas pagadas
                 if (soloVentasPagadas == true)
                 {
-                    listaVenta = listaVenta.FindAll(x => x.pagada == true);
+                    listaVentaCobros = listaVentaCobros.FindAll(x => (venta2 = new modeloVenta().getVentaById(x.codigo_venta)).pagada==true).ToList();
+                    //listaVenta = listaVenta.FindAll(x => x.pagada == true);
                 }
 
-                foreach (var clienteActual in listaCliente)
-                {
-                    foreach (var ventaActual in listaVenta)
-                    {
-                        if (clienteActual.codigo == ventaActual.codigo_cliente)
-                        {
-                            reporteDetalle = new reporte_cobros_detalle(ventaActual.codigo);
-                            reporteEncabezado.listaDetalle.Add(reporteDetalle);
-                        }
-                    }
-                }
+
+                listaVentaCobros.ToList().ForEach(x=> {
+                    reporteDetalle = new reporte_cobros_detalle(x.codigo_venta);
+                    reporteEncabezado.listaDetalle.Add(reporteDetalle);
+                });                        
+                   
+                
+
+
+                //foreach (var clienteActual in listaCliente)
+                //{
+                //    foreach (var ventaActual in listaVentaCobros)
+                //    {
+                //        venta = new modeloVenta().getVentaById(ventaActual.codigo_venta);
+                //        cliente = new modeloCliente().getClienteById(venta.codigo_cliente);
+                //        if (clienteActual.codigo == cliente.codigo)
+                //        {
+                //            reporteDetalle = new reporte_cobros_detalle(ventaActual.codigo);
+                //            reporteEncabezado.listaDetalle.Add(reporteDetalle);
+                //        }
+                //    }
+                //}
 
                 reporteEncabezado.listaDetalle = reporteEncabezado.listaDetalle.OrderByDescending(x => x.idVenta).ToList();
 
