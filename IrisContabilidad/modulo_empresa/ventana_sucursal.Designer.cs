@@ -55,7 +55,7 @@ namespace IrisContabilidad.modulo_empresa
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(16, 481);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Size = new System.Drawing.Size(827, 66);
             // 
             // button2
@@ -67,19 +67,19 @@ namespace IrisContabilidad.modulo_empresa
             // 
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Location = new System.Drawing.Point(639, 6);
-            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Size = new System.Drawing.Size(859, 25);
             // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.Location = new System.Drawing.Point(321, 6);
-            this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button3.Margin = new System.Windows.Forms.Padding(5);
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // groupBox1
@@ -88,9 +88,9 @@ namespace IrisContabilidad.modulo_empresa
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.sucursalIdText);
             this.groupBox1.Location = new System.Drawing.Point(21, 33);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(820, 98);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
@@ -101,7 +101,7 @@ namespace IrisContabilidad.modulo_empresa
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(585, 33);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(63, 46);
             this.button4.TabIndex = 22;
@@ -112,7 +112,7 @@ namespace IrisContabilidad.modulo_empresa
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(83, 41);
+            this.label1.Location = new System.Drawing.Point(74, 39);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 25);
@@ -124,13 +124,16 @@ namespace IrisContabilidad.modulo_empresa
             this.sucursalIdText.BackColor = System.Drawing.Color.SkyBlue;
             this.sucursalIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sucursalIdText.Location = new System.Drawing.Point(217, 39);
-            this.sucursalIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sucursalIdText.Margin = new System.Windows.Forms.Padding(4);
             this.sucursalIdText.Name = "sucursalIdText";
             this.sucursalIdText.Size = new System.Drawing.Size(359, 30);
             this.sucursalIdText.TabIndex = 0;
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(99, 38);
@@ -142,10 +145,13 @@ namespace IrisContabilidad.modulo_empresa
             // 
             // secuenciaText
             // 
+            this.secuenciaText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.secuenciaText.BackColor = System.Drawing.Color.White;
             this.secuenciaText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.secuenciaText.Location = new System.Drawing.Point(217, 38);
-            this.secuenciaText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.secuenciaText.Margin = new System.Windows.Forms.Padding(4);
             this.secuenciaText.MaxLength = 3;
             this.secuenciaText.Name = "secuenciaText";
             this.secuenciaText.Size = new System.Drawing.Size(340, 30);
@@ -155,6 +161,9 @@ namespace IrisContabilidad.modulo_empresa
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(117, 155);
@@ -166,10 +175,13 @@ namespace IrisContabilidad.modulo_empresa
             // 
             // direccionText
             // 
+            this.direccionText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.direccionText.BackColor = System.Drawing.Color.White;
             this.direccionText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.direccionText.Location = new System.Drawing.Point(217, 155);
-            this.direccionText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.direccionText.Margin = new System.Windows.Forms.Padding(4);
             this.direccionText.MaxLength = 200;
             this.direccionText.Multiline = true;
             this.direccionText.Name = "direccionText";
@@ -179,13 +191,16 @@ namespace IrisContabilidad.modulo_empresa
             // 
             // activoCheck
             // 
+            this.activoCheck.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.activoCheck.AutoSize = true;
             this.activoCheck.Checked = true;
             this.activoCheck.CheckState = System.Windows.Forms.CheckState.Checked;
             this.activoCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.activoCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activoCheck.Location = new System.Drawing.Point(217, 280);
-            this.activoCheck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.activoCheck.Margin = new System.Windows.Forms.Padding(4);
             this.activoCheck.Name = "activoCheck";
             this.activoCheck.Size = new System.Drawing.Size(79, 24);
             this.activoCheck.TabIndex = 21;
@@ -205,19 +220,22 @@ namespace IrisContabilidad.modulo_empresa
             this.groupBox2.Controls.Add(this.secuenciaText);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(21, 139);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(820, 332);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
             // 
             // telefono2Text
             // 
+            this.telefono2Text.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.telefono2Text.BackColor = System.Drawing.Color.White;
             this.telefono2Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.telefono2Text.Location = new System.Drawing.Point(565, 95);
-            this.telefono2Text.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.telefono2Text.Margin = new System.Windows.Forms.Padding(4);
             this.telefono2Text.MaxLength = 10;
             this.telefono2Text.Name = "telefono2Text";
             this.telefono2Text.Size = new System.Drawing.Size(173, 30);
@@ -226,10 +244,13 @@ namespace IrisContabilidad.modulo_empresa
             // 
             // telefono1Text
             // 
+            this.telefono1Text.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.telefono1Text.BackColor = System.Drawing.Color.White;
             this.telefono1Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.telefono1Text.Location = new System.Drawing.Point(217, 95);
-            this.telefono1Text.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.telefono1Text.Margin = new System.Windows.Forms.Padding(4);
             this.telefono1Text.MaxLength = 10;
             this.telefono1Text.Name = "telefono1Text";
             this.telefono1Text.Size = new System.Drawing.Size(173, 30);
@@ -238,6 +259,9 @@ namespace IrisContabilidad.modulo_empresa
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(422, 96);
@@ -249,6 +273,9 @@ namespace IrisContabilidad.modulo_empresa
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(74, 96);
@@ -265,7 +292,7 @@ namespace IrisContabilidad.modulo_empresa
             this.ClientSize = new System.Drawing.Size(859, 562);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "ventana_sucursal";
             this.Text = "ventana_sucursal";
             this.Load += new System.EventHandler(this.ventana_sucursal_Load);

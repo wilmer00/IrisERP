@@ -47,8 +47,8 @@ namespace IrisContabilidad.modulo_facturacion
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(16, 368);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.panel1.Size = new System.Drawing.Size(716, 66);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
+            this.panel1.Size = new System.Drawing.Size(846, 66);
             // 
             // button2
             // 
@@ -58,27 +58,27 @@ namespace IrisContabilidad.modulo_facturacion
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Location = new System.Drawing.Point(528, 6);
-            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button1.Location = new System.Drawing.Point(658, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.panel2.Size = new System.Drawing.Size(748, 25);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
+            this.panel2.Size = new System.Drawing.Size(878, 25);
             // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Location = new System.Drawing.Point(264, 6);
-            this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button3.Location = new System.Drawing.Point(329, 6);
+            this.button3.Margin = new System.Windows.Forms.Padding(5);
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // nombreText
             // 
             this.nombreText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreText.Location = new System.Drawing.Point(205, 197);
-            this.nombreText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nombreText.Location = new System.Drawing.Point(248, 197);
+            this.nombreText.Margin = new System.Windows.Forms.Padding(4);
             this.nombreText.MaxLength = 30;
             this.nombreText.Name = "nombreText";
             this.nombreText.Size = new System.Drawing.Size(336, 30);
@@ -89,7 +89,7 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(125, 197);
+            this.label3.Location = new System.Drawing.Point(168, 197);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 25);
@@ -102,10 +102,10 @@ namespace IrisContabilidad.modulo_facturacion
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Location = new System.Drawing.Point(8, 33);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(727, 81);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(854, 81);
             this.groupBox1.TabIndex = 79;
             this.groupBox1.TabStop = false;
             // 
@@ -114,7 +114,7 @@ namespace IrisContabilidad.modulo_facturacion
             this.conceptoIdText.BackColor = System.Drawing.Color.SkyBlue;
             this.conceptoIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conceptoIdText.Location = new System.Drawing.Point(240, 30);
-            this.conceptoIdText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.conceptoIdText.Margin = new System.Windows.Forms.Padding(4);
             this.conceptoIdText.Name = "conceptoIdText";
             this.conceptoIdText.Size = new System.Drawing.Size(205, 30);
             this.conceptoIdText.TabIndex = 18;
@@ -137,7 +137,7 @@ namespace IrisContabilidad.modulo_facturacion
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(455, 23);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(63, 46);
             this.button4.TabIndex = 23;
@@ -151,8 +151,8 @@ namespace IrisContabilidad.modulo_facturacion
             this.activoCheck.CheckState = System.Windows.Forms.CheckState.Checked;
             this.activoCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.activoCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activoCheck.Location = new System.Drawing.Point(205, 281);
-            this.activoCheck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.activoCheck.Location = new System.Drawing.Point(248, 281);
+            this.activoCheck.Margin = new System.Windows.Forms.Padding(4);
             this.activoCheck.Name = "activoCheck";
             this.activoCheck.Size = new System.Drawing.Size(79, 24);
             this.activoCheck.TabIndex = 84;
@@ -164,12 +164,12 @@ namespace IrisContabilidad.modulo_facturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(748, 449);
+            this.ClientSize = new System.Drawing.Size(878, 449);
             this.Controls.Add(this.activoCheck);
             this.Controls.Add(this.nombreText);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "ventana_caja_ingresos_egresos_conceptos";
             this.Text = "ventana_caja_ingresos_egresos_conceptos";
             this.Load += new System.EventHandler(this.ventana_caja_ingresos_egresos_conceptos_Load);

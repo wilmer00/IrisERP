@@ -123,7 +123,7 @@ namespace IrisContabilidad.modulo_facturacion
                     dataGridView1.Rows.Clear();
                     listaVentaDetalle = modeloVenta.getListaVentaDetalle(venta.codigo, true);
                     loadListaVentaDetalle();
-                    botonImprimir.Visible = true;
+                    //botonImprimir.Visible = true;
                 }
                 else
                 {
@@ -149,7 +149,7 @@ namespace IrisContabilidad.modulo_facturacion
                     }
                     fechaInicialText.Text = DateTime.Today.ToString("dd-MM-yyyy");
                     fechaFinalText.Text = DateTime.Today.ToString("dd-MM-yyyy");
-                    botonImprimir.Visible = false;
+                    //botonImprimir.Visible = false;
                 }
                 //para tomar el comprobante que tiene en el combo seleccionado en el momento
                 getTipocomprobante();
@@ -1176,6 +1176,11 @@ namespace IrisContabilidad.modulo_facturacion
         }
 
         private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void botonImprimir_Click(object sender, EventArgs e)
         {
 
         }

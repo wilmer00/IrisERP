@@ -119,12 +119,12 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clienteText.BackColor = System.Drawing.Color.White;
             this.clienteText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clienteText.Location = new System.Drawing.Point(131, 66);
+            this.clienteText.Location = new System.Drawing.Point(137, 66);
             this.clienteText.Margin = new System.Windows.Forms.Padding(4);
             this.clienteText.MaxLength = 200;
             this.clienteText.Name = "clienteText";
             this.clienteText.ReadOnly = true;
-            this.clienteText.Size = new System.Drawing.Size(313, 30);
+            this.clienteText.Size = new System.Drawing.Size(307, 30);
             this.clienteText.TabIndex = 77;
             // 
             // button5
@@ -150,10 +150,10 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clienteIdText.BackColor = System.Drawing.Color.SkyBlue;
             this.clienteIdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clienteIdText.Location = new System.Drawing.Point(131, 21);
+            this.clienteIdText.Location = new System.Drawing.Point(137, 21);
             this.clienteIdText.Margin = new System.Windows.Forms.Padding(4);
             this.clienteIdText.Name = "clienteIdText";
-            this.clienteIdText.Size = new System.Drawing.Size(243, 30);
+            this.clienteIdText.Size = new System.Drawing.Size(237, 30);
             this.clienteIdText.TabIndex = 71;
             this.clienteIdText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.clienteIdText_KeyDown);
             // 
