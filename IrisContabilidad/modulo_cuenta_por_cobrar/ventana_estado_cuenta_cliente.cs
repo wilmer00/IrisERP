@@ -49,7 +49,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
         {
             InitializeComponent();
             empleado = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "ventana estado cuenta cliente");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "Customer's account status/estado cuenta cliente");
             this.Text = tituloLabel.Text;
             loadVentana();
             loadListaVentaCobros();
@@ -70,7 +70,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error imprimiendo.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error printing/Error imprimiendo.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -200,7 +200,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                 {
                     return;
                 }
-                if (MessageBox.Show("Desea procesar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                if (MessageBox.Show("Do you want to process?/Desea procesar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 {
                     return;
                 }
@@ -220,7 +220,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
             {
                 if (reporteEncabezado == null)
                 {
-                    MessageBox.Show("Debe procesar antes de imprimir.:", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Do you want to process before printing?/Desea procesar?Debe procesar antes de imprimir.:", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 //datos generales
@@ -271,7 +271,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
         
         public void salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }

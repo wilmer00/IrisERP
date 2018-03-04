@@ -566,7 +566,7 @@ namespace IrisContabilidad.modelos
                 sql = "ALTER TABLE `iris`.`sistema` ADD COLUMN `nombre_impresora_hoja_completa` VARCHAR(20) NOT NULL DEFAULT 'normalprinter' AFTER `nombre_impresora_rollo_defecto`;";
                 utilidades.ejecutarcomando_mysql(sql);
                 //nuevo query
-                sql = "";
+                sql = "ALTER TABLE `iris`.`cliente` MODIFY COLUMN `cod_tipo_comprobante` INTEGER UNSIGNED;";
                 utilidades.ejecutarcomando_mysql(sql);
                 //nuevo query
                 sql = "";

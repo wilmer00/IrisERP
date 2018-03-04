@@ -61,7 +61,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
         {
             InitializeComponent();
             empleado = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "ventana reporte cobros");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "Charges report/reporte cobros");
             this.Text = tituloLabel.Text;
             loadVentana();
             loadListaVentaCobros();

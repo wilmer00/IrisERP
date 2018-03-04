@@ -56,7 +56,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
         {
             InitializeComponent();
             empleado = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "ventana venta cobros");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "sales charges/venta cobros");
             this.Text = tituloLabel.Text;
             loadVentana();
         }
@@ -89,14 +89,14 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                 {
                     clienteIdText.Focus();
                     clienteIdText.SelectAll();
-                    MessageBox.Show("Debe seleccionar un cliente", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("You must select a customer/Debe seleccionar un cliente", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
                 if (dataGridView1.Rows.Count == 0)
                 {
                     clienteIdText.Focus();
                     clienteIdText.SelectAll();
-                    MessageBox.Show("No hay facturas", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("No invoices/No hay facturas", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
                 //validar que se digito algun monto a pagar
@@ -110,7 +110,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                 }
                 if (existe == false)
                 {
-                    MessageBox.Show("Debe efectuar un abono", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("You must make a payment/Debe efectuar un abono", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
 
@@ -179,7 +179,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                 if((modeloVenta.setVentaCobro(ventaCobro, listaVentacobroDetalle))==true)
                 {
                     loadCliente();
-                    if (MessageBox.Show("Se agregó el cobro, desea imprimir el cobro?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("The charge was added, do you want to print the charge?Se agregó el cobro, desea imprimir el cobro?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         modeloReporte.imprimirVentaCobro(ventaCobro.codigo);
                     }
@@ -188,7 +188,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                 else
                 {
                     loadCliente();
-                    MessageBox.Show("No se agregó el cobro", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("No charge was added/No se agregó el cobro", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     ventaCobro = null;
                 }
             }
@@ -222,7 +222,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error eliminar.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error removing/Error eliminar.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -239,7 +239,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                 {
                     montoAbonoText.Focus();
                     montoAbonoText.SelectAll();
-                    MessageBox.Show("Falta el abono", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The amount is missing/Falta el abono", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
                 //que descuento no este en blanco
@@ -248,21 +248,21 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                 {
                     montoDescuentoText.Focus();
                     montoDescuentoText.SelectAll();
-                    MessageBox.Show("Falta el descuento", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The discount is missing/Falta el descuento", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
                 if (Convert.ToDecimal(montoAbonoText.Text) < 0)
                 {
                     montoAbonoText.Focus();
                     montoAbonoText.SelectAll();
-                    MessageBox.Show("El abono debe ser mayor que cero", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The credit must be more than zero/El abono debe ser mayor que cero", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
                 if (Convert.ToDecimal(montoDescuentoText.Text) < 0)
                 {
                     montoDescuentoText.Focus();
                     montoDescuentoText.SelectAll();
-                    MessageBox.Show("El descuento debe ser por lo menos cero", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The discount must be at least zero/El descuento debe ser por lo menos cero", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
                 //monto abonar no sobrepase el monto pendiente
@@ -270,7 +270,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                 {
                     montoAbonoText.Focus();
                     montoAbonoText.SelectAll();
-                    MessageBox.Show("El abono debe ser menor que el monto pendiente", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The payment must be less than the outstanding amount/El abono debe ser menor que el monto pendiente", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
                 //validar que el descuento sea menor o igual al monto a pagar
@@ -279,7 +279,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                 {
                     montoDescuentoText.Focus();
                     montoDescuentoText.SelectAll();
-                    MessageBox.Show("El descuento debe ser menor o igual que el monto deabono", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The discount must be less than or equal to the amount of credit/El descuento debe ser menor o igual que el monto de abono", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
                 return true;
@@ -314,7 +314,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error agregar.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error adding/Error agregar.: " + ex.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -354,7 +354,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
 
         public void salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -377,7 +377,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Desea procesar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to process?/Desea procesar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 getAction();
                 calcularTotal();
@@ -413,7 +413,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                     empleado = modeloEmpleado.getEmpleadoById(x.codigo_empleado);
                     if (montoPendiente > 0)
                     {
-                        dataGridView1.Rows.Add(x.codigo, x.fecha.ToString("dd/MM/yyyy"),utilidades.getDiasByRangoFecha(x.fecha_limite, DateTime.Today),empleado.nombre,x.tipo_venta, x.ncf, x.fecha_limite.ToString("dd/MM/yyyy"), montoPendiente.ToString("N"),"0.00","0.00","");
+                        dataGridView1.Rows.Add(x.codigo, x.fecha.Date.ToString(),utilidades.getDiasByRangoFecha(x.fecha_limite, DateTime.Today),empleado.nombre,x.tipo_venta, x.ncf, x.fecha_limite.Date.ToString(), montoPendiente.ToString("N"),"0.00","0.00","");
                     }
                     else
                     {

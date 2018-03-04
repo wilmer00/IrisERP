@@ -96,7 +96,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
         }
         public void Salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -171,7 +171,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                         {
                             nombreText.Focus();
                             nombreText.SelectAll();
-                            MessageBox.Show("El formato de la fecha no es valido", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("The format of the date is not valid/El formato de la fecha no es valido", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     //por empleado
@@ -193,7 +193,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error buscando.: " + ex.ToString());
+                MessageBox.Show("Error searching/Error buscando.:" + ex.ToString());
             }
         }
     }

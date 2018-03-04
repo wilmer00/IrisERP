@@ -33,7 +33,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
         {
             InitializeComponent();
             empleado = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "ventana cliente");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "Customer/cliente");
             this.Text = tituloLabel.Text;
             loadVentana();
         }
@@ -93,7 +93,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
         }
         public void salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -105,7 +105,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                 //validar nombre
                 if (nombreText.Text == "")
                 {
-                    MessageBox.Show("Falta el nombre del cliente ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The customer's name is missing/Falta el nombre del cliente", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     nombreText.Focus();
                     nombreText.SelectAll();
                     return false;
@@ -113,7 +113,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                 //validar cedula
                 if (cedulaText.Text == "")
                 {
-                    MessageBox.Show("Falta la cedula del cliente", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The customer's ID is missing/Falta la cedula del cliente", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     cedulaText.Focus();
                     cedulaText.SelectAll();
                     return false;
@@ -121,19 +121,19 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                 //validar categoria
                 if (categoriaCliente == null)
                 {
-                    MessageBox.Show("Falta la categoria", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The category is missing/Falta la categoria", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     categoriaIdText.Focus();
                     categoriaIdText.SelectAll();
                     return false;
                 }
                 //validar tipo comprobante fiscal
-                if (tipoComprobante == null)
-                {
-                    MessageBox.Show("Falta el tipo de comprobante fiscal", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    tipoNcfIdText.Focus();
-                    tipoNcfIdText.SelectAll();
-                    return false;
-                }
+                //if (tipoComprobante == null)
+                //{
+                //    MessageBox.Show("Falta el tipo de comprobante fiscal", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    tipoNcfIdText.Focus();
+                //    tipoNcfIdText.SelectAll();
+                //    return false;
+                //}
                 
                 return true;
             }
@@ -154,7 +154,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                     return;
                 }
 
-                if (MessageBox.Show("Desea guardar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                if (MessageBox.Show("Do you want to save?/Desea guardar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 {
                     return;
                 }
@@ -188,12 +188,12 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                     {
                         cliente = null;
                         loadVentana();
-                        MessageBox.Show("Se agregó ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Was added/ se agregó", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
                     else
                     {
-                        MessageBox.Show("No se agregó ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Was not added/no se agregó", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -203,12 +203,12 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                     {
                         cliente = null;
                         loadVentana();
-                        MessageBox.Show("Se actualizó ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Updated successfully/ sea ctualizó correctamente", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
                     else
                     {
-                        MessageBox.Show("No se actualizó ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("it is not updated correctly/no se acuatlizó correctamente", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

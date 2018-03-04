@@ -45,7 +45,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
         {
             InitializeComponent();
             empleado = singleton.getEmpleado();
-            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "ventana anular cobros");
+            this.tituloLabel.Text = utilidades.GetTituloVentana(empleado, "cancel charges/anular cobros");
             this.Text = tituloLabel.Text;
             loadVentana();
         }
@@ -79,7 +79,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                 {
                     clienteIdText.Focus();
                     clienteIdText.SelectAll();
-                    MessageBox.Show("Debe seleccionar un cliente", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("You must select a client/Debe seleccionar un cliente", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
                 //validar que hayan datos en el grid
@@ -87,7 +87,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                 {
                     clienteIdText.Focus();
                     clienteIdText.SelectAll();
-                    MessageBox.Show("No hay facturas", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("No invoices/No hay facturas", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
                 //validar que tenga motivo porque anular
@@ -95,7 +95,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                 {
                     motivoAnularText.Focus();
                     motivoAnularText.SelectAll();
-                    MessageBox.Show("Debe especificar el motivo porque desea anular los cobros", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("You must specify the reason why you want to cancel the charges/Debe especificar el motivo porque desea anular los cobros", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
                 //validar que tenga cobros seleccionado
@@ -109,7 +109,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                 }
                 if (existe == false)
                 {
-                    MessageBox.Show("No hay cobros seleccionado para anular", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("There are no charges selected to cancel/No hay cobros seleccionado para anular", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
                 return true;
@@ -139,7 +139,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
                         utilidades.ejecutarcomando_mysql(sql);
                     }
                 }
-                MessageBox.Show("Se eliminaron los cobros", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Charges were eliminated/Se eliminaron los cobros", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 motivoAnularText.Text = "";
                 loadCobros();
             }
@@ -155,7 +155,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
         
         public void salir()
         {
-            if (MessageBox.Show("Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to go out?/Desea salir?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -260,7 +260,7 @@ namespace IrisContabilidad.modulo_cuenta_por_cobrar
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Desea anular los cobros?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==DialogResult.Yes)
+            if (MessageBox.Show("Do you want to cancel the charges/Desea anular los cobros?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==DialogResult.Yes)
             {
                 getAction();
             }
